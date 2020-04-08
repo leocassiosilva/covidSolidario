@@ -1,5 +1,6 @@
- $(document).ready(function() {
-    $.mask.definitions['~']='[+-]';
+$(document).ready(function() {
+
+ $.mask.definitions['~']='[+-]';
     $('input[type=tel]').focusout(function(){
         var phone, element;
         element = $(this);
@@ -55,4 +56,40 @@
                     limpa_formulário_cep();
                 }
             });
+$('#btnCadastrar').on('click', function(){
+        var nome = $("#nome").val();
+        var celular = $("#celular").val();
+        var email = $("#email").val();
+        var cep = $("#cep").val();
+        var cidade = $("#cidade").val();
+        var uf = $("#uf").val();
+        var senha = $("#senha").val();
+         alert(cep);
+        $.ajax({
+            type : 'POST',
+            url  : 'src/valida_cadastro.php',
+            data:{
+                nome: nome, 
+                celular: celular,
+                email: email,
+                cep: cep,
+                cidade:cidade,
+                uf:uf,
+                senha:senha
+            },
+            dataType: 'json',
+
+            success :  function(response){
+                console.log(response.codigo);   
+                if(response.codigo == 1){
+                    $('#mensagem').append(response.mensagem);
+                    window.location.href = "index.php";
+                }
+                else{           
+                    $("#cad-alert").css('display', 'block');
+                    $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
+                }
+            }
         });
+    });   
+});
