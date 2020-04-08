@@ -75,6 +75,11 @@ class Usuario {
         $this->cidade = $cidade;
     }
 
+    function setUf($uf)
+    {
+        $this->uf = $uf;
+    }
+
     function setSenha($senha)
     {
         $this->senha = md5($senha);
