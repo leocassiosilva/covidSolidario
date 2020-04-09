@@ -34,14 +34,11 @@
 
                                 </div>
                                 <div>
-                                    <label class="custom-control custom-checkbox">
-                                        <a href="javascript:void('register-form-link');" class="register-form-link">Cadastro</a>
-                                    </label>
-                                    <label class="custom-control custom-checkbox">
-                                        <a href="javascript:void('forgot-form-link');" class="forgot-form-link">Esqueceu senha</a>
+                                    <label class="custom-control custom-checkbox float-right">
+                                        <a href="cadastroUsuario.php" class="register-form-link">Cadastre-se</a>
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin" name="btnLogin">Login</button>
+                                <button type="submit" class="btn btn-success btn-lg " id="btnLogin" name="btnLogin">Login</button>
                             </form>
                         </div>
                     </div>
