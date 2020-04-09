@@ -4,7 +4,7 @@ class Conexao{
 	//ATRIBUTO PRIVADOS
 	private $usuario = "root";
 	private $senha= "";
-	private $banco= "covidSolitario";
+	private $banco= "covidsolidario";
 	private $servidor = "localhost";
 	private static $conexao;
 	//CONSTRUTOR

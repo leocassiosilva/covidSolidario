@@ -1,6 +1,12 @@
 <?php
+
 session_start();
 require_once("../model/Usuario.php");
+require_once("../dao/usuarioDAO.php");
+
+$usuarioDAO = new usuarioDAO();
+
+$usuario = new Usuario(); 
 
 $nome = $_POST["nome"];
 $celular = $_POST["celular"];
@@ -50,6 +56,42 @@ if (empty($uf)) {
 
 if (empty($senha)) {
     $retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu senha!');
+    echo json_encode($retorno);
+    exit();
+}
+
+$nome = $_POST["nome"];
+$celular = $_POST["celular"];
+$email = $_POST["email"];
+$cep = $_POST["cep"];
+$cidade = $_POST["cidade"];
+$uf = $_POST["uf"];
+$senha = $_POST["senha"];
+
+/*Usuario*/
+$usuario->setNome($nome);
+$usuario->setCelular($celular);
+$usuario->setEmail($email);
+$usuario->setCep($cep);
+$usuario->setCidade($cidade);
+$usuario->setUf($uf);
+$usuario->setSenha($senha);
+
+
+$verificarEmail = $usuarioDAO->verificar($usuario);
+
+$verificarEmail = $usuarioDAO->verificar($usuario); 
+
+if (!empty($verificarEmail)) {
+    $retorno = array('codigo' => 0, 'mensagem' => ' E-mail já existe!');
+    echo json_encode($retorno);
+    exit();
+}
+
+$resultado = $usuarioDAO->cadastro($usuario);
+
+if (!empty($resultado)) {
+    $retorno = array('codigo' => 1, 'mensagem' => 'Cadastrado!');
     echo json_encode($retorno);
     exit();
 }

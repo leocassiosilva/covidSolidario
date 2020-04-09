@@ -29,7 +29,7 @@
                      <input type="text" class="form-control" name="nome" id="nome" >
                    </div>
                    <div class="form-group col-md-6">
-                    <label for="inputCelular">Celular</label>
+                    <label for="inputCelular">Whatsapp</label>
                     <input type="tel" class="form-control" name="celular" id="celular" required=""
                     placeholder="(84)9999-99999">
                   </div>

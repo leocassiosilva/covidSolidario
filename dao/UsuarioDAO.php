@@ -25,7 +25,7 @@ class usuarioDAO
 		$uf = $usuario->getUf();
 		$senha = $usuario->getSenha();
 
-		$sql =  "INSERT INTO usuario (nome, celular, email, cep, cidade, uf, senha, data_cadastro) VALUES (:nome, :celular ,:email, :cep, :cidade, :senha, NOW())";
+		$sql =  "INSERT INTO usuario (nome, celular, email, cep, cidade, uf, senha, data_cadastro) VALUES (:nome, :celular ,:email, :cep, :cidade, :uf, :senha, NOW())";
 		$query = $this->conexao->conectar()->prepare($sql);
 		$query->bindValue(":nome", $nome);
 		$query->bindValue(":celular", $celular);
@@ -34,7 +34,6 @@ class usuarioDAO
 		$query->bindValue(":cidade", $cidade);
 		$query->bindValue(":uf", $uf);
 		$query->bindValue(":senha", $senha);
-		$query->bindValue(":tipo", $tipo);
 		$query->execute();
 
 
