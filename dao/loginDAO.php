@@ -21,7 +21,7 @@ class loginDAO
     $senha = $usuario->getSenha();
     $email = $usuario->getEmail();
 
-    $query = $this->conexao->conectar()->prepare("SELECT nome, email, id_tipo, id_usuario FROM usuario WHERE email = :email AND senha = :senha");
+    $query = $this->conexao->conectar()->prepare("SELECT nome, celular, email,cep, cidade, uf , id_usuario FROM usuario WHERE email = :email AND senha = :senha");
     $query->bindValue(":email", $email);
     $query->bindValue(":senha", $senha);
     $query->execute();
@@ -36,7 +36,7 @@ class loginDAO
       $_SESSION["cidade"] = $resultado["cidade"];
        $_SESSION["uf"] = $resultado["uf"];
       $_SESSION['id_usuario'] = $resultado["id_usuario"];
-      $_SESSION['logado'] = 'sim';
+      $_SESSION['logado'] = true;
       return $resultado;
     } 
 
