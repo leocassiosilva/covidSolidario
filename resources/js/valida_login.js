@@ -14,7 +14,7 @@ $('document').ready(function(){
 			success :  function(response){						
 				if(response.codigo == "1"){	
 					$("#login-alert").css('display', 'none')
-					window.location.href = "home.php";
+					window.location.href = "../view/home.php";
 				}
 				else{			
 					$("#login-alert").css('display', 'block')
