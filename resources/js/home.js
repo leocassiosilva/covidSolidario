@@ -16,4 +16,13 @@ $('document').ready(function(){
       });
   }
   curso();
+
+  $("#cadProd").click(function(){
+    alert("Ola");
+    $("#mostrar").toggle();
+  });
+
+  $("#listar").click(function(){
+    $("#apresentar").toggle();
+  });
 });
