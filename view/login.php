@@ -2,9 +2,11 @@
 <head>
     <title>Covid Solidarrio</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="../resources/css/home.css" media="screen" />
 </head>
 <body>
+    <?php include 'layout/navbar.php';?>
+
  <div class="container py-5">
     <div id="login-alert">
         <span id="mensagem"></span>
@@ -47,7 +49,9 @@
         </div>
     </div>
 </div>
-</body>
+<?php include 'layout/footer.php';?>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="../resources/js/valida_login.js"> </script>
 </html>

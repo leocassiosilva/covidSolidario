@@ -2,9 +2,9 @@
 <head>
   <title>Cadastro de Usuario</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+      <?php include 'layout/navbar.php';?>
   <div class="container py-5">
     <div class="row">
       <div class="col-md-12">
@@ -79,8 +79,11 @@
   </div>
 </div>
 </div>
+    <?php include 'layout/footer.php';?>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
 <script src="../resources/js/valida_cadastro.js"> </script>
+
 </html>
