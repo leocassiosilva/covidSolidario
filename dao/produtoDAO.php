@@ -2,6 +2,8 @@
 
 include("Conexao.php");
 require_once("../model/Produto.php");
+require_once("../model/Categoria.php");
+require_once("../control/Funcoes.php");
 
 
 class produtoDAO
@@ -15,52 +17,31 @@ class produtoDAO
   }
 
 
-  public function cadastro(Produto $produto)
-  {
-    $nome = $usuario->getNome();
-    $celular = $usuario->getCelular();
-    $email = $usuario->getEmail();
-    $cep = $usuario->getCep();
-    $cidade = $usuario->getCidade();
-    $uf = $usuario->getUf();
-    $senha = $usuario->getSenha();
-
-    $sql =  "INSERT INTO usuario (nome, celular, email, cep, cidade, uf, senha, data_cadastro) VALUES (:nome, :celular ,:email, :cep, :cidade, :uf, :senha, NOW())";
-    $query = $this->conexao->conectar()->prepare($sql);
-    $query->bindValue(":nome", $nome);
-    $query->bindValue(":celular", $celular);
-    $query->bindValue(":email", $email);
-    $query->bindValue(":cep", $cep);
-    $query->bindValue(":cidade", $cidade);
-    $query->bindValue(":uf", $uf);
-    $query->bindValue(":senha", $senha);
-    $query->execute();
-
-
-    if ($query->rowCount()){
-      return 1;
-    }
-  }
-
-
-  public function verificar(Usuario $usuario)
+  public function verificar(Produto $produto, Categoria $categoria)
   {
 
-    $email = $usuario->getEmail();
+    $nome = $produto->getNome();
+    $id_categoria = $categoria->getId_categoria();
 
-    $query = $this->conexao->conectar()->prepare("SELECT * FROM usuario WHERE email = :email");
-    $query->bindValue(":email", $email);
+
+    $nomeSemAcento = retirarAcento($nome);
+    $nomeMaiusculo = maiuscula($nomeSemAcento);
+
+    $query = $this->conexao->conectar()->prepare("SELECT * FROM produto");
     $query->execute();
-    $resultado = $query->fetch(PDO::FETCH_ASSOC);
+    $linha = $query->fetch(PDO::FETCH_ASSOC);
 
-    $retorno = true;
+    /*Essas variaveis pegao armazenado no banco*/
+    $palavra = retirarAcento($linha['nome']);
+    $palavraMaiuscula = maiuscula($palavra);  
 
-    if(!empty($resultado)){
-      return $retorno;
-    } else {
-      return $retorno = false;
-    }
+    /*Essa pega a id_categoria*/
+    $cat = $linha['id_categoria'];
 
+    $retorno = pesquisarComparar($palavraMaiuscula, $nomeMaiusculo);
+
+    return  $palavraMaiuscula;
   }
+
 }
 ?>

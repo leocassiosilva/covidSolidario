@@ -5,13 +5,17 @@ session_start();
 
 require_once("../dao/produtoDAO.php");
 require_once("../model/Produto.php");
+require_once("../model/Categoria.php");
 
 
 $nomeProduto = $_POST["nome"];
-$categoria = $_POST["categoria"];
+$id_categoria = $_POST["categoria"];
 $quantidade = $_POST["quantidade"];
 
+$produtoDAO = new produtoDAO();
+
 $produto = new Produto();
+$categoria = new Categoria();
 
 
 //Verificar o nome produto
@@ -30,5 +34,17 @@ if (empty($quantidade)) {
 	echo json_encode($retorno);
 	exit();
 }
+
+
+
+$produto->setNome($nomeProduto);
+$produto->setQuantidade($quantidade);
+$categoria->setId_categoria($id_categoria);
+
+
+
+$verificar = $produtoDAO->verificar($produto, $categoria);
+
+echo $verificar;
 
 ?>

@@ -62,7 +62,7 @@
       <div class="card" id="mostrar">
         <div class="card-body">
           <h5 class="card-title">Cadastrar Doação</h5>
-          <form>
+          <form method="POST" action="../control/ControleProduto.php"> 
             <div class="form-row">
               <div class="form-group col-md-12">
                <label for="inputNome">Nome</label>

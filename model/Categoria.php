@@ -18,4 +18,9 @@ class Categoria {
     {
         $this->nome = $nome;
     }
+
+    function setId_categoria($id_categoria)
+    {
+        $this->id_categoria = $id_categoria;
+    }
 }
