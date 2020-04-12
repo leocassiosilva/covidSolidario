@@ -48,6 +48,10 @@ class produtoDAO
     $query->bindValue(":id_usuario", $id_usuario);
     $query->execute();
 
+    if ($query->rowCount()){
+      return 1;
+    }
+
 }
 
 

@@ -19,17 +19,44 @@ $produto = new Produto();
 $categoria = new Categoria();
 $usuario = new Usuario();
 
+
+//Verificar o nome produto
+if (empty($nomeProduto)) {
+	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha o nome do produto!');
+	echo json_encode($retorno);
+	exit();
+}
+//Verificar se o numero contem caractere invalidos como numeros e 
+if (!(preg_match('/^[a-zA-Z]+/', $nomeProduto))) {
+    $retorno = array('codigo' => 0, 'mensagem' => 'Digite um nome sem caracterer especiaais como numeros e [#@$%]');
+	echo json_encode($retorno);
+	exit();
+}
+
+if (empty($categoria)) {
+	$retorno = array('codigo' => 0, 'mensagem' => 'Escolha a categoria!');
+	echo json_encode($retorno);
+	exit();
+}
+if (empty($quantidade)) {
+	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha o quantidade!');
+	echo json_encode($retorno);
+	exit();
+}
+
 $produto->setNome($nomeProduto);
 $categoria->setId_categoria($id_categoria);
 $usuario->setId_usuario($id_usuario);
-
-
 
 $resultProduto = $produtoDAO->cadastro($produto, $categoria);
 $produto->setId_produto($resultProduto);
 
 if (!empty($resultProduto)) {
-	$produtoDAO->cadastroDoacao($produto, $usuario, $quantidade);
+	$retornoDoacao = $produtoDAO->cadastroDoacao($produto, $usuario, $quantidade);
 }
-
+if (!empty($retornoDoacao)) {
+	$retorno = array('codigo' => 1, 'mensagem' => 'Doação Realizada com Sucesso!');
+    echo json_encode($retorno);
+    exit();
+}
 ?>
