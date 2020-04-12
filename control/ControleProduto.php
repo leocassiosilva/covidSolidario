@@ -24,6 +24,15 @@ if (empty($nomeProduto)) {
 	echo json_encode($retorno);
 	exit();
 }
+//Verificar se o numero contem caractere invalidos como numeros e 
+if (!(preg_match('/^[a-zA-Z]+/', $nomeProduto))) {
+    $retorno = array('codigo' => 0, 'mensagem' => 'Digite um nome sem caracterer especiaais como numeros e [#@$%]');
+	echo json_encode($retorno);
+	exit();
+}
+
+
+
 if (empty($categoria)) {
 	$retorno = array('codigo' => 0, 'mensagem' => 'Escolha a categoria!');
 	echo json_encode($retorno);
@@ -42,9 +51,8 @@ $produto->setQuantidade($quantidade);
 $categoria->setId_categoria($id_categoria);
 
 
-
 $verificar = $produtoDAO->verificar($produto, $categoria);
 
-echo $verificar;
+//var_dump($verificar);
 
 ?>

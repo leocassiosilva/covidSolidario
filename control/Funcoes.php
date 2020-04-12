@@ -10,11 +10,24 @@ function maiuscula($value)
 	return strtoupper($value);
 }
 
-function pesquisarComparar($value1, $value2 )
-{
-	$pos = strstr($value1, $value2);
+function maiuscula1($value)
+{	
+	$nome = array();
 
-	return $pos;
+	foreach ($value as $item) {
+		$nome [] = strtoupper($item);
+	}
+	return $nome;
+}
+
+function pesquisarComparar($palavra, $nome)
+{
+	foreach ($palavra as $v) {        
+		if ($v == $nome) {
+			return "Existe";
+		}		
+	}
+	return "Não existe";
 }
 
 ?>

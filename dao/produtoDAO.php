@@ -29,19 +29,26 @@ class produtoDAO
 
     $query = $this->conexao->conectar()->prepare("SELECT * FROM produto");
     $query->execute();
-    $linha = $query->fetch(PDO::FETCH_ASSOC);
+    $linha = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    /*Essas variaveis pegao armazenado no banco*/
-    $palavra = retirarAcento($linha['nome']);
-    $palavraMaiuscula = maiuscula($palavra);  
+    $array = array();
 
-    /*Essa pega a id_categoria*/
-    $cat = $linha['id_categoria'];
+    foreach($linha as $item)
+    {
+     $array[] = $item["nome"];
+   }
 
-    $retorno = pesquisarComparar($palavraMaiuscula, $nomeMaiusculo);
+   /*Retirando todos os acentos dos nomes do protudo que contem no banco e deixando as lebras em maiusculas*/
+   $palavra = retirarAcento($array);
+   $palavra = maiuscula1($palavra);
 
-    return  $palavraMaiuscula;
-  }
+   $retorno = pesquisarComparar($palavra, $nomeMaiusculo);
+
+   echo $retorno;
+
+
+
+}
 
 }
 ?>
