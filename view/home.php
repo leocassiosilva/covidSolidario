@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if($_SESSION["logado"] == true){
+  $nome = $_SESSION["nome"];
+  $email = $_SESSION["email"];
+}else{
+  header("location: ../index.php"); 
+}
+?>
+
+
 <html>
 <head>
   <title>Cadastro Doação</title>

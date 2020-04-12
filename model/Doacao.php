@@ -1,6 +1,6 @@
 <?php 
 
-class Produto {
+class Doacao {
 
     private $id_produto;
     private $nome;    
@@ -20,10 +20,5 @@ class Produto {
     function setNome($nome)
     {
         $this->nome = $nome;
-    } 
-
-    function setId_produto($id_produto)
-    {
-        $this->id_produto = $id_produto;
     }   
 }

@@ -50,6 +50,11 @@ class Usuario {
         return $this->senha;
     }
 
+    function setId_usuario($id_usuario)
+    {
+        $this->id_usuario = $id_usuario;
+    }
+
     function setNome($nome)
     {
         $this->nome = $nome;
