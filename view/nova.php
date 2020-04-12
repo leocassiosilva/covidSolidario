@@ -1,10 +1,8 @@
 <?php
-$username = "";
-
-if (!(preg_match('/^[a-zA-Z]+/', $username))) {
-    echo "Username tem caracteres inválidos...";
-}
-else {
-    echo "Username Ok!";
+$var;
+if(!isset($var)){
+	echo "a variável não existe.";
+}else{
+	echo "minha variável existe."; 
 }
 ?>

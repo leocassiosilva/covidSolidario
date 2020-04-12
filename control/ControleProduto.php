@@ -33,7 +33,7 @@ if (!(preg_match('/^[a-zA-Z]+/', $nomeProduto))) {
 	exit();
 }
 
-if (empty($categoria)) {
+if (empty($id_categoria)) {
 	$retorno = array('codigo' => 0, 'mensagem' => 'Escolha a categoria!');
 	echo json_encode($retorno);
 	exit();
