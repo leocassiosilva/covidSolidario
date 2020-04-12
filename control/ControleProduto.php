@@ -31,8 +31,6 @@ if (!(preg_match('/^[a-zA-Z]+/', $nomeProduto))) {
 	exit();
 }
 
-
-
 if (empty($categoria)) {
 	$retorno = array('codigo' => 0, 'mensagem' => 'Escolha a categoria!');
 	echo json_encode($retorno);
@@ -47,12 +45,18 @@ if (empty($quantidade)) {
 
 
 $produto->setNome($nomeProduto);
-$produto->setQuantidade($quantidade);
 $categoria->setId_categoria($id_categoria);
 
-
-$verificar = $produtoDAO->verificar($produto, $categoria);
-
-//var_dump($verificar);
+/*Recebe o retorno da verificação de existencia do protudo no banco de dados*/
+$verificar = $produtoDAO->verificar($produto);
+/**/
+$resultProduto = 0;
+if (!($verificar == 1)) {
+	echo "Produto cadastrado";
+	$resultProduto = $produtoDAO->cadastro($produto, $categoria);
+}
+if ($verificar == 1 || $resultProduto == 1) {
+	echo "doação cadastrada";
+}
 
 ?>

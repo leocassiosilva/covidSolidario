@@ -24,10 +24,10 @@ function pesquisarComparar($palavra, $nome)
 {
 	foreach ($palavra as $v) {        
 		if ($v == $nome) {
-			return "Existe";
+			return true;
 		}		
 	}
-	return "Não existe";
+	return false;
 }
 
 ?>

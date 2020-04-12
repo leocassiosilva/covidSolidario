@@ -17,12 +17,10 @@ class produtoDAO
   }
 
 
-  public function verificar(Produto $produto, Categoria $categoria)
+  public function verificar(Produto $produto)
   {
 
     $nome = $produto->getNome();
-    $id_categoria = $categoria->getId_categoria();
-
 
     $nomeSemAcento = retirarAcento($nome);
     $nomeMaiusculo = maiuscula($nomeSemAcento);
@@ -44,11 +42,45 @@ class produtoDAO
 
    $retorno = pesquisarComparar($palavra, $nomeMaiusculo);
 
-   echo $retorno;
-
-
-
+   if ($retorno) {
+    return 1;
+  }else {
+   return 0;
+ }
 }
+
+public function cadastro(Produto $produto, Categoria $categoria)
+{
+  $nome = $produto->getNome();
+  $id_categoria = $categoria->getId_categoria();
+
+  $sql =  "INSERT INTO produto(nome, id_categoria) VALUES (:nome, :id_categoria)";
+  $query = $this->conexao->conectar()->prepare($sql);
+  $query->bindValue(":nome", $nome);
+  $query->bindValue(":id_categoria", $id_categoria);
+  $query->execute();
+
+  if ($query->rowCount()){
+    return 1;
+  }
+}
+
+public function cadastro(Produto $produto, Usuario $usuario)
+{
+  $nome = $produto->getNome();
+  $id_categoria = $categoria->getId_categoria();
+
+  $sql =  "INSERT INTO produto(nome, id_categoria) VALUES (:nome, :id_categoria)";
+  $query = $this->conexao->conectar()->prepare($sql);
+  $query->bindValue(":nome", $nome);
+  $query->bindValue(":id_categoria", $id_categoria);
+  $query->execute();
+
+  if ($query->rowCount()){
+    return 1;
+  }
+}
+
 
 }
 ?>
