@@ -30,93 +30,94 @@
   </nav>
 
 
-<div class="container" style="padding-top: 50px;">
-  <div class="row align-items-start">
-    <div class="col">
+  <div class="container" style="padding-top: 50px;">
+    <div class="row align-items-start">
+      <div class="col">
 
-      <div class="card">
+        <div class="card">
           <div class="card-body">
             <h5 class="card-title">Cadastrar Doação</h5>
             <p class="card-text">Para realizar o seu cadastro...</p>
-                <button id="cadProd" class="btn btn-primary">Cadastrar Doação</button>
-
+            <button id="cadProd" class="btn btn-primary">Cadastrar Doação</button>
+          </div>
+          <div id="login-alert">
+            <span id="mensagem"></span>
           </div>
         </div>
-    </div>
-    <div class="col">
+      </div>
+      <div class="col">
        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Listar Doação</h5>
-            <p class="card-text">Para realizar o seu cadastro...</p>
-                    <button id="listar" class="btn btn-primary">Listar</button>
+        <div class="card-body">
+          <h5 class="card-title">Listar Doação</h5>
+          <p class="card-text">Para realizar o seu cadastro...</p>
+          <button id="listar" class="btn btn-primary">Listar</button>
 
 
-          </div>
         </div>
+      </div>
     </div>
   </div>
   <div class="row align-items-start" style="padding-top: 20px;">
     <div class="col">
       <div class="card" id="mostrar">
-          <div class="card-body">
-            <h5 class="card-title">Cadastrar Doação</h5>
-            <form>
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                     <label for="inputNome">Nome</label>
-                     <input type="text" class="form-control" name="nome" id="nome" >
-                   </div>
-                 </div>
-                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                     <label for="categoria">Categoria</label>
-                     <select name="categoria" id="categoria" class="form-control">
-                     </select>
-                   </div>
-                   <div class="form-group col-md-6">
-                    <label for="inputQuantidade">Quantidade</label>
-                    <input type="number" class="form-control" name="quantidade" id="quantidade" required=""
-                    placeholder="10">
-                  </div>
-                </div>
-
-                 <button type="submit" class="btn btn-success btn-lg " id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
-               </form>
-
+        <div class="card-body">
+          <h5 class="card-title">Cadastrar Doação</h5>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+               <label for="inputNome">Nome</label>
+               <input type="text" class="form-control" name="nome" id="nome" >
+             </div>
+           </div>
+           <div class="form-row">
+            <div class="form-group col-md-6">
+             <label for="categoria">Categoria</label>
+             <select name="categoria" id="categoria" class="form-control">
+             </select>
+           </div>
+           <div class="form-group col-md-6">
+            <label for="inputQuantidade">Quantidade</label>
+            <input type="number" class="form-control" name="quantidade" id="quantidade" required=""
+            placeholder="10">
           </div>
         </div>
-    </div>
-    <div class="col">
-      <div class="card" id="apresentar">
-          <div class="card-body">
-            <h5 class="card-title">Cadastrar Doação</h5>
-            <form>
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                     <label for="inputNome">Nome</label>
-                     <input type="text" class="form-control" name="nome" id="nome" >
-                   </div>
-                 </div>
-                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                     <label for="categoria">Categoria</label>
-                     <select name="categoria" id="categoria" class="form-control">
-                     </select>
-                   </div>
-                   <div class="form-group col-md-6">
-                    <label for="inputQuantidade">Quantidade</label>
-                    <input type="number" class="form-control" name="quantidade" id="quantidade" required=""
-                    placeholder="10">
-                  </div>
-                </div>
+        <button id="btnCadProduto" name="btnCadProduto" class="btn btn-success btn-lg ">Listar</button>
+      </form>
 
-                 <button type="submit" class="btn btn-success btn-lg " id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
-               </form>
-
-          </div>
-        </div>
     </div>
   </div>
+</div>
+<div class="col">
+  <div class="card" id="apresentar">
+    <div class="card-body">
+      <h5 class="card-title">Cadastrar Doação</h5>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+           <label for="inputNome">Nome</label>
+           <input type="text" class="form-control" name="nome" id="nome" >
+         </div>
+       </div>
+       <div class="form-row">
+        <div class="form-group col-md-6">
+         <label for="categoria">Categoria</label>
+         <select name="categoria" id="categoria" class="form-control">
+         </select>
+       </div>
+       <div class="form-group col-md-6">
+        <label for="inputQuantidade">Quantidade</label>
+        <input type="number" class="form-control" name="quantidade" id="quantidade" required=""
+        placeholder="10">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success btn-lg " id="btnCadProduto" name="btnCadProduto">Cadastrar</button>
+  </form>
+
+</div>
+</div>
+</div>
+</div>
 </div><br>
 
 <?php include 'layout/footer.php';?>
@@ -126,5 +127,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../resources/js/home.js"> </script>
 <script type="text/javascript" src="../resources/js/funcoes.js"> </script>
+<script type="text/javascript" src="../resources/js/valida_produto.js">
+
+</script>
 
 </html>

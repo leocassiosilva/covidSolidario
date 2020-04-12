@@ -2,7 +2,7 @@ $('document').ready(function(){
   function curso(){
     $('#categoria').hide();
     $.getJSON(
-      '../control/ControleProduto.php?search=',
+      '../control/ControleCategoria.php?search=',
       {
         acao: "categoria",
         ajax: 'true'
