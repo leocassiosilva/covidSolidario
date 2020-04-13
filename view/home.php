@@ -49,7 +49,7 @@ if($_SESSION["logado"] == true){
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Cadastrar Doação</h5>
-            <p class="card-text">Para realizar o seu cadastro...</p>
+            <p class="card-text">Para realizar o seu cadastro clique no botão abaixo</p>
             <button id="cadProd" class="btn btn-primary">Cadastrar Doação</button>
           </div>
         </div>
@@ -58,7 +58,7 @@ if($_SESSION["logado"] == true){
        <div class="card">
         <div class="card-body">
           <h5 class="card-title">Listar Doação</h5>
-          <p class="card-text">Para realizar o seu cadastro...</p>
+          <p class="card-text">Para pesquisar doadores clique no botão abaixo.</p>
           <button id="listar" class="btn btn-primary">Listar</button>
 
 
@@ -70,7 +70,7 @@ if($_SESSION["logado"] == true){
     <div class="col">
       <div class="card" id="mostrar">
         <div class="card-body">
-          <h5 class="card-title">Cadastrar Doação</h5>
+          <h5 class="card-title">Listar Doações</h5>
           <form method="POST"> 
             <div class="form-row">
               <div class="form-group col-md-12">
@@ -100,30 +100,26 @@ if($_SESSION["logado"] == true){
   <div class="card" id="apresentar">
     <div class="card-body">
       <h5 class="card-title">Cadastrar Doação</h5>
-      <form>
-        <div class="form-row">
-          <div class="form-group col-md-12">
-           <label for="inputNome">Nome</label>
-           <input type="text" class="form-control" name="nome" id="nome" >
-         </div>
-       </div>
+      <form method="POST" action="../control/ListarProdutos.php">
        <div class="form-row">
-        <div class="form-group col-md-6">
-         <label for="categoria">Categoria</label>
-         <select name="categoria" id="categoria" class="form-control">
-         </select>
-       </div>
-       <div class="form-group col-md-6">
-        <label for="inputQuantidade">Quantidade</label>
-        <input type="number" class="form-control" name="quantidade" id="quantidade" required=""
-        placeholder="10">
+         <div class="form-group col-md-5">
+           <label for="inputCep">CEP</label>
+           <input type="text" class="form-control" name="cep" id="cep" required=""
+           placeholder="99999-999">
+         </div>
+         <div class="form-group col-md-5">
+          <label for="inputCidade">Cidade</label>
+          <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputUf">UF</label>
+          <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
+        </div>
       </div>
-    </div>
+      <button type="submit" class="btn btn-success btn-lg " id="btnListar" name="btnListar">Pesquisar</button>
+    </form>
 
-    <button type="submit" class="btn btn-success btn-lg " id="btnCadProduto" name="btnCadProduto">Cadastrar</button>
-  </form>
-
-</div>
+  </div>
 </div>
 </div>
 </div>
@@ -139,6 +135,7 @@ if($_SESSION["logado"] == true){
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
 <script type="text/javascript" src="../resources/js/home.js"> </script>
 <script type="text/javascript" src="../resources/js/funcoes.js"> </script>
 <script type="text/javascript" src="../resources/js/valida_produto.js">

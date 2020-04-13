@@ -31,17 +31,17 @@ class produtoDAO
 
     if ($query->rowCount()){
       return $this->conexao->conectar()->lastInsertId();
-   }
+    }
 
 
- }
+  }
 
- public function cadastroDoacao(Produto $produto, Usuario $usuario, $quantidade)
- {
-  $id_produto = $produto->getId_produto();
-  $id_usuario = $usuario->getId_usuario();
+  public function cadastroDoacao(Produto $produto, Usuario $usuario, $quantidade)
+  {
+    $id_produto = $produto->getId_produto();
+    $id_usuario = $usuario->getId_usuario();
 
-  $sql =  "INSERT INTO usuario_produto(quantidade, id_produto, id_usuario) VALUES (:quantidade, :id_produto, :id_usuario)";
+    $sql =  "INSERT INTO usuario_produto(quantidade, id_produto, id_usuario) VALUES (:quantidade, :id_produto, :id_usuario)";
     $query = $this->conexao->conectar()->prepare($sql);
     $query->bindValue(":quantidade", $quantidade);
     $query->bindValue(":id_produto", $id_produto);
@@ -52,8 +52,19 @@ class produtoDAO
       return 1;
     }
 
-}
+  }
 
+  public function listar($cep)
+  {
+
+
+   $query = $this->conexao->conectar()->prepare("SELECT * FROM usuario WHERE cep = :cep");
+   $query->bindValue(":cep", $cep);
+   $query->execute();
+   $resultado = $query->fetch(PDO::FETCH_ASSOC);
+
+   var_dump($resultado);
+ }
 
 }
 ?>

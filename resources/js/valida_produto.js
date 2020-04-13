@@ -26,4 +26,81 @@ $('document').ready(function(){
 			}
 		});
 	});
+
+
+
+	$("#cep").mask("99999-999");
+
+	function limpa_formulário_cep() {
+		$("#cidade").val("");
+		$("#uf").val("");
+	}
+
+	//Aqui é quando o campo cep perde o foco ai chama essa função.
+	$("#cep").blur(function() {
+
+		var cep = $(this).val().replace(/\D/g, '');
+
+		if (cep != "") {
+
+			var validacep = /^[0-9]{8}$/;
+
+			if(validacep.test(cep)) {
+
+				$("#cidade").val("...");
+				$("#uf").val("...");
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                        	if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                            } 
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } 
+                    else {
+                    	limpa_formulário_cep();
+                    	alert("Formato de CEP inválido.");
+                    }
+                } 
+                else {
+                	limpa_formulário_cep();
+                }
+            });
+
+
+	$('#btnListar').on('click', function(){
+		var cep = $("#cep").val();
+		var cidade = $("#cidade").val();
+		var uf = $("#uf").val();
+		alert(cep);
+		$.ajax({
+			type : 'POST',
+			url  : '../control/ListarProdutos.php',
+			data:{
+				cep: cep,
+				cidade:cidade,
+				uf:uf
+			},
+			dataType: 'json',
+
+			success :  function(response){
+				console.log(response.codigo);   
+				if(response.codigo == 1){
+					$('#mensagem').append(response.mensagem);
+					window.location.href = "local.php";
+				}
+				else{           
+					$("#cad-alert").css('display', 'block', 'background:red');
+					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
+				}
+			}
+		});
+	});
 });
