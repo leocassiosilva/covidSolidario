@@ -10,7 +10,7 @@ require_once("../model/Categoria.php");
 require_once("../model/Usuario.php");
 $produtoDAO = new produtoDAO();
 
-$produtoDAO->listar($cep);
+$resultado = $produtoDAO->listar($cep, $id_usuario);
 
-
+    var_dump($resultado);
 ?>

@@ -54,17 +54,21 @@ class produtoDAO
 
   }
 
-  public function listar($cep)
+  public function listar($value)
   {
+    $cep = $value;
+    $query = $this->conexao->conectar()->prepare('SELECT usuario.nome as nome_usuario, usuario.celular as celular, usuario.cep as cep, usuario.cidade as cidade, usuario.uf as uf, produto.nome as nome_produto, usuario_produto.quantidade as quantidade FROM usuario
+      INNER JOIN usuario_produto
+      ON(usuario.id_usuario = usuario_produto.id_usuario)
+      INNER JOIN produto
+      ON(produto.id_produto = usuario_produto.id_produto)
+      WHERE cep = :cep');
+    $query->bindValue(":cep", $cep);
+    $query->execute();
+    $resultado = $query->fetch(PDO::FETCH_ASSOC);
 
-
-   $query = $this->conexao->conectar()->prepare("SELECT * FROM usuario WHERE cep = :cep");
-   $query->bindValue(":cep", $cep);
-   $query->execute();
-   $resultado = $query->fetch(PDO::FETCH_ASSOC);
-
-   var_dump($resultado);
- }
+    return $resultado;
+  }
 
 }
 ?>
