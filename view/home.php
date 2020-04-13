@@ -52,9 +52,6 @@ if($_SESSION["logado"] == true){
             <p class="card-text">Para realizar o seu cadastro...</p>
             <button id="cadProd" class="btn btn-primary">Cadastrar Doação</button>
           </div>
-          <div id="login-alert">
-            <span id="mensagem"></span>
-          </div>
         </div>
       </div>
       <div class="col">
@@ -129,6 +126,11 @@ if($_SESSION["logado"] == true){
 </div>
 </div>
 </div>
+</div>
+<div class="row" id="login-alert">
+  <div class="col-6">
+    <span id="mensagem"></span>
+  </div>
 </div>
 </div><br>
 
