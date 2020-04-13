@@ -12,5 +12,8 @@ $produtoDAO = new produtoDAO();
 
 $resultado = $produtoDAO->listar($cep, $id_usuario);
 
-    var_dump($resultado);
+foreach ($resultado as  $value) {
+	 echo "Nome: {$resultado['nome_usuario']} <br />";
+}
+    //var_dump($resultado);
 ?>
