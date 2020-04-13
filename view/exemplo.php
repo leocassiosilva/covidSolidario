@@ -29,9 +29,27 @@
       </div>
     </div>
   </nav>
+<form name="frm-newsletter" id="frm-newsletter" method="post" action="">
+    <label for="email">Seu e-mail</label>
+    <input type="text" name="email" id="email" size="60" />
+    <input type="button" id="btn-newsletter" value="OK" />
+</form>
 
-<div id="status"></div>
-<button id="botao1">CLICAR</button>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#btn-newsletter').m2brDialog({
+        tipo      : 'erro',
+        titulo      : 'Erro!',
+        texto      : 'Por favor, preencha o campo e-mail',
+        condicao    : {
+            origem    : function() {
+              return ($('#email').val() ? true : false);
+      },
+            retorno    : function() { return true; }
+        }
+    });
+});
+</script>
 <!-- Footer -->
 <footer class="py-4" style="background-color: #bdbfc1; 
 ">

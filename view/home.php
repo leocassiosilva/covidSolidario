@@ -71,7 +71,7 @@ if($_SESSION["logado"] == true){
       <div class="card" id="mostrar">
         <div class="card-body">
           <h5 class="card-title">Cadastrar Doação</h5>
-          <form method="POST" action="../control/ControleProduto.php"> 
+          <form method="POST"> 
             <div class="form-row">
               <div class="form-group col-md-12">
                <label for="inputNome">Nome</label>
@@ -90,7 +90,7 @@ if($_SESSION["logado"] == true){
             placeholder="10">
           </div>
         </div>
-        <button id="btnCadProduto" name="btnCadProduto" class="btn btn-success btn-lg ">Listar</button>
+        <button id="btnCadProduto" name="btnCadProduto" class="btn btn-success btn-lg ">Cadastrar</button>
       </form>
 
     </div>

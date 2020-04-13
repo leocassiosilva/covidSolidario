@@ -8,9 +8,6 @@
     <?php include 'layout/navbar.php';?>
 
  <div class="container py-5">
-    <div id="login-alert">
-        <span id="mensagem"></span>
-    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-12 text-center mb-2">
@@ -24,7 +21,7 @@
                             <h3 class="mb-0">Login</h3>
                         </div>
                         <div class="card-body">
-                            <form class="form" role="form"  id="login-form" novalidate="" method="POST" action="../control/ControleLogin.php">
+                            <form class="form" role="form"  id="login-form" novalidate="" method="POST">
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
                                     <input type="text" class="form-control form-control-lg rounded-0" name="email" id="email" required="">
@@ -47,6 +44,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mx-auto" id="login-alert">
+        <span id="mensagem"></span>
+    </div>
     </div>
 </div>
 <?php include 'layout/footer.php';?>
