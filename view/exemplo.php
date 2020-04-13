@@ -10,7 +10,8 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <nav class="navbar  navbar-expand-lg navbar-dark " style="background-color: #5abba7;">
+  <nav class="navbar  navbar-expand-lg navbar-dark " style="background-color: #5abba7; width: 100%;
+">
     <div class="container">
       <a class="navbar-brand" href="#">Covid Solidário</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
@@ -31,6 +32,14 @@
 
 <div id="status"></div>
 <button id="botao1">CLICAR</button>
+<!-- Footer -->
+<footer class="py-4" style="background-color: #bdbfc1; 
+">
+
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:</div>
+
+</footer>
+<!-- Footer -->
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

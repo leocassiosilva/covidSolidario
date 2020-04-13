@@ -2,6 +2,7 @@
 <head>
   <title>Cadastro de Usuario</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" type="text/css" href="../resources/css/index.css" media="screen" />
 </head>
 <body>
       <?php include 'layout/navbar.php';?>
