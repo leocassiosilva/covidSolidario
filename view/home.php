@@ -70,8 +70,8 @@ if($_SESSION["logado"] == true){
     <div class="col">
       <div class="card" id="mostrar">
         <div class="card-body">
-          <h5 class="card-title">Listar Doações</h5>
-          <form method="POST"> 
+          <h5 class="card-title">Cadstrar Doações</h5>
+          <form method="POST" action="../control/ControleProduto.php"> 
             <div class="form-row">
               <div class="form-group col-md-12">
                <label for="inputNome">Nome</label>
@@ -99,7 +99,7 @@ if($_SESSION["logado"] == true){
 <div class="col">
   <div class="card" id="apresentar">
     <div class="card-body">
-      <h5 class="card-title">Cadastrar Doação</h5>
+      <h5 class="card-title">Listar Doação</h5>
       <form method="POST" action="../control/ListarProdutos.php">
        <div class="form-row">
          <div class="form-group col-md-5">

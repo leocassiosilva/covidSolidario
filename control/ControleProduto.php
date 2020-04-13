@@ -28,7 +28,7 @@ if (empty($nomeProduto)) {
 }
 //Verificar se o numero contem caractere invalidos como numeros e 
 if (!(preg_match('/^[a-zA-Z]+/', $nomeProduto))) {
-    $retorno = array('codigo' => 0, 'mensagem' => 'Digite um nome sem caracterer especiaais como numeros e [#@$%]');
+	$retorno = array('codigo' => 0, 'mensagem' => 'Digite um nome sem caracterer especiaais como numeros e [#@$%]');
 	echo json_encode($retorno);
 	exit();
 }
@@ -48,6 +48,28 @@ $produto->setNome($nomeProduto);
 $categoria->setId_categoria($id_categoria);
 $usuario->setId_usuario($id_usuario);
 
+$verificarProduto = $produtoDAO->verificar($produto);
+
+//var_dump($verificarProduto);
+
+if (empty($verificarProduto)) {
+	$resultProduto = $produtoDAO->cadastro($produto, $categoria);
+	$produto->setId_produto($resultProduto);
+	if (!empty($resultProduto)) {
+		$retornoDoacao = $produtoDAO->cadastroDoacao($produto, $usuario, $quantidade);
+	}
+}else {
+	$produto->setId_produto($verificarProduto);
+	$retornoDoacao = $produtoDAO->cadastroDoacao($produto, $usuario, $quantidade);
+	//echo $produto->getId_produto();
+}
+
+if (!empty($retornoDoacao)) {
+	$retorno = array('codigo' => 1, 'mensagem' => 'Doação Realizada com Sucesso!');
+    echo json_encode($retorno);
+    exit();
+}
+/*
 $resultProduto = $produtoDAO->cadastro($produto, $categoria);
 $produto->setId_produto($resultProduto);
 
@@ -58,5 +80,5 @@ if (!empty($retornoDoacao)) {
 	$retorno = array('codigo' => 1, 'mensagem' => 'Doação Realizada com Sucesso!');
     echo json_encode($retorno);
     exit();
-}
+}*/
 ?>

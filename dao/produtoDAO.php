@@ -3,7 +3,6 @@
 include("Conexao.php");
 require_once("../model/Produto.php");
 require_once("../model/Categoria.php");
-require_once("../control/Funcoes.php");
 require_once("../model/Usuario.php");
 
 
@@ -17,6 +16,22 @@ class produtoDAO
     $this->conexao = new Conexao();
   }
 
+
+  public function verificar(Produto $produto)
+  {
+    $nome = $produto->getNome();
+    $query = $this->conexao->conectar()->prepare("SELECT * FROM produto WHERE nome LIKE :nome");
+    $query->bindValue(":nome", "%".$nome."%", PDO::PARAM_STR);
+    $query->execute();
+    $resultado = $query->fetch(PDO::FETCH_ASSOC);
+
+    if (!empty($resultado)) {
+      return $resultado['id_produto'];
+    }else {
+      return $resultado;
+    }
+    
+  }
 
   public function cadastro(Produto $produto, Categoria $categoria)
   {
