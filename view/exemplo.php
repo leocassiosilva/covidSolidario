@@ -29,18 +29,20 @@
     </div>
   </div>
 </nav>
-<table border="1" width="500">
-  <thead>
-    <tr>
-      <th>Nome Usuario</th>
-      <th>Celular</th>
-      <th>Nome Produto</th>
-    </tr>
-  </thead>
-  <tbody id="tabela">
-  </tbody>
-</table>
-
+ <button id="btnLogin">Pesquisar</button>
+  
+<div class="resultadoForm">
+        <table>
+            <thead>
+            <tr>
+                <td>ID</td>
+                <td>NOME</td>
+                <td>ID_CATEGORIA</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 <!-- Footer -->
 <footer class="py-4" style="background-color: #bdbfc1; 
 ">
@@ -57,29 +59,21 @@
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    var cep = "59980-000";
-    var cidade = "José da Penha";
-    var uf = "RN";
-    function curso(){
-    $('#tabela').empty(); //Limpando a tabela
-    $.getJSON(
-      '../control/ListarProdutos.php',
-      {
-        data:{
-          cep: cep,
-          cidade:cidade,
-          uf:uf
-        },
-        ajax: 'true'
-      }, function(j){
-        for(var i=0;j.length>i;i++){
-        //Adicionando registros retornados na tabela
-        $('#tabela').append('<tr><td>'+j[i].nome_usuario +'</td><td>'+j[i].celular+'</td><td>'+j[i].cidade+'</td></tr>');
-        }
-
+    $('#btnLogin').on('click', function(){
+      alert("");
+      $.ajax({
+        url:'../control/ListarProdutos.php',
+        type:'post',
+        dataType:'json',
+        success :  function(response){  
+          $.each(response,function (key, value) {
+            $('.resultadoForm').append("Nome: " + value.nome + '<br>');
+          });
+        } 
       });
-  }
-  curso();
-});
+    });
+  });
+
+</script>
 </script>
 </html>

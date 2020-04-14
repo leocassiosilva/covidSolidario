@@ -80,7 +80,7 @@ class produtoDAO
       WHERE cep = :cep');
     $query->bindValue(":cep", $cep);
     $query->execute();
-    $resultado = $query->fetch(PDO::FETCH_ASSOC);
+    $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
 
     return $resultado;
   }

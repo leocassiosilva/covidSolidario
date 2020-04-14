@@ -10,10 +10,9 @@ require_once("../model/Categoria.php");
 require_once("../model/Usuario.php");
 $produtoDAO = new produtoDAO();
 
-$resultado = $produtoDAO->listar($cep, $id_usuario);
+$resultado = $produtoDAO->listar($cep);
+//$resultado = $produtoDAO->listar();
 
-
-var_dump($resultado);
 
 echo json_encode($resultado);
 

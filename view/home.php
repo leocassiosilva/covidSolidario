@@ -122,28 +122,25 @@ if($_SESSION["logado"] == true){
 </div>
 </div>
 </div>
-<div class="row" id="login-alert">
-  <div class="col-6">
+<div class="row">
+  <div class="col-6" id="login-alert">
     <span id="mensagem"></span>
   </div>
-</div>
-<div class="row">
-  <div class="col-6">
-    <table border="1" width="500">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>E-mail</th>
-        </tr>
-      </thead>
-      <tbody id="tabela">
-      </tbody>
-    </table>
+   <div class="col-6">
+    <div class="resultadoForm">
+      <table>
+            <thead>
+            <tr>
+                <td>NOME</td>
+                <td>Celular</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
   </div>
 </div>
 </div><br>
-
 <?php include 'layout/footer.php';?>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -153,35 +150,5 @@ if($_SESSION["logado"] == true){
 <script type="text/javascript" src="../resources/js/home.js"> </script>
 <script type="text/javascript" src="../resources/js/funcoes.js"> </script>
 <script type="text/javascript" src="../resources/js/valida_produto.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('#tabela').empty();
-    $('#btnListar').on('click', function(){
-      var cep = $("#cep").val();
-      var cidade = $("#cidade").val();
-      var uf = $("#uf").val();
-      alert(cep);
-      $.ajax({
-        type : 'POST',
-        url  : '../control/ListarProdutos.php',
-        data:{
-          cep: cep,
-          cidade:cidade,
-          uf:uf
-        },
-        
-        dataType: 'json',
-        success: function(dados){
-          for(var i=0;dados.length>i;i++){
-        //Adicionando registros retornados na tabela
-        $('#tabela').append('<tr><td>'+dados[i].nome_usuario+'</td><td>'+dados[i].celular+'</td><td>'+dados[i].cidade+'</td></tr>');
-      }
-    }
-  })
-    });
-  });
-
-
-
-</script>
+<script type="text/javascript" src="../resources/js/listar_produtos.js"></script>
 </html>

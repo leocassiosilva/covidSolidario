@@ -1,26 +1,20 @@
 $(document).ready(function(){
 	$('#btnListar').on('click', function(){
-		alert("ola");
 		var cep = $("#cep").val();
-		var cidade = $("#cidade").val();
-		var uf = $("#uf").val();
 		alert(cep);
 		$.ajax({
-			type : 'POST',
-			url  : '../control/ListarProdutos.php',
+			url:'../control/ListarProdutos.php',
+			type:'post',
 			data:{
-				cep: cep,
-				cidade:cidade,
-				uf:uf
+				cep: cep
 			},
-			dataType: 'json',
-
-			success :  function(response){
-				for(var i=0;response.length>i;i++){
-				//Adicionando registros retornados na tabela
-				$('#tabela').append('<tr><td>'+response[i].nome_usuario +'</td><td>'+response[i].celular+'</td><td>'+response[i].cidade+'</td></tr>');
-				}
-			}
+			dataType:'json',
+			success :  function(response){  
+				$.each(response,function (key, value) {
+					alert(value.nome_usuario);
+                    $('.resultadoForm table tbody').append("<tr> <td>" + value.nome_usuario + "</td> <td>" + value.celular + "</td> </tr> ").style.display = 'block';
+				});
+			} 
 		});
 	});
 });
