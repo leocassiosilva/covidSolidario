@@ -1,12 +1,29 @@
 $(document).on('click', '#cadProd', function() {
-  $("footer").css({"position":"relative"});
-  $("#apresentar").css("display", "none");
-    $("table").css("display", "none");
-  $("#mostrar").toggle();
+	$("#listar").attr("disabled", true);
+	$("footer").css({"position":"relative"});
+	$("#mostrar").toggle();
+	$(this).attr("id","botao2");
+
+});
+
+$(document).on('click', '#botao2', function() {
+	$("footer").css({"position":"absolute"});
+	$("#listar").attr("disabled", false);
+	$("#mostrar").toggle();
+	$(this).attr("id","cadProd");
 });
 
 $(document).on('click', '#listar', function() {
-  $("footer").css({"position":"relative"});
-  $("#mostrar").css("display", "none");
-  $("#apresentar").toggle();
+	$("#cadProd").attr("disabled", true);
+	$("footer").css({"position":"relative"});
+	$("#apresentar").toggle();
+	$(this).attr("id","listarPro");
+
+});
+
+$(document).on('click', '#listarPro', function() {
+	$("#cadProd").attr("disabled", false);
+	$("footer").css({"position":"absolute"});
+	$("#apresentar").toggle();
+	$(this).attr("id","listar");
 });
