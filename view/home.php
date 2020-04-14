@@ -50,7 +50,7 @@ if($_SESSION["logado"] == true){
           <div class="card-body">
             <h5 class="card-title">Cadastrar Doação</h5>
             <p class="card-text">Para realizar o seu cadastro clique no botão abaixo</p>
-            <button id="cadProd" class="btn btn-primary">Cadastrar Doação</button>
+            <button id="cadProd" name="cadProd" class="btn btn-primary">Cadastrar Doação</button>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ if($_SESSION["logado"] == true){
         <div class="card-body">
           <h5 class="card-title">Listar Doação</h5>
           <p class="card-text">Para pesquisar doadores clique no botão abaixo.</p>
-          <button id="listar" class="btn btn-primary">Listar</button>
+          <button id="listar" name="listar" class="btn btn-primary">Listar</button>
 
 
         </div>
@@ -71,7 +71,7 @@ if($_SESSION["logado"] == true){
       <div class="card" id="mostrar">
         <div class="card-body">
           <h5 class="card-title">Cadastrar Doações</h5>
-          <form method="POST" action="../control/ControleProduto.php"> 
+          <form method="POST" id="formCad"> 
             <div class="form-row">
               <div class="form-group col-md-12">
                <label for="inputNome">Nome</label>
@@ -156,7 +156,7 @@ if($_SESSION["logado"] == true){
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
 <script type="text/javascript" src="../resources/js/home.js"> </script>
-<script type="text/javascript" src="../resources/js/funcoes.js"> </script>
+<script type="text/javascript" src="../resources/js/funcao.js"> </script>
 <script type="text/javascript" src="../resources/js/valida_produto.js"></script>
 <script type="text/javascript" src="../resources/js/listar_produtos.js"></script>
 </html>
