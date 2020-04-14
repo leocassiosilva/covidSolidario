@@ -70,7 +70,7 @@ if($_SESSION["logado"] == true){
     <div class="col">
       <div class="card" id="mostrar">
         <div class="card-body">
-          <h5 class="card-title">Cadstrar Doações</h5>
+          <h5 class="card-title">Cadastrar Doações</h5>
           <form method="POST" action="../control/ControleProduto.php"> 
             <div class="form-row">
               <div class="form-group col-md-12">
@@ -100,7 +100,7 @@ if($_SESSION["logado"] == true){
   <div class="card" id="apresentar">
     <div class="card-body">
       <h5 class="card-title">Listar Doação</h5>
-      <form method="POST" action="../control/ListarProdutos.php">
+      <form method="POST">
        <div class="form-row">
          <div class="form-group col-md-5">
            <label for="inputCep">CEP</label>
@@ -118,7 +118,6 @@ if($_SESSION["logado"] == true){
       </div>
       <button type="submit" class="btn btn-success btn-lg " id="btnListar" name="btnListar">Pesquisar</button>
     </form>
-
   </div>
 </div>
 </div>
@@ -126,6 +125,21 @@ if($_SESSION["logado"] == true){
 <div class="row" id="login-alert">
   <div class="col-6">
     <span id="mensagem"></span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <table border="1" width="500">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody id="tabela">
+      </tbody>
+    </table>
   </div>
 </div>
 </div><br>
@@ -138,8 +152,36 @@ if($_SESSION["logado"] == true){
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
 <script type="text/javascript" src="../resources/js/home.js"> </script>
 <script type="text/javascript" src="../resources/js/funcoes.js"> </script>
-<script type="text/javascript" src="../resources/js/valida_produto.js">
+<script type="text/javascript" src="../resources/js/valida_produto.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#tabela').empty();
+    $('#btnListar').on('click', function(){
+      var cep = $("#cep").val();
+      var cidade = $("#cidade").val();
+      var uf = $("#uf").val();
+      alert(cep);
+      $.ajax({
+        type : 'POST',
+        url  : '../control/ListarProdutos.php',
+        data:{
+          cep: cep,
+          cidade:cidade,
+          uf:uf
+        },
+        
+        dataType: 'json',
+        success: function(dados){
+          for(var i=0;dados.length>i;i++){
+        //Adicionando registros retornados na tabela
+        $('#tabela').append('<tr><td>'+dados[i].nome_usuario+'</td><td>'+dados[i].celular+'</td><td>'+dados[i].cidade+'</td></tr>');
+      }
+    }
+  })
+    });
+  });
+
+
 
 </script>
-
 </html>

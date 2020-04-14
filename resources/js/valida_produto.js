@@ -72,35 +72,7 @@ $('document').ready(function(){
                 else {
                 	limpa_formulário_cep();
                 }
+
             });
 
-
-	$('#btnListar').on('click', function(){
-		var cep = $("#cep").val();
-		var cidade = $("#cidade").val();
-		var uf = $("#uf").val();
-		alert(cep);
-		$.ajax({
-			type : 'POST',
-			url  : '../control/ListarProdutos.php',
-			data:{
-				cep: cep,
-				cidade:cidade,
-				uf:uf
-			},
-			dataType: 'json',
-
-			success :  function(response){
-				console.log(response.codigo);   
-				if(response.codigo == 1){
-					$('#mensagem').append(response.mensagem);
-					window.location.href = "local.php";
-				}
-				else{           
-					$("#cad-alert").css('display', 'block', 'background:red');
-					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
-				}
-			}
-		});
-	});
 });
