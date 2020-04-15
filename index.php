@@ -43,7 +43,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Atenção <small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><p>Qualquer pessoa que deseja doar ou receber doação. Mas para isso é preciso com essa pessoas realize um simples cadastro no site.</p></li>
+          <li><p>Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p></li>
         </ul>
       </div>
     </div>
@@ -54,7 +54,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Atenção<small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formularios.</p></li>
+          <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
         </ul>
       </div>
     </div>
@@ -65,7 +65,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Atenção <small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><p>Para doar você precisa esta logado no sistema, informar o nome do produto/objeto que deseja doar, escolher a categoria e quantidade.</p></li>
+          <li><p>Para doar você precisa estar logado no sistema, informar o nome do produto/objeto que deseja doar, escolher a categoria e quantidade.</p></li>
         </ul>
       </div>
     </div>
