@@ -53,5 +53,38 @@ $(document).ready(function() {
                     limpa_formulário_cep();
                 }
             });
+            $('#btnCadastrar').on('click', function(){
+                var nome = $("#nome").val();
+                var celular = $("#celular").val();
+                var email = $("#email").val();
+                var cep = $("#cep").val();
+                var cidade = $("#cidade").val();
+                var uf = $("#uf").val();
+                var senha = $("#senha").val();
+                $.ajax({
+                  type : 'POST',
+                  url  : '../control/ControleUsuario.php',
+                  data:{
+                    nome: nome, 
+                    celular: celular,
+                    email: email,
+                    cep: cep,
+                    cidade:cidade,
+                    uf:uf,
+                    senha:senha
+                },
+                dataType: 'json',
 
+                success :  function(response){
+                    if(response.codigo == 1){
+                    $("#login-alert").css('display', 'none')
+                    window.location.href = "../view/home.php";
+                 }
+                 else{           
+                  $("#cad-alert").css('display', 'block', 'background:red');
+                  $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
+              }
+          }
+      });
+            });
         });

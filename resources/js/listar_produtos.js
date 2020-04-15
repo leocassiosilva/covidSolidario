@@ -1,7 +1,7 @@
 $(document).ready(function(e){
 	$('#btnListar').on('click', function(e){
 		e.preventDefault();
-		//this.blur();
+		this.blur();
 		var cep = $("#cep").val();
 		$.ajax({
 			url:'../control/ListarProdutos.php',
@@ -11,6 +11,7 @@ $(document).ready(function(e){
 			},
 			dataType:'json',
 			success :  function(response){  
+				$(".resultadoForm table tbody").empty();
 				if (response == "") {
 					$("table").css("display", "none");
 					$("#listar-alert").css('display', 'block')

@@ -5,16 +5,16 @@
   <link rel="stylesheet" type="text/css" href="../resources/css/index.css" media="screen" />
 </head>
 <body>
-      <?php include 'layout/navbar.php';?>
+  <?php include 'layout/navbar.php';?>
   <div class="container py-5">
+    <div class="row">
+      <div id="cad-alert" class="col-md-6">
+        <span id="mensagem"></span>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12">
         <div class="col-md-12 text-center mb-2">
-        </div>
-        <div class="row">
-          <div id="cad-alert" class="col-md-6">
-          <span id="mensagem"></span>
-        </div>
         </div>
         <div class="row">
           <div class="col-md-6 mx-auto">
@@ -70,7 +70,6 @@
                 </div>
               </div>
 
-
               <button type="submit" class="btn btn-success btn-lg " id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
             </form>
           </div>
@@ -80,11 +79,10 @@
   </div>
 </div>
 </div>
-    <?php include 'layout/footer.php';?>
+<?php include 'layout/footer.php';?>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
-<script src="../resources/js/valida_cadastro.js"> </script>
-
+<script src="../resources/js/valida_usuario.js"> </script>
 </html>
