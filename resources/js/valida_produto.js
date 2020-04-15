@@ -2,7 +2,6 @@ $('document').ready(function(){
 	$('#btnCadProduto').on('click', function(e){
 		e.preventDefault();
 		this.blur();
-		alert("ola");
 		var nome = $("#nome").val();
 		var categoria = $("#categoria").val();
 		var quantidade = $ ("#quantidade").val();
@@ -24,7 +23,7 @@ $('document').ready(function(){
 					$("footer").css({"position":"absolute"});
 				}
 				else{			
-					$("#login-alert").css('display', 'block')
+					$("#login-alert").css('display', 'block');
 					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
 				}
 				$("#nome").val("");

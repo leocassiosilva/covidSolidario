@@ -15,6 +15,9 @@ $cep = $_POST["cep"];
 $cidade = $_POST["cidade"];
 $uf = $_POST["uf"];
 $senha = $_POST["senha"];
+$confirmar_senha = $_POST["confirmar_senha"];
+
+
 
 $retorno = false;
 
@@ -59,6 +62,19 @@ if (empty($senha)) {
     echo json_encode($retorno);
     exit();
 }
+
+if (empty($confirmar_senha)) {
+    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha o campo confrimar senha!');
+    echo json_encode($retorno);
+    exit();
+}
+
+if ($senha != $confirmar_senha) {
+    $retorno = array('codigo' => 0, 'mensagem' => 'O Campo confirmar senha deve ser igual ao campo de senha!');
+    echo json_encode($retorno);
+    exit();
+}
+
 
 $nome = $_POST["nome"];
 $celular = $_POST["celular"];

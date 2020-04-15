@@ -30,7 +30,7 @@
   <div class="container">
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">O que é o Covid Solidário ?</h1>
-  <p class="lead">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker..</p>
+  <p class="lead">É um site que tem como objetivo facilitar a comunicação em doadores e recptores.</p>
 </div>
   </div>
 
@@ -43,8 +43,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Atenção <small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p></li>
-          
+          <li><p>Qualquer pessoa que deseja doar ou receber doação. Mas para isso é preciso com essa pessoas realize um simples cadastro no site.</p></li>
         </ul>
       </div>
     </div>
@@ -55,7 +54,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Atenção<small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p></li>
+          <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formularios.</p></li>
         </ul>
       </div>
     </div>
@@ -66,7 +65,7 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Atenção <small class="text-muted"></small></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p></li>
+          <li><p>Para doar você precisa esta logado no sistema, informar o nome do produto/objeto que deseja doar, escolher a categoria e quantidade.</p></li>
         </ul>
       </div>
     </div>

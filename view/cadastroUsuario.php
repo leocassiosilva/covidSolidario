@@ -23,7 +23,7 @@
                 <h3 class="mb-0">Cadastro</h3>
               </div>
               <div class="card-body">
-                <form>
+                <form id="formulario" name="formulario" method="POST">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                      <label for="inputNome">Nome</label>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                   <label for="inputEmail">E-mail</label>
-                  <input type="text" class="form-control" name="email" id="email" required="">
+                  <input type="email" class="form-control" name="email" id="email" required="">
                 </div>
                 <div class="form-row">
                  <div class="form-group col-md-5">
@@ -83,6 +83,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
 <script src="../resources/js/valida_usuario.js"> </script>
 </html>

@@ -1,6 +1,6 @@
 $(document).ready(function() {
- $.mask.definitions['~']='[+-]';
- $('input[type=tel]').focusout(function(){
+   $.mask.definitions['~']='[+-]';
+   $('input[type=tel]').focusout(function(){
     var phone, element;
     element = $(this);
     element.unmask();
@@ -11,9 +11,9 @@ $(document).ready(function() {
         element.mask("(99) 9999-9999?9");
     }
 }).trigger('focusout');
- $("#cep").mask("99999-999");
+   $("#cep").mask("99999-999");
 
- function limpa_formulário_cep() {
+   function limpa_formulário_cep() {
     $("#cidade").val("");
     $("#uf").val("");
 }
@@ -61,6 +61,7 @@ $(document).ready(function() {
                 var cidade = $("#cidade").val();
                 var uf = $("#uf").val();
                 var senha = $("#senha").val();
+                var confirmar_senha = $("#confirmarSenha").val();
                 $.ajax({
                   type : 'POST',
                   url  : '../control/ControleUsuario.php',
@@ -71,20 +72,24 @@ $(document).ready(function() {
                     cep: cep,
                     cidade:cidade,
                     uf:uf,
-                    senha:senha
+                    senha:senha,
+                    confirmar_senha:confirmar_senha
                 },
                 dataType: 'json',
 
                 success :  function(response){
                     if(response.codigo == 1){
-                    $("#login-alert").css('display', 'none')
-                    window.location.href = "../view/home.php";
+                     $("#cad-alert").css('display', 'block');
+                     $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );                     
+                     alert(response.mensagem);
+                     window.location.href = "../view/login.php";
                  }
-                 else{           
-                  $("#cad-alert").css('display', 'block', 'background:red');
-                  $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
-              }
-          }
-      });
+                 else{  
+                     alert(response.mensagem);
+                     $('display', 'block');
+                     $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
+                 }
+             }
+         });
             });
         });
