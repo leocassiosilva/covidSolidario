@@ -39,6 +39,14 @@ if (empty($email)) {
     exit();
 }
 
+/*Usado para validar e-mail*/
+if (!preg_match("/^([[:alnum:]_.-]){3,}@([[:lower:][:digit:]_.-]{3,})(.[[:lower:]]{2,3})(.[[:lower:]]{2})?$/", $email)) {
+    $retorno = array('codigo' => 0, 'mensagem' => 'Formato de email inválido!');
+    echo json_encode($retorno);
+    exit();
+}
+
+
 if (empty($cep)) {
     $retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu CEP!');
     echo json_encode($retorno);

@@ -23,11 +23,11 @@
                 <h3 class="mb-0">Cadastro</h3>
               </div>
               <div class="card-body">
-                <form id="formulario" name="formulario" method="POST">
+                <form method="POST">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                      <label for="inputNome">Nome</label>
-                     <input type="text" class="form-control" name="nome" id="nome" >
+                     <input type="text" class="form-control" name="nome" id="nome" required="">
                    </div>
                    <div class="form-group col-md-6">
                     <label for="inputCelular">Whatsapp</label>
@@ -69,8 +69,8 @@
                   </div>
                 </div>
               </div>
-
-              <button type="submit" class="btn btn-success btn-lg " id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
+              
+              <button class="btn btn-success btn-lg " id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
             </form>
           </div>
         </div>

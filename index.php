@@ -14,8 +14,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="view/cadastroUsuario.php">Cadastrar-se</a>
@@ -30,7 +30,7 @@
   <div class="container">
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">O que é o Covid Solidário ?</h1>
-  <p class="lead">É um site que tem como objetivo facilitar a comunicação em doadores e receptores.</p>
+  <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores.</p>
 </div>
   </div>
 

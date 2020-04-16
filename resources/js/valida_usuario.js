@@ -1,95 +1,96 @@
 $(document).ready(function() {
-   $.mask.definitions['~']='[+-]';
-   $('input[type=tel]').focusout(function(){
-    var phone, element;
-    element = $(this);
-    element.unmask();
-    phone = element.val().replace(/\D/g, '');
-    if(phone.length > 10) {
-        element.mask("(99) 99999-999?9");
-    } else {
-        element.mask("(99) 9999-9999?9");
-    }
+ $.mask.definitions['~']='[+-]';
+ $('input[type=tel]').focusout(function(){
+  var phone, element;
+  element = $(this);
+  element.unmask();
+  phone = element.val().replace(/\D/g, '');
+  if(phone.length > 10) {
+    element.mask("(99) 99999-999?9");
+  } else {
+    element.mask("(99) 9999-9999?9");
+  }
 }).trigger('focusout');
-   $("#cep").mask("99999-999");
+ $("#cep").mask("99999-999");
 
-   function limpa_formulário_cep() {
-    $("#cidade").val("");
-    $("#uf").val("");
+ function limpa_formulário_cep() {
+  $("#cidade").val("");
+  $("#uf").val("");
 }
 
             //Aqui é quando o campo cep perde o foco ai chama essa função.
             $("#cep").blur(function() {
 
-                var cep = $(this).val().replace(/\D/g, '');
+              var cep = $(this).val().replace(/\D/g, '');
 
-                if (cep != "") {
+              if (cep != "") {
 
-                    var validacep = /^[0-9]{8}$/;
+                var validacep = /^[0-9]{8}$/;
 
-                    if(validacep.test(cep)) {
+                if(validacep.test(cep)) {
 
-                        $("#cidade").val("...");
-                        $("#uf").val("...");
+                  $("#cidade").val("...");
+                  $("#uf").val("...");
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
 
-                            if (!("erro" in dados)) {
+                          if (!("erro" in dados)) {
                                 //Atualiza os campos com os valores da consulta.
                                 $("#cidade").val(dados.localidade);
                                 $("#uf").val(dados.uf);
-                            } 
-                            else {
+                              } 
+                              else {
                                 //CEP pesquisado não foi encontrado.
                                 limpa_formulário_cep();
-                            }
-                        });
+                              }
+                            });
+                      } 
+                      else {
+                        limpa_formulário_cep();
+                      }
                     } 
                     else {
-                        limpa_formulário_cep();
+                      limpa_formulário_cep();
                     }
-                } 
-                else {
-                    limpa_formulário_cep();
-                }
-            });
-            $('#btnCadastrar').on('click', function(){
-                var nome = $("#nome").val();
-                var celular = $("#celular").val();
-                var email = $("#email").val();
-                var cep = $("#cep").val();
-                var cidade = $("#cidade").val();
-                var uf = $("#uf").val();
-                var senha = $("#senha").val();
-                var confirmar_senha = $("#confirmarSenha").val();
-                $.ajax({
-                  type : 'POST',
-                  url  : '../control/ControleUsuario.php',
-                  data:{
-                    nome: nome, 
-                    celular: celular,
-                    email: email,
-                    cep: cep,
-                    cidade:cidade,
-                    uf:uf,
-                    senha:senha,
-                    confirmar_senha:confirmar_senha
+                  });
+            $('#btnCadastrar').on('submit', function(){
+              var nome = $("#nome").val();
+              var celular = $("#celular").val();
+              var email = $("#email").val();
+              var cep = $("#cep").val();
+              var cidade = $("#cidade").val();
+              var uf = $("#uf").val();
+              var senha = $("#senha").val();
+              var confirmar_senha = $("#confirmarSenha").val();
+              $.ajax({
+                type : 'POST',
+                url  : '../control/ControleUsuario.php',
+                data:{
+                  nome: nome, 
+                  celular: celular,
+                  email: email,
+                  cep: cep,
+                  cidade:cidade,
+                  uf:uf,
+                  senha:senha,
+                  confirmar_senha:confirmar_senha
                 },
                 dataType: 'json',
 
                 success :  function(response){
-                    if(response.codigo == 1){
-                     $("#cad-alert").css('display', 'block');
-                     $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );                     
-                     alert(response.mensagem);
-                     window.location.href = "../view/login.php";
-                 }
-                 else{  
-                     alert(response.mensagem);
-                     $('display', 'block');
-                     $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
-                 }
-             }
-         });
+                  alert(response.mensagem);
+                  if(response.codigo == 1){
+                    alert(response.mensagem);
+                    $("#cad-alert").css('display', 'block');
+                    $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem).fadeIn(300).delay(300).fadeOut(400);                    
+                    window.location.href = "../view/login.php";
+                  }
+                  else{ 
+                    //alert(response.mensagem);
+                    $("#cad-alert").css('display', 'block');
+                    $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
+                  }
+                }
+              });
             });
-        });
+          });

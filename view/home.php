@@ -5,7 +5,7 @@ if($_SESSION["logado"] == true){
   $nome = $_SESSION["nome"];
   $email = $_SESSION["email"];
 }else{
-  header("location: ../index.php"); 
+  header("location: ../login.php"); 
 }
 ?>
 
@@ -135,7 +135,7 @@ if($_SESSION["logado"] == true){
         <thead>
           <tr>
             <th scope="col">Nome</th>
-            <th scope="col">Celular</th>
+            <th scope="col">Whatsapp</th>
             <th scope="col">Cidade</th> 
             <th scope="col">UF</th> 
             <th scope="col">Produto</th>
