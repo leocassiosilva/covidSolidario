@@ -53,7 +53,8 @@ $(document).ready(function() {
                       limpa_formulário_cep();
                     }
                   });
-            $('#btnCadastrar').on('submit', function(){
+            $('#btnCadastrar').on('click', function(){
+              alert("Pedro");
               var nome = $("#nome").val();
               var celular = $("#celular").val();
               var email = $("#email").val();
@@ -61,7 +62,7 @@ $(document).ready(function() {
               var cidade = $("#cidade").val();
               var uf = $("#uf").val();
               var senha = $("#senha").val();
-              var confirmar_senha = $("#confirmarSenha").val();
+              var senha2 = $("#senha2").val();
               $.ajax({
                 type : 'POST',
                 url  : '../control/ControleUsuario.php',
@@ -73,20 +74,21 @@ $(document).ready(function() {
                   cidade:cidade,
                   uf:uf,
                   senha:senha,
-                  confirmar_senha:confirmar_senha
+                  senha2:senha2
                 },
                 dataType: 'json',
 
                 success :  function(response){
-                  alert(response.mensagem);
+                  alert(response.codigo);
                   if(response.codigo == 1){
+                    alert ("Ola");
                     alert(response.mensagem);
-                    $("#cad-alert").css('display', 'block');
-                    $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem).fadeIn(300).delay(300).fadeOut(400);                    
+                    //$("#cad-alert").css('display', 'block');
+                    //$("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem).fadeIn(300).delay(300).fadeOut(400);                    
                     window.location.href = "../view/login.php";
-                  }
-                  else{ 
-                    //alert(response.mensagem);
+                  }else{ 
+                    alert("Boa Noite");
+                    alert(response.mensagem);
                     $("#cad-alert").css('display', 'block');
                     $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
                   }

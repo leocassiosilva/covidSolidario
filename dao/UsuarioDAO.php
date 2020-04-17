@@ -15,7 +15,8 @@ class usuarioDAO
 	}
 
 
-	public function cadastro(Usuario $usuario)
+
+	function cadastro(Usuario $usuario)
 	{
 		$nome = $usuario->getNome();
 		$celular = $usuario->getCelular();
@@ -36,31 +37,20 @@ class usuarioDAO
 		$query->bindValue(":senha", $senha);
 		$query->execute();
 
-
-		if ($query->rowCount()){
-			return 1;
-		}
 	}
 
+	function buscarUsuario($email)
+	{	
+		$verificar = $this->conexao->conectar()->prepare("SELECT * FROM usuario WHERE email = :email");
+		$verificar->bindValue(":email", $email);
+		$verificar->execute();
+		$resultado = $verificar->fetchAll(PDO::FETCH_ASSOC);
 
-	public function verificar(Usuario $usuario)
-	{
+		//$rows = $verificar->rowCount();
 
-		$email = $usuario->getEmail();
+		//var_dump($resultado);
 
-		$query = $this->conexao->conectar()->prepare("SELECT * FROM usuario WHERE email = :email");
-		$query->bindValue(":email", $email);
-		$query->execute();
-		$resultado = $query->fetch(PDO::FETCH_ASSOC);
-
-		$retorno = true;
-
-		if(!empty($resultado)){
-			return $retorno;
-		} else {
-			return $retorno = false;
-		}
-
+		return $resultado;
 	}
 }
 ?>

@@ -9,6 +9,7 @@ $(document).on('click', '#cadProd', function() {
 	value = $("#listarPro").attr("id");
 	if (value == "listarPro") {
 		$("#listarPro").attr("id","listar");
+		$("footer").css({"position":"relative"});
 	}
 
 });

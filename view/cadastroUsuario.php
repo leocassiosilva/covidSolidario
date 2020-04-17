@@ -64,8 +64,8 @@
                 </div>
                 <div class="form-group col-md-6">
                   <div class="form-group">
-                    <label>Confirmar Senha</label>
-                    <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha" required="">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" id="senha2" name="senha2" required="">
                   </div>
                 </div>
               </div>
