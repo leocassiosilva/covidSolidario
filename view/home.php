@@ -67,7 +67,7 @@ if($_SESSION["logado"] == true){
     </div>
   </div>
   <div class="row align-items-start" style="padding-top: 20px;">
-    <div class="col">
+    <div class="col" style="display: none;">
       <div class="card" id="mostrar">
         <div class="card-body">
           <h5 class="card-title">Cadastrar Doações</h5>

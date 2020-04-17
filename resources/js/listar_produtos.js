@@ -25,7 +25,7 @@ $(document).ready(function(e){
 						$("input").val("");
 						$('.resultadoForm table tbody').append("<tr> <td>" + value.nome_usuario + "</td> <td>" + value.celular + "</td> <td>" + value.cidade + "</td> <td>" + value.uf + "</td> <td>" + value.nome_produto + "</td> <td>" + value.quantidade + "</td></tr> ");
 						$("table").css("display", "block");
-						$("footer").css({"position":"relative"});
+						//$("footer").css({"position":"relative"});
 					});
 				}
 			} 

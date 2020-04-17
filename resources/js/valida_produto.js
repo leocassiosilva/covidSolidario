@@ -17,15 +17,17 @@ $('document').ready(function(){
 
 			success :  function(response){						
 				if(response.codigo == 1){	
+					alert(response.codigo);
 					$("#mensagem").html(response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
 					$("#login-alert").css('display', 'block');
-					$('#mostrar').remove();
+					$('#mostrar').css("display", "none");
 					$("footer").css({"position":"absolute"});
 				}
-				else{			
+				else{	
+					alert(response.codigo);		
 					$("#login-alert").css('display', 'block');
 					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
-					$("footer").css({"position":"fixed"});
+					$("footer").css({"position":"absolute"});
 
 				}
 				$("#nome").val("");
