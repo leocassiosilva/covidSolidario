@@ -17,7 +17,7 @@ $cidade = $_POST["cidade"];
 $uf = $_POST["uf"];
 $senha = $_POST["senha"];
 $confirmar_senha = $_POST["senha2"];
-var_dump($confirmar_senha);
+//var_dump($confirmar_senha);
 
 $retorno = false;
 
@@ -105,13 +105,15 @@ $usuario->setSenha($senha);
 
 //$verificarEmail = $usuarioDAO->verificar($usuario); 
 $resultado = $usuarioDAO->buscarUsuario($email);
+//Função que vai verificar se o usuario já tem cadastro 
+//var_dump($resultado);
 
-
-if ($resultado == true) {
+if ($resultado == 1) {
     $retorno = array('codigo' => 0, 'mensagem' => 'Já existe um usuario cadastrado com esse email!');
     echo json_encode($retorno);
     exit();
 }else {
+    //Função que vai cadastrar
     $result = $usuarioDAO->cadastro($usuario);
     $retorno = array('codigo' => 1, 'mensagem' => 'Cadastrado com sucesso!');
     echo json_encode($retorno);

@@ -85,5 +85,52 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
-<script src="../resources/js/valida_usuario.js"> </script>
+<script type="text/javascript" src="../resources/js/valida_usuario.js"> </script>
+
+<script type="text/javascript">
+  $('document').ready(function(){ 
+    $('#btnCadastrar').on('click', function(){
+      var nome = $("#nome").val();
+      var celular = $("#celular").val();
+      var email = $("#email").val();
+      var cep = $("#cep").val();
+      var cidade = $("#cidade").val();
+      var uf = $("#uf").val();
+      var senha = $("#senha").val();
+      var senha2 = $("#senha2").val();
+      //alert(senha2);
+      $.ajax({
+        type : 'POST',
+        url  : '../control/ControleUsuario.php',
+        data:{
+         nome: nome, 
+         celular: celular,
+         email: email,
+         cep: cep,
+         cidade:cidade,
+         uf:uf,
+         senha:senha,
+         senha2:senha2
+       },
+       dataType: 'json',
+
+       success :  function(response){
+        //Parte de javaScript 
+        if(response.codigo == 1){
+         alert(response.mensagem);
+         $("#cad-alert").css('display', 'block');
+         $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem).fadeIn(300).delay(300).fadeOut(400);         
+         window.location.href = "../view/login.php";
+         //Além disso não redireciona para a pagina de login 
+       }else {
+         alert(response.mensagem);
+         $("#cad-alert").css('display', 'block');
+         $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
+
+       }
+     }
+   });
+    });
+  });
+</script>
 </html>

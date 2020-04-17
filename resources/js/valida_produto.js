@@ -25,6 +25,8 @@ $('document').ready(function(){
 				else{			
 					$("#login-alert").css('display', 'block');
 					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn( 300 ).delay( 1900 ).fadeOut( 400 );
+					$("footer").css({"position":"fixed"});
+
 				}
 				$("#nome").val("");
 				$("#categoria").val("");

@@ -46,11 +46,11 @@ class usuarioDAO
 		$verificar->execute();
 		$resultado = $verificar->fetchAll(PDO::FETCH_ASSOC);
 
-		//$rows = $verificar->rowCount();
+		$rows = $verificar->rowCount();
 
 		//var_dump($resultado);
 
-		return $resultado;
+		return $rows;
 	}
 }
 ?>

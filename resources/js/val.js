@@ -53,4 +53,37 @@ $(document).ready(function() {
                       limpa_formulário_cep();
                     }
                   });
+            $('#btnCadastrar').on('click', function(){
+              alert("Pedsdnsmdro");
+              //alert ("Ola");
+              var nome = $("#nome").val();
+              var celular = $("#celular").val();
+              var email = $("#email").val();
+              var cep = $("#cep").val();
+              var cidade = $("#cidade").val();
+              var uf = $("#uf").val();
+              var senha = $("#senha").val();
+              var senha2 = $("#senha2").val();
+              $.ajax({
+                type : 'POST',
+                url  : '../control/ControleUsuario.php',
+                data:{
+                  nome: nome, 
+                  celular: celular,
+                  email: email,
+                  cep: cep,
+                  cidade:cidade,
+                  uf:uf,
+                  senha:senha,
+                  senha2:senha2
+                },
+                dataType: 'json',
+
+                success :  function(response){
+                  if(response.codigo == 1){
+                   alert(response.mensagem);
+                  }
+                });
+            });
           });
+});
