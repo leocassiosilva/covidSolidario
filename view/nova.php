@@ -2,7 +2,7 @@
 <head>
   <title>Cadastro de Usuario</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/index.css" media="screen" />
 </head>
 <body>
   <?php include 'layout/navbar.php';?>
@@ -84,7 +84,11 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script> 
-<script type="text/javascript" src="../resources/js/valida_usuario.js"> </script>
-<script type="text/javascript" src="../resources/js/cadUsuarios.js"> </script>
-
+<script type="text/javascript">
+  $('document').ready(function(){ 
+    $('#btnCadastrar').on('click', function(){
+      alert("olaj");
+    });
+  });
+</script>
 </html>

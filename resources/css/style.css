@@ -16,7 +16,7 @@ width: 100%;
     position:relative;
     bottom:0;
     width:100%;
-    background-color: blue;
+    background-color: red; 
 }
 
 .content {overflow:hidden;}
