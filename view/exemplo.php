@@ -1,14 +1,3 @@
-<?php
-session_start();
-
-if($_SESSION["logado"] == true){
-  $nome = $_SESSION["nome"];
-  $email = $_SESSION["email"];
-}else{
-  header("location: ../login.php"); 
-}
-?>
-
 <html>
 <head>
   <title>Cadastro Doação</title>
@@ -27,7 +16,7 @@ if($_SESSION["logado"] == true){
       <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Nome do usuario:</i> <?=$nome ?></a>
+            <a class="nav-link" href="#">Nome do usuario:</i>  <span class="sr-only">(Página atual)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../control/logoff.php">Sair</a>

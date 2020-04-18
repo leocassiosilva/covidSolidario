@@ -2,7 +2,7 @@
 <head>
     <title>Covid Solidarrio</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      <link rel="stylesheet" type="text/css" href="../resources/css/home.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
 </head>
 <body>
     <?php include 'layout/navbar.php';?>

@@ -1,33 +1,30 @@
 *  {
-    margin:0;
-    padding:0;
+  margin:0;
+  padding:0;
 }
 
-html, body {height:100%;
-width: 100%;
-}
+html, body { margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;}
 
-.geral {
+  .geral {
     min-height:100%;
     position:relative;
 }
 
 .footer {
-    position:relative;
-    bottom:0;
-    width:100%;
-    background-color: red; 
+ width: 100%;
+ position: relative;
+ bottom: 0;
+ left: 0;
+ background-color: #cccccc; 
+
 }
-
-.content {overflow:hidden;}
-.aside {width:200px;}
-.fleft {float:left;}
-.fright {float:right;}
-
 #mostrar{
-	display: none;
+  display: none;
 }
 
 #apresentar{
-	display: none;
+  display: none;
 }
