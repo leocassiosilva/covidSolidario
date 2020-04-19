@@ -6,7 +6,9 @@
 </head>
 <body>
     <?php include 'layout/navbar.php';?>
+<div class="geral">
 
+    <div class="content">
  <div class="container py-5">
     <div class="row">
         <div class="col-md-12">
@@ -51,9 +53,47 @@
     </div>
     </div>
 </div>
+</div>
+</div>
 <?php include 'layout/footer.php';?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="../resources/js/valida_login.js"> </script>
+<script>
+
+$('document').ready(function(){ 
+    $('#btnLogin').on('click', function(){
+        alert("ola");
+        var email = $("#email").val();
+        var senha = $("#senha").val();
+        jQuery.ajax({
+            type: "POST",
+            url: "../control/ControleLogin.php",
+            data:{
+                email: email,
+                senha:senha
+            },
+            dataType: 'json',
+            success: function(response)
+            {
+                if (response.codigo  == 1) {
+                    $("#login-alert").css('display', 'block');
+                    $("#mensagem").html(response.mensagem).fadeIn(300).delay(900).fadeOut(400);       
+                    window.location.href = "../view/doacao.php";
+                }else {
+                    $("#login-alert").css('display', 'block');
+                    $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
+                }
+                $("#email").val("");
+                $("#senha").val("");
+            }
+        });
+        return false;
+    });
+});
+
+
+
+
+</script>
 </html>

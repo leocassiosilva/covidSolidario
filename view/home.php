@@ -135,7 +135,7 @@ if($_SESSION["logado"] == true){
             <th scope="col">Whatsapp</th>
             <th scope="col">Cidade</th> 
             <th scope="col">UF</th> 
-            <th scope="col">Produto</th>
+            <th scope="col">Descricao</th>
             <th scope="col">Quantidade</th>
           </tr>
         </thead>

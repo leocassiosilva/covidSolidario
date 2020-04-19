@@ -2,23 +2,28 @@
 
 class Doacao {
 
-    private $id_produto;
-    private $nome;    
+    private $id_doacao;
+    private $descricao;    
     
 
-    function getId_produto()
+    function getId_doacao()
     {
         return $this->id_produto;
     }
 
-    function getNome()
+    function getDescricao()
     {
-        return $this->nome;
+        return $this->descricao;
     }
     
 
-    function setNome($nome)
+    function setDescricao($descricao)
     {
-        $this->nome = $nome;
+        $this->descricao= $descricao;
     }   
+
+    function setId_doacao($id_doacao)
+    {
+        $this->id_doacao= $id_doacao;
+    } 
 }

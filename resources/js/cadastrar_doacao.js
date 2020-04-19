@@ -1,11 +1,10 @@
 $('document').ready(function(){ 
-	$('btnLogin').on('click', function(){
-		alert("ola");
-		var email = $("#email").val();
-		var senha = $("#senha").val();
+	$('#btnCadDoacao').on('click', function(){
+		this.blur();
+		var descricao = $("#descricao").val();
 		jQuery.ajax({
 			type: "POST",
-			url: "../control/ControleLogin.php",
+			url: "../control/ControleDoacao.php",
 			data:{
 				descricao: descricao
 			},
