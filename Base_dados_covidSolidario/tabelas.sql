@@ -14,37 +14,28 @@ uf char(2) NOT NULL,
 senha varchar (50),
 data_cadastro date
 );
-CREATE TABLE categoria (
-	id_categoria int (4) auto_increment primary key, 
-    nome varchar (50) NOT NULL
+
+CREATE TABLE status_doacao (
+	id_status int auto_increment primary key, 
+    nome varchar(50) not null
 );
 
-INSERT INTO categoria (nome)
-VALUES ("Alimento Infantil");
-INSERT INTO categoria (nome)
-VALUES ("Leite e Derivados");
-INSERT INTO categoria (nome)
-VALUES ("Carne e Ovos");
-INSERT INTO categoria (nome)
-VALUES ("Biscoitos");
-INSERT INTO categoria (nome)
-VALUES ("Equipamento de proteção individual");
-INSERT INTO categoria (nome)
-VALUES ("Outros");
+INSERT INTO status_doacao (nome)
+VALUES ("Em andamento");
 
+INSERT INTO status_doacao (nome)
+VALUES ("Concluida");
 
-CREATE TABLE produto(
-	id_produto int auto_increment primary key, 
-    nome varchar(100) not null, 
-	id_categoria integer(4),
-	FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria)
-);
-
-CREATE TABLE usuario_produto(
-	id_usuario_produto  int auto_increment primary key, 
-	quantidade int not null, 
-    id_produto integer,
-	FOREIGN KEY (id_produto) REFERENCES produto (id_produto),
+/*Tabela doação*/
+CREATE TABLE doacao (
+	id_doacao int auto_increment primary key, 
+    descricao text not null, 
     id_usuario integer(4),
-	FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
+	FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),
+    id_status integer,
+	FOREIGN KEY (id_status) REFERENCES status_doacao (id_status),
+    data_doacao date
 );
+
+
+
