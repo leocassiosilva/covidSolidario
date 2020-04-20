@@ -72,7 +72,7 @@ class doacaoDAO
 		$id_usuario = $usuario->getId_usuario();
 
 
-		$query = $this->conexao->conectar()->prepare('SELECT usuario.id_usuario as id_usuario, usuario.nome as nome_usuario, usuario.celular as celular, usuario.cep as cep, usuario.cidade as cidade, usuario.uf as uf, doacao.descricao as descricao, status_doacao.nome as nome_status FROM usuario 
+		$query = $this->conexao->conectar()->prepare('SELECT usuario.nome as nome_usuario, usuario.celular as celular, usuario.cep as cep, usuario.cidade as cidade, usuario.uf as uf, doacao.id_doacao as id_doacao , doacao.descricao as descricao, status_doacao.nome as nome_status FROM usuario 
 			INNER JOIN doacao 
 			ON (usuario.id_usuario = doacao.id_usuario) 
 			INNER JOIN status_doacao
