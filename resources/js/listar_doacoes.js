@@ -19,7 +19,7 @@
                     }else {
                         $.each(response,function (key, value) {
                             $("input").val("");
-                            $('.resultadoForm table tbody').append("<tr> <td>" + value.nome_usuario + "</td> <td>" + value.celular + "</td> <td>" + value.cidade + "</td> <td>" + value.uf + "</td> <td>" + value.descricao + "</td> </tr> ");
+                            $('.resultadoForm table tbody').append("<tr> <td>" + value.nome_usuario + "</td> <td>" + value.descricao + "</td> </tr> ");
                             $("table").css("display", "block");
                         });
                     }

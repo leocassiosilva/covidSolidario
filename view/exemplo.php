@@ -9,31 +9,36 @@
   <?php include 'layout/navbar.php';?>
   <div class="geral">
     <div class="content">
-     <div class="row" style="padding-top: 50px;">
-      <div class="col-md-6 mx-auto">
-        <div class="resultadoForm">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Whatsapp</th>
-                <th scope="col">Cidade</th> 
-                <th scope="col">UF</th> 
-                <th scope="col">Descricao</th>
-                <th scope="col">Status</th>
-                <th scope="col">Modificar Status</th>
-                <th scope="col">ID doação</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
+      <div class="row" style="padding-top: 50px;">
+        <div class="col-md-6 mx-auto">
+          <h1>Minhas doações</h1>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 50px;">
+        <div class="col-md-6 mx-auto">
+          <div class="resultadoForm">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Whatsapp</th>
+                  <th scope="col">Cidade</th> 
+                  <th scope="col">UF</th> 
+                  <th scope="col">Descricao</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Modificar Status</th>
+                  <th scope="col">ID doação</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<?php include 'layout/footer.php';?>
+  <?php include 'layout/footer.php';?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -55,9 +60,11 @@
         $("#listarmensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(1000).delay(4900).fadeOut(3400);
       }else {
         $.each(response,function (key, value) {
-          //var id = value.id_doacao;
+          var id = value.id_doacao;
+          //$("#btnStatus").attr("value",id);
           $("input").val("");
           $('.resultadoForm table tbody').append("<tr> <td>" + value.nome_usuario + "</td> <td>" + value.celular + "</td> <td>" + value.cidade + "</td> <td>" + value.uf + "</td> <td>" + value.descricao + "</td> <td>" + value.nome_status + "</td> <td>" + "<button type='button' class='btn btn-success' id='btnStatus' name='btnStatus' value='"+ value.id_doacao +"'>Concluir</button>"+ "</td> <td>" + value.id_doacao + "</td></tr> ");
+          
           $("table").css("display", "block");
         });
       }

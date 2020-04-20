@@ -62,9 +62,6 @@
         <thead>
           <tr>
             <th scope="col">Nome</th>
-            <th scope="col">Whatsapp</th>
-            <th scope="col">Cidade</th> 
-            <th scope="col">UF</th> 
             <th scope="col">Descricao</th>
         </tr>
     </thead>

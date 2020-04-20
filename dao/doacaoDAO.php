@@ -35,7 +35,7 @@ class doacaoDAO
 	public function listar($value)
 	{
 		$cep = $value;
-		$query = $this->conexao->conectar()->prepare('SELECT usuario.nome as nome_usuario, usuario.celular as celular, usuario.cep as cep, usuario.cidade as cidade, usuario.uf as uf, doacao.descricao as descricao FROM usuario 
+		$query = $this->conexao->conectar()->prepare('SELECT usuario.nome as nome_usuario, doacao.descricao as descricao FROM usuario 
 			INNER JOIN doacao 
 			ON (usuario.id_usuario = doacao.id_usuario)
 			WHERE cep = :cep');
