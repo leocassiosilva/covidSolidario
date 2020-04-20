@@ -1,6 +1,5 @@
  $('document').ready(function(){ 
     $('#btnCadastrar').on('click', function(){
-      alert("olaj");
       var nome = $("#nome").val();
       var celular = $("#celular").val();
       var email = $("#email").val();

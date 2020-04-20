@@ -46,5 +46,43 @@ class doacaoDAO
 		return $resultado;
 	}
 
+
+	public function modificarStatus(Doacao $doacao)
+	{
+		$id_doacao = $doacao->getId_doacao();
+
+		$query = $this->conexao->conectar()->prepare('UPDATE doacao SET id_status = 2 
+			WHERE id_doacao = :id_doacao');
+		$query->bindValue(":id_doacao", $id_doacao);
+		$query->execute();
+		
+		$row = $query->rowCount(); 
+
+		if($row != 0){
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+
+	public function listarDoacaoUsuario(Usuario $usuario)
+	{
+
+		$id_usuario = $usuario->getId_usuario();
+
+
+		$query = $this->conexao->conectar()->prepare('SELECT usuario.id_usuario as id_usuario, usuario.nome as nome_usuario, usuario.celular as celular, usuario.cep as cep, usuario.cidade as cidade, usuario.uf as uf, doacao.descricao as descricao, status_doacao.nome as nome_status FROM usuario 
+			INNER JOIN doacao 
+			ON (usuario.id_usuario = doacao.id_usuario) 
+			INNER JOIN status_doacao
+			on(doacao.id_status = status_doacao.id_status)
+			WHERE usuario.id_usuario = :id_usuario');
+		$query->bindValue(":id_usuario", $id_usuario);
+		$query->execute();
+		$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+
+		return $resultado;
+	}
 }
 ?>
