@@ -5,7 +5,7 @@ session_start();
 require_once("../model/Usuario.php");
 require_once("../dao/doacaoDAO.php");
 
-$id_usuario = 174;//$_SESSION["id_usuario"];
+$id_usuario = $_SESSION["id_usuario"];
 
 $doacaoDAO = new doacaoDAO();
 

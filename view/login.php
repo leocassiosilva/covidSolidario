@@ -79,7 +79,7 @@ $('document').ready(function(){
                 if (response.codigo  == 1) {
                     $("#login-alert").css('display', 'block');
                     $("#mensagem").html(response.mensagem).fadeIn(300).delay(900).fadeOut(400);       
-                    window.location.href = "../view/doacao.php";
+                    window.location.href = "../view/home.php";
                 }else {
                     $("#login-alert").css('display', 'block');
                     $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
