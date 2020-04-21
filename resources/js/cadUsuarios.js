@@ -1,13 +1,13 @@
  $('document').ready(function(){ 
-    $('#btnCadastrar').on('click', function(){
-      var nome = $("#nome").val();
-      var celular = $("#celular").val();
-      var email = $("#email").val();
-      var cep = $("#cep").val();
-      var cidade = $("#cidade").val();
-      var uf = $("#uf").val();
-      var senha = $("#senha").val();
-      var senha2 = $("#senha2").val();
+  $('#btnCadastrar').on('click', function(){
+    var nome = $("#nome").val();
+    var celular = $("#celular").val();
+    var email = $("#email").val();
+    var cep = $("#cep").val();
+    var cidade = $("#cidade").val();
+    var uf = $("#uf").val();
+    var senha = $("#senha").val();
+    var senha2 = $("#senha2").val();
       //alert(senha2);
       jQuery.ajax({
         type: "POST",
@@ -27,16 +27,14 @@
        {
         if (response.codigo == 1) {
           console.log(response.mensagem);
-          $("#cad-alert").css('display', 'block');
-         $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem).fadeIn(300).delay(300).fadeOut(400);         
-         window.location.href = "../view/login.php";
+          $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem);
+          $("#cad-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);          window.location.href = "../view/login.php";
         }else {
-          console.log(response.mensagem);
-          $("#cad-alert").css('display', 'block');
-         $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
+          $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem);
+          $("#cad-alert").addClass( "col-md-6 mx-auto alert alert-danger").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);
         }
       }
     });
       return false;
     });
-  });
+});

@@ -8,7 +8,7 @@
   <?php include 'layout/navbar.php';?>
   <div class="container py-5">
     <div class="row">
-      <div id="cad-alert" class="col-md-6">
+      <div id="cad-alert" style="display: none;">
         <span id="mensagem"></span>
       </div>
     </div>

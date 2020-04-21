@@ -1,6 +1,5 @@
 $('document').ready(function(){ 
         $('#btnListar').on('click', function(){
-            alert("ola");
             var cep = $("#cep").val();
             jQuery.ajax({
                 type: "POST",
