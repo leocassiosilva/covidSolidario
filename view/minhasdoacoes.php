@@ -49,19 +49,7 @@ if($_SESSION["logado"] == true){
       <div class="col-md-6 mx-auto">
         <div class="resultadoForm">
           <table class="table" id="idTabela">
-            <thead>
-              <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Whatsapp</th>
-                <th scope="col">Cidade</th> 
-                <th scope="col">UF</th> 
-                <th scope="col">Descricao</th>
-                <th scope="col">Status</th>
-                <th scope="col">Modificar Status</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
+            
           </table>
         </div>
       </div>
@@ -85,7 +73,8 @@ if($_SESSION["logado"] == true){
     url: "../control/MinhasDoacoes.php",
     dataType: 'json',
     success: function(response)
-    {
+    {  
+      $('table').append('<thead> <tr><th scope="col">Nome</th> <th scope="col">Whatsapp</th><th scope="col">Cidade</th>th scope="col">Cidade</th><th scope="col">UF</th><th scope="col">Descricao</th><th scope="col">Status</th><th scope="col">Modificar Status</th></tr></thead>');
       for(var i=0;response.length>i;i++){
         $('table').append('<tr><td>'+response[i].nome_usuario+'</td><td>'+response[i].celular+'</td><td>'+response[i].cidade+'</td> <td>'+response[i].uf+'</td><td>'+response[i].descricao+'</td><td>'+ response[i].nome_status +'</td> <td> <button type="button" class="btn btn-success" id="btnStatus" name="btnStatus" value="'+ response[i].id_doacao +'">Concluir</button></td></tr>');
         if (response[i].nome_status == "Concluida") {
@@ -118,13 +107,11 @@ if($_SESSION["logado"] == true){
     dataType: 'json',
     success: function(response)
     {
-      //$('table').closest('tr').remove();
-      //alert(response);
+
       if (response.codigo == 0) {
         $("#cad-alert").css('display', 'block', 'background-color: green');
         $("#mensagem").html(response.mensagem).fadeIn(300).delay(1900).fadeOut(400);
       }else {
-        alert("Deu certo");
         $(".table tr").remove();
         carrega();
       }
