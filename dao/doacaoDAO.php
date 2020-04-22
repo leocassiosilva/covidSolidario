@@ -28,7 +28,13 @@ class doacaoDAO
 		$query->bindValue(":id_status", $id_status);
 		$query->execute();
 		
-		return true;
+		$row = $query->rowCount(); 
+
+		if($row != 0){
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 
@@ -72,7 +78,7 @@ class doacaoDAO
 		$id_usuario = $usuario->getId_usuario();
 
 
-		$query = $this->conexao->conectar()->prepare('SELECT usuario.nome as nome_usuario, usuario.celular as celular, usuario.cep as cep, usuario.cidade as cidade, usuario.uf as uf, doacao.id_doacao as id_doacao , doacao.descricao as descricao, status_doacao.nome as nome_status, status_doacao.id_status as id_status FROM usuario 
+		$query = $this->conexao->conectar()->prepare('SELECT usuario.nome as nome_usuario, doacao.descricao as descricao, status_doacao.nome as nome_status, status_doacao.id_status as id_status, doacao.id_doacao as id_doacao FROM usuario 
 			INNER JOIN doacao 
 			ON (usuario.id_usuario = doacao.id_usuario) 
 			INNER JOIN status_doacao

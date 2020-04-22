@@ -17,7 +17,7 @@ if($_SESSION["logado"] == true){
 
 </head>
 <body>
- <nav class="navbar  navbar-expand-lg navbar-dark maximo" style="background-color: #5abba7;" >
+ <nav class="navbar  navbar-expand-lg navbar-dark maximo" style="background-color: #5abba7;width: 110%;" >
   <div class="container">
     <a class="navbar-brand" href="#">Covid Solidário</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
@@ -46,9 +46,9 @@ if($_SESSION["logado"] == true){
       </div>
     </div>
     <div class="row" style="padding-top: 50px;">
-      <div class="col-md-6 mx-auto">
+      <div class="col-10 mx-auto">
         <div class="resultadoForm">
-          <table class="table" id="idTabela">
+          <table class="table" id="idTabela" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;table-layout:fixed">
             
           </table>
         </div>
@@ -65,58 +65,5 @@ if($_SESSION["logado"] == true){
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-<script> 
-  function carrega(){
-   jQuery.ajax({
-    type: "POST",
-    url: "../control/MinhasDoacoes.php",
-    dataType: 'json',
-    success: function(response)
-    {  
-      $('table').append('<thead> <tr><th scope="col">Nome</th> <th scope="col">Whatsapp</th><th scope="col">Cidade</th>th scope="col">Cidade</th><th scope="col">UF</th><th scope="col">Descricao</th><th scope="col">Status</th><th scope="col">Modificar Status</th></tr></thead>');
-      for(var i=0;response.length>i;i++){
-        $('table').append('<tr><td>'+response[i].nome_usuario+'</td><td>'+response[i].celular+'</td><td>'+response[i].cidade+'</td> <td>'+response[i].uf+'</td><td>'+response[i].descricao+'</td><td>'+ response[i].nome_status +'</td> <td> <button type="button" class="btn btn-success" id="btnStatus" name="btnStatus" value="'+ response[i].id_doacao +'">Concluir</button></td></tr>');
-        if (response[i].nome_status == "Concluida") {
-          $("button[value ='"+ response[i].id_doacao + "']").attr('disabled', 'disabled').removeClass('btn btn-success').addClass('btn btn-danger').text("Encerrada");
-        }
-      } 
-
-    }
-  });
- }
- $(document).ready(function(){
-  carrega();
-});
-
-
-
-
-
- $("table").on("click", "button", function(){
-   if($(this).attr('id') == 'btnStatus'){
-     var id_doacao = $(this).val();
-     $(this).blur();
-   }
-   jQuery.ajax({
-    type: "POST",
-    url: "../control/ModificarStatus.php",
-    data:{
-      id_doacao: id_doacao
-    },
-    dataType: 'json',
-    success: function(response)
-    {
-
-      if (response.codigo == 0) {
-        $("#cad-alert").css('display', 'block', 'background-color: green');
-        $("#mensagem").html(response.mensagem).fadeIn(300).delay(1900).fadeOut(400);
-      }else {
-        $(".table tr").remove();
-        carrega();
-      }
-    }
-  });
- });
-</script>
+<script type="text/javascript" src="../resources/js/minhas_doacoes.js"></script>
 </html>

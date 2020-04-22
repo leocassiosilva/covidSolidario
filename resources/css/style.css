@@ -11,20 +11,23 @@ html, body { margin: 0;
   .geral {
     min-height:100%;
     position:relative;
-}
+  }
 
-.footer {
- width: 100%;
- position: relative;
- bottom: 0;
- left: 0;
- background-color: #cccccc; 
+  .footer {
+    width: 110%;
+   position: relative;
+   bottom: 0;
+   left: 0;
+   background-color: #cccccc; 
 
-}
-#mostrar{
+ }
+ #mostrar{
   display: none;
 }
 
 #apresentar{
   display: none;
+}
+td{
+ word-wrap:break-word;
 }
