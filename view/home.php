@@ -43,6 +43,12 @@ if($_SESSION["logado"] == true){
 
     <div class="content">
      <div class="container" style="padding-top: 50px;">
+      <div class="row">
+        <div id="cad-alert" style="display: none;">
+          <span id="mensagem"></span>
+        </div>
+      </div>
+
       <div class="row align-items-start" style="padding-top: 20px;">
         <div class="col">
           <div class="card">
@@ -65,11 +71,6 @@ if($_SESSION["logado"] == true){
       </div>
     </div>
   </div><br/>
-  <div class="row align-items-start">
-    <div id="cad-alert" class="col-md-6">
-      <span id="mensagem"></span>
-    </div>
-  </div>
 </div>
 </div>
 </div>

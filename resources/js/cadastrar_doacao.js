@@ -11,12 +11,13 @@ $('document').ready(function(){
 			dataType: 'json',
 			success: function(response)
 			{
+				alert(response.codigo);
 				if (response.codigo  == 1) {
-					$("#cad-alert").css('display', 'block', 'background-color: green');
-					$("#mensagem").html(response.mensagem).fadeIn(300).delay(1900).fadeOut(400);       
+					$("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem);
+					$("#cad-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);         
 				}else {
-					$("#cad-alert").css('display', 'block');
-					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem).fadeIn(300).delay(1900).fadeOut( 400 );
+					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem);
+					$("#cad-alert").addClass( "col-md-6 mx-auto alert alert-danger").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);
 				}
 				$("#descricao").val("");
 			}

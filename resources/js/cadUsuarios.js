@@ -26,7 +26,6 @@
        success: function(response)
        {
         if (response.codigo == 1) {
-          console.log(response.mensagem);
           $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem);
           $("#cad-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);          window.location.href = "../view/login.php";
         }else {
