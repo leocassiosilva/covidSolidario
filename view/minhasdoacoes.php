@@ -11,33 +11,14 @@ if($_SESSION["logado"] == true){
 
 <html>
 <head>
-  <title>Covid Solidarrio</title>
+  <title>Minhas Doações</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
 
 </head>
 <body>
- <nav class="navbar  navbar-expand-lg navbar-dark maximo" style="background-color: #5abba7;" >
-  <div class="container">
-    <a class="navbar-brand" href="#">Covid Solidário</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="home.php">Pagina inicial</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="#">Nome do usuario:</i> <?=$nome ?> <span class="sr-only">(Página atual)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../control/logoff.php">Sair</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <?php include 'layout/navbar1.php';?>
+
 
 <div class="container" id="geral">
   <div class="row" style="padding-top: 50px;">

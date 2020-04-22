@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Covid Solidarrio</title>
+  <title>Listar doadores</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
 
@@ -32,7 +32,7 @@
 </nav>
 
 <div class="container" id="geral">
-  <div class="row" style="padding-top: 50px;">
+  <div class="row" id="mensagemAlerta">
     <div class="col-md-6 mx-auto" id="listar-alert">
       <span id="listarmensagem"></span>
     </div>
@@ -68,8 +68,8 @@
   </div>
 </div>
 
-<div class="row" style="padding-top: 50px;">
-  <div class="col-md-8 mx-auto" >
+<div class="row" id="tabela">
+  <div class="col-md-12 mx-auto" >
     <div class="table-responsive">
       <table class="table" id="idTabela" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;table-layout:fixed;">
 

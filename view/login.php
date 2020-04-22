@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Covid Solidarrio</title>
+    <title>Login</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
 </head>
