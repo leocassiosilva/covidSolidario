@@ -11,23 +11,34 @@ html, body { margin: 0;
   .geral {
     min-height:100%;
     position:relative;
+    min-width: 80%;
   }
 
+  #geral{
+    position:relative;
+    padding-top: 10px; 
+    min-height: 100%;
+  }
   .footer {
-    width: 110%;
-   position: relative;
-   bottom: 0;
-   left: 0;
-   background-color: #cccccc; 
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #cccccc; 
 
+  }
+  #mostrar{
+    display: none;
+  }
+
+  #apresentar{
+    display: none;
+  }
+  td{
+   word-wrap:break-word;
  }
- #mostrar{
-  display: none;
-}
 
-#apresentar{
-  display: none;
-}
-td{
- word-wrap:break-word;
+#id_nome{
+  margin-left: 30px;
+
 }

@@ -1,7 +1,6 @@
 
 $('document').ready(function(){ 
 	$('#btnLogin').on('click', function(){
-		alert("olafdg");
 		var email = $("#email").val();
 		var senha = $("#senha").val();
 		jQuery.ajax({

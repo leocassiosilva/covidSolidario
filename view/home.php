@@ -39,45 +39,39 @@ if($_SESSION["logado"] == true){
       </div>
     </div>
   </nav>
-  <div class="geral">
 
-    <div class="content">
-     <div class="container" style="padding-top: 50px;">
-      <div class="row">
-        <div id="cad-alert" style="display: none;">
-          <span id="mensagem"></span>
-        </div>
-      </div>
-
-      <div class="row align-items-start" style="padding-top: 20px;">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title" style="text-align: center;">Cadastrar Doações</h5>
-              <form method="POST"> 
-                <div class="form-row">
-                 <div class="form-group col-md-12">
-                  <label for="descricaoTexto">Descreva sua doação</label>
-                  <textarea class="form-control" id="descricao" name="descricao" rows="4"></textarea>
-                </div>
-              </div>
-              <div class="form-row">
-               <div class="form-group col-md-12">
-                <button id="btnCadDoacao" name="btnCadDoacao" class="btn btn-success btn-lg ">Cadastrar</button>
-              </div>
-            </div>
-          </form>
-        </div>
+  <div class="container" id="geral">
+    <div class="row">
+      <div id="cad-alert" style="display: none;">
+        <span id="mensagem"></span>
       </div>
     </div>
-  </div><br/>
-</div>
+
+    <div class="row align-items-start" style="padding-top: 20px;">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Cadastrar Doações</h5>
+            <form method="POST"> 
+              <div class="form-row">
+               <div class="form-group col-md-12">
+                <label for="descricaoTexto">Descreva sua doação</label>
+                <textarea class="form-control" id="descricao" name="descricao" rows="4"></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+             <div class="form-group col-md-12">
+              <button id="btnCadDoacao" name="btnCadDoacao" class="btn btn-success btn-lg ">Cadastrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
 <?php include 'layout/footer.php';?>
-
-
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

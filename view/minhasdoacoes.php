@@ -17,7 +17,7 @@ if($_SESSION["logado"] == true){
 
 </head>
 <body>
- <nav class="navbar  navbar-expand-lg navbar-dark maximo" style="background-color: #5abba7;width: 110%;" >
+ <nav class="navbar  navbar-expand-lg navbar-dark maximo" style="background-color: #5abba7;" >
   <div class="container">
     <a class="navbar-brand" href="#">Covid Solidário</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
@@ -38,10 +38,10 @@ if($_SESSION["logado"] == true){
     </div>
   </div>
 </nav>
-<div class="geral">
-  <div class="content">
-    <div class="row" style="padding-top: 50px;">
-      <div class="col-md-6 mx-auto">
+
+<div class="container" id="geral">
+  <div class="row" style="padding-top: 50px;">
+      <div class="col-12 mx-auto" style="text-align: center;">
         <h1>Minhas doações</h1>
       </div>
     </div>
@@ -54,13 +54,9 @@ if($_SESSION["logado"] == true){
         </div>
       </div>
     </div>
-    <div class="row align-items-start">
-      <div id="cad-alert" class="col-md-6">
-        <span id="mensagem"></span>
-      </div>
-    </div>
-  </div>
 </div>
+
+
 <?php include 'layout/footer.php';?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

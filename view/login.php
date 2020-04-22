@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php include 'layout/navbar.php';?>
-    <div class="geral">
+    <div id="geral">
         <div class="content">
            <div class="container py-5">
             <div class="row">
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 <?php include 'layout/footer.php';?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

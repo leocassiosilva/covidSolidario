@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if($_SESSION["logado"] == true){
+  $nome = $_SESSION["nome"];
+  $email = $_SESSION["email"];
+}else{
+  header("location: ../login.php"); 
+}
+?>
 <html>
 <head>
     <title>Doações</title>
