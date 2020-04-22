@@ -2,7 +2,7 @@
 <head>
   <title>Covid Solidarrio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="resources/css/index.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css" media="screen" />
 </head>
 <body>
 
@@ -36,7 +36,7 @@
       <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores.</p>
     </div>
   </div>
-
+<div id="geralIndex">
   <div class="container">
     <div class="card-deck mb-3 text-center">
       <div class="card mb-4 shadow-sm">
@@ -44,7 +44,6 @@
           <h4 class="my-0 font-weight-normal">Quem pode participar?</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">Atenção <small class="text-muted"></small></h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li><p>Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p></li>
           </ul>
@@ -55,7 +54,6 @@
           <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">Atenção<small class="text-muted"></small></h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
           </ul>
@@ -66,7 +64,6 @@
           <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">Atenção <small class="text-muted"></small></h1>
           <ul class="list-unstyled mt-3 mb-4">
             <li><p>Para doar você precisa estar logado no sistema, informar o nome do produto/objeto que deseja doar, escolher a categoria e quantidade.</p></li>
           </ul>
@@ -74,7 +71,8 @@
       </div>
     </div>
   </div>
-  <?php include 'view/layout/footer1.php';?>
+</div>
+  <?php include 'view/layout/footer.php';?>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

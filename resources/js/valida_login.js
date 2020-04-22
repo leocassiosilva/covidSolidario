@@ -15,7 +15,7 @@ $('document').ready(function(){
 			{
 				if (response.codigo  == 1) {
 					$("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem);
-					$("#login-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);          window.location.href = "../view/login.php";
+					$("#login-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);         
 					window.location.href = "../view/home.php";
 				}else {
 					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem);

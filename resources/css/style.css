@@ -38,7 +38,11 @@ html, body { margin: 0;
    word-wrap:break-word;
  }
 
-#id_nome{
+ #id_nome{
   margin-left: 30px;
-
+}
+#geralIndex{
+  position:relative;
+  padding-top: 10px; 
+  min-height: 50%
 }
