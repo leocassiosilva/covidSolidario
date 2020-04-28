@@ -5,7 +5,7 @@ margin-top: 60px;">
 		<div class="col-6 col-md" style="text-align: center;">
 			<h5>Equipe</h5>
 			<ul class="list-unstyled text-small">
-				<li><a class="text-muted" href="#">Felipe Gabriel</a></li>
+				<li><a class="text-muted" href="https://github.com/fgabrielqr">Felipe Gabriel</a></li>
 				<li><a class="text-muted" href="https://github.com/leocassiosilva">Francisco Leocassio</a></li>
 			</ul>
 		</div>
