@@ -5,11 +5,13 @@ if($_SESSION["logado"] == true){
   $nome = $_SESSION["nome"];
   $email = $_SESSION["email"];
 }else{
-  header("location: ../login.php"); 
+  header("location: login.php"); 
 }
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
+  <meta http-equiv="Content-Language" content="pt-br">
   <title>Listar Doadores</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
