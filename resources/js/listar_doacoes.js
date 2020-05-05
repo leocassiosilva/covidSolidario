@@ -12,7 +12,6 @@
             success: function(response)
             {
                 if (response.codigo == 0) {
-                    console.log(response);
                     $("table").css("display", "none");  
                     $("#listarmensagem").html('<strong>Erro! </strong>' + response.mensagem);
                     $("#listar-alert").addClass( "col-md-6 mx-auto alert alert-danger").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);

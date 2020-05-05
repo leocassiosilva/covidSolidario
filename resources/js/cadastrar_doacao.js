@@ -11,7 +11,6 @@ $('document').ready(function(){
 			dataType: 'json',
 			success: function(response)
 			{
-				alert(response.codigo);
 				if (response.codigo  == 1) {
 					$("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem);
 					$("#cad-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);         
