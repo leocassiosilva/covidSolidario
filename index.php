@@ -41,7 +41,7 @@
 <div id="geralIndex">
   <div class="container-fluid">
     <div class="card-deck m-5 mb-3 text-center">
-      <div class="card mb-4 shadow-sm">
+      <div class="card m-5 mb-4 shadow-sm">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal">Quem pode participar?</h4>
         </div>
@@ -51,7 +51,7 @@
           </ul>
         </div>
       </div>
-      <div class="card mb-4 shadow-sm">
+      <div class="card m-5 mb-4 shadow-sm">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
         </div>
@@ -61,7 +61,7 @@
           </ul>
         </div>
       </div>
-      <div class="card mb-4 shadow-sm">
+      <div class="card m-5 mb-4 shadow-sm">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
         </div>
