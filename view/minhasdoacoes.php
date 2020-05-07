@@ -5,7 +5,7 @@ if($_SESSION["logado"] == true){
   $nome = $_SESSION["nome"];
   $email = $_SESSION["email"];
 }else{
-  header("location: ../login.php"); 
+   header("location: login.php"); 
 }
 ?>
 
