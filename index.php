@@ -67,7 +67,7 @@
         </div>
         <div class="card-body">
           <ul class="list-unstyled mt-3 mb-4">
-            <li><p>Para doar você precisa estar logado no sistema, informar o nome do produto/objeto que deseja doar, escolher a categoria e quantidade.</p></li>
+            <li><p>Para doar você precisa estar logado no sistema e descrever a sua doação.</p></li>
           </ul>
         </div>
       </div>
