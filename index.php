@@ -40,9 +40,8 @@
   </div>
   <div id="geralIndex">
     <div class="container-fluid">
-      <div class="card-deck m-5 mb-3 text-center">
-        <div class="row justify-content-center">
-
+      <div class="row justify-content-center">
+        <div class="card-deck m-5 mb-3 text-center">
           <div class="card m-5 mb-6 shadow-sm col-4 col-sm-4">
             <div class="card-header">
               <h4 class="my-0 font-weight-normal">Quem pode participar?</h4>
