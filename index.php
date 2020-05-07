@@ -38,42 +38,45 @@
       <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores.</p>
     </div>
   </div>
-<div id="geralIndex">
-  <div class="container-fluid">
-    <div class="card-deck m-5 mb-3 text-center">
-      <div class="card m-5 mb-6 shadow-sm">
-        <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Quem pode participar?</h4>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled mt-3 mb-4">
-            <li><p>Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p></li>
-          </ul>
-        </div>
-      </div>
-      <div class="card m-5 mb-6 shadow-sm">
-        <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled mt-3 mb-4">
-            <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
-          </ul>
-        </div>
-      </div>
-      <div class="card m-5 mb-6 shadow-sm">
-        <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled mt-3 mb-4">
-            <li><p>Para doar você precisa estar logado no sistema e descrever a sua doação.</p></li>
-          </ul>
+  <div id="geralIndex">
+    <div class="container-fluid">
+      <div class="card-deck m-5 mb-3 text-center">
+        <div class="row justify-content-center">
+
+          <div class="card m-5 mb-6 shadow-sm col-4 col-md-4">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Quem pode participar?</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li><p>Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card m-5 mb-6 shadow-sm col-4 col-md-4">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card m-5 mb-6 shadow-sm col-4 col-md-4">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li><p>Para doar você precisa estar logado no sistema e descrever a sua doação.</p></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
   <?php include 'view/layout/footer.php';?>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
