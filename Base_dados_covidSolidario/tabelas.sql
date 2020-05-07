@@ -4,7 +4,7 @@ create database covidsolidario;
 USE covidsolidario;
 
 CREATE TABLE usuario(
-id_usuario int(4) AUTO_INCREMENT primary key,
+id_usuario serial primary key not null,
 nome varchar(50) NOT NULL,
 celular varchar(50) NOT NULL,
 email varchar(50),
@@ -16,7 +16,7 @@ data_cadastro date
 );
 
 CREATE TABLE status_doacao (
-	id_status int auto_increment primary key, 
+	id_status serial primary key not null, 
     nome varchar(50) not null
 );
 
@@ -28,9 +28,9 @@ VALUES ("Concluida");
 
 /*Tabela doação*/
 CREATE TABLE doacao (
-	id_doacao int auto_increment primary key, 
+	id_doacao serial primary key not null, 
     descricao text not null, 
-    id_usuario integer(4),
+    id_usuario integer,
 	FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),
     id_status integer,
 	FOREIGN KEY (id_status) REFERENCES status_doacao (id_status),
