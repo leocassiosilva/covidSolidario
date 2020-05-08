@@ -37,8 +37,8 @@
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-12 col-sm-12 mb-4 text-center">
-         <h1 class="display-4">O que é o Covid Solidário ?</h1>
-         <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores. </p>
+         <h1 class="display-4" id="titulo1">O que é o Covid Solidário ?</h1>
+         <p class="lead" id="texto1">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores. </p>
        </div>
      </div>
 
