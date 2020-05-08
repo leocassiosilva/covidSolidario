@@ -25,35 +25,38 @@ if($_SESSION["logado"] == true){
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-6 mx-auto">
-        <div class="card rounded-0" id="login-form">
-          <div class="card-header">
-            <h3 class="mb-0" style="text-align: center;">Pesquisar doadores</h3>
-          </div>
-          <div class="card-body">
-            <form method="POST">
-             <div class="form-row">
-               <div class="form-group col-md-5">
-                 <label for="inputCep">CEP</label>
-                 <input type="text" class="form-control" name="cep" id="cep" required=""
-                 placeholder="99999-999">
-               </div>
-               <div class="form-group col-md-5">
-                <label for="inputCidade">Cidade</label>
-                <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputUf">UF</label>
-                <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
-              </div>
-            </div>
-            <button type="submit" class="btn btn-success btn-lg " id="btnListar" name="btnListar">Pesquisar</button>
-          </form>
+
+  <div class="row  d-flex justify-content-center">
+    <div class="col-lg-6 col-sm-12 mb-4 text-center">
+      <div class="card rounded-0" id="login-form">
+        <div class="card-header">
+          <h3 class="mb-0" style="text-align: center;">Pesquisar doadores</h3>
         </div>
+        <div class="card-body">
+          <form method="POST">
+            <div class="form-row">
+             <div class="form-group col-md-5 text-left">
+               <label for="inputCep">CEP</label>
+               <input type="text" class="form-control" name="cep" id="cep" required=""
+               placeholder="99999-999">
+             </div>
+             <div class="form-group col-md-5 text-left">
+              <label for="inputCidade">Cidade</label>
+              <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
+            </div>
+            <div class="form-group col-md-2 text-left">
+              <label for="inputUf">UF</label>
+              <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar" style="float: left;">Pesquisar</button>
+        </form>
       </div>
     </div>
   </div>
+
+
+</div>
 
   <div class="row" id="tabela">
     <div class="col-md-8 mx-auto" >
