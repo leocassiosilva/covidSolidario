@@ -36,13 +36,13 @@
     <!-- Page Content -->
     <div class="container">
       <div class="row d-flex justify-content-center">
-        <div class="col-lg-12 col-sm-12 mb-4 text-center">
+        <div class="col-lg-12 col-sm-12 mb-4">
          <h1 class="display-4">O que é o Covid Solidário ?</h1>
          <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores. </p>
        </div>
      </div>
 
-     <div class="row">
+     <div class="row d-flex justify-content-center">
       <div class="col-lg-4 col-sm-8 mb-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
