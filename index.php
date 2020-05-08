@@ -41,20 +41,20 @@
     </div>
     <div class="row justify-content-center">
 
-      <div class="card-deck col-4">
+      <div class="card-deck col-6">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Quem pode participar?</h5>
             <p class="card-text">Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p>
           </div>
         </div>
-        <div class="card col-4">
+        <div class="card col-6">
           <div class="card-body">
             <h5 class="card-title">Como me cadastrar?</h5>
             <p class="card-text">Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p>
           </div>
         </div>
-         <div class="card col-4">
+         <div class="card col-6">
           <div class="card-body">
             <h5 class="card-title">Como posso doar ?</h5>
             <p class="card-text">Para doar você precisa estar logado no sistema e descrever a sua doação.</p>
