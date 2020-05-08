@@ -39,7 +39,7 @@
 
     <div class="container">
      <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
           <h1 class="display-4">O que é o Covid Solidário ?</h1>
           <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores. </p>
@@ -48,7 +48,7 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-sm-4">
        <div class="card mb-4 shadow-sm">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal">Quem pode participar?</h4>
@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-4">
+    <div class="col-sm-4">
       <div class="card mb-4 shadow-sm">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-4">
+    <div class="col-sm-4">
      <div class="card mb-4 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
