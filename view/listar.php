@@ -50,16 +50,16 @@
           <form method="POST">
             <div class="form-row">
              <div class="form-group col-md-5 text-left">
-               <label for="inputCep">CEP</label>
+               <label for="inputCep" id="label">CEP</label>
                <input type="text" class="form-control" name="cep" id="cep" required=""
                placeholder="99999-999">
              </div>
              <div class="form-group col-md-5 text-left">
-              <label for="inputCidade">Cidade</label>
+              <label for="inputCidade" id="label">Cidade</label>
               <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
             </div>
             <div class="form-group col-md-2 text-left">
-              <label for="inputUf">UF</label>
+              <label for="inputUf" id="label">UF</label>
               <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
             </div>
           </div>
