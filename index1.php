@@ -57,13 +57,13 @@
 </div>
 
 <div class="row">
-  <div class="col-md-4 col-sm-12">
+  <div class="col-md-4 col-sm-6">
    coluna 1
  </div>
- <div class="col-md-4 col-sm-12">
+ <div class="col-md-4 col-sm-6">
    coluna 2
  </div>
- <div class="col-md-4 col-sm-12">
+ <div class="col-md-4 col-sm-6">
    coluna 3
  </div>
 </div>
