@@ -41,7 +41,7 @@
   </div>
 
    <div class="row">
-      <div class="col-lg-12 col-sm-12 mb-4">
+      <div class="col-lg-12 col-sm-12 mb-4 text-center">
         jjs
       </div>
     </div>
