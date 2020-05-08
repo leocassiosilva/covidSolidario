@@ -33,12 +33,12 @@
     </div>
   </nav>
   <div class="container">
+    <div class="row">
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">O que é o Covid Solidário ?</h1>
       <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores. </p>
     </div>
   </div>
-  <div class="container">
 
     <div class="row">
       <div class="col-md-4">
