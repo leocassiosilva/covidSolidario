@@ -56,22 +56,26 @@
         </div>
       </div>
       <div class="col-lg-4 col-sm-12 mb-4">
-        <div class="card h-200">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
+          </div>
           <div class="card-body">
-            <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
-            </div>
-            <p class="card-text">Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
+            </ul>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-12 mb-4">
-        <div class="card h-200">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
+          </div>
           <div class="card-body">
-            <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
-            </div>
-            <p class="card-text">Para doar você precisa estar logado no sistema e descrever a sua doação. Ex: Arroz 1kg.</p>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><p>Para doar você precisa estar logado no sistema e descrever a sua doação.</p></li>
+            </ul>
           </div>
         </div>
       </div>
