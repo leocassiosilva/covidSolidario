@@ -19,7 +19,7 @@
         <li class="nav-item">
           <a class="nav-link" href="../index.php">Home</a>
         </li>
-                <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="listar.php">Doadores</a>
         </li>
         <li class="nav-item">
@@ -40,12 +40,34 @@
     </div>
   </div>
 
-   <div class="row">
-      <div class="col-lg-12 col-sm-12 mb-4 text-center">
-        jjs
+  <div class="row">
+    <div class="col-lg-12 col-sm-12 mb-4 text-center">
+      <div class="card rounded-0" id="login-form">
+        <div class="card-header">
+          <h3 class="mb-0" style="text-align: center;">Pesquisar doadores</h3>
+        </div>
+        <div class="card-body">
+          <form method="POST">
+            <div class="form-row">
+             <div class="form-group col-md-5">
+               <label for="inputCep">CEP</label>
+               <input type="text" class="form-control" name="cep" id="cep" required=""
+               placeholder="99999-999">
+             </div>
+             <div class="form-group col-md-5">
+              <label for="inputCidade">Cidade</label>
+              <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputUf">UF</label>
+              <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg " id="btnListar" name="btnListar">Pesquisar</button>
+        </form>
       </div>
     </div>
-
+  </div>
 
 
 </div>
