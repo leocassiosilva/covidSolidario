@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Language" content="pt-br">
   <title>Covid Solidarrio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+  <link rel="stylesheet" type="text/css" href="../resources/css/estilo.css" media="screen" />
 </head>
 <body>
   <div id="main">
@@ -43,7 +43,7 @@
      </div>
 
      <div class="row">
-      <div class="col-lg-4 col-sm-12 mb-4">
+      <div class="col-lg-4 col-sm-8 mb-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Quem pode participar?</h4>
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-12 mb-4">
+      <div class="col-lg-4 col-sm-8 mb-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Como me cadastrar?</h4>
@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-12 mb-4">
+      <div class="col-lg-4 col-sm-8 mb-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
