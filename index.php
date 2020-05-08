@@ -43,7 +43,7 @@
      </div>
 
      <div class="row d-flex justify-content-center">
-      <div class="col-lg-4 col-sm-10 mb-4">
+      <div class="col-lg-4 col-sm-10 mb-4 text-center">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal" id="titulo">Quem pode participar?</h4>
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-10 mb-4">
+      <div class="col-lg-4 col-sm-10 mb-4 text-center">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal" id="titulo">Como me cadastrar?</h4>
@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-10 mb-4">
+      <div class="col-lg-4 col-sm-10 mb-4 text-center">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal" id="titulo">Como posso doar ?</h4>
