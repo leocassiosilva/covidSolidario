@@ -69,7 +69,7 @@
             <div class="card-header">
               <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
             </div>
-            <p class="card-text">Para doar você precisa estar logado no sistema e descrever a sua doação.</p>
+            <p class="card-text">Para doar você precisa estar logado no sistema e descrever a sua doação. </p>
           </div>
         </div>
       </div>
