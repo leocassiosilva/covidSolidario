@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="resources/css/estilo.css" media="screen" />
 
 </head>
-
-
+<body>
+<div id="main">
 <nav  id="navbar" class="navbar  navbar-expand-lg navbar-dark maximo" style="background-color: #5abba7;" >
   <div class="container">
     <a class="navbar-brand" href="#">Covid Solidário</a>
@@ -56,7 +56,7 @@
  </div>
 </div>
 </div>
-
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
