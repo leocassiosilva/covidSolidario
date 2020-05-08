@@ -41,7 +41,7 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-12 col-sm-12 mb-4 text-center">
+    <div class="col-lg-6 col-sm-12 mb-4 text-center">
       <div class="card rounded-0" id="login-form">
         <div class="card-header">
           <h3 class="mb-0" style="text-align: center;">Pesquisar doadores</h3>
