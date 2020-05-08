@@ -74,7 +74,7 @@
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li><p>Para doar você precisa estar logado no sistema e descrever a sua doação.</p></li>
+              <li><p>Para doar você precisa estar logado no sistema e descrever a sua doação. Exemplo: Arroz 1kg.</p></li>
             </ul>
           </div>
         </div>
