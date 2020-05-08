@@ -32,7 +32,7 @@
       </div>
     </div>
   </nav>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4">O que é o Covid Solidário ?</h1>
