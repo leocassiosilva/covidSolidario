@@ -46,7 +46,7 @@
       <div class="col-lg-4 col-sm-10 mb-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal" id="titilo">Quem pode participar?</h4>
+            <h4 class="my-0 font-weight-normal" id="titulo">Quem pode participar?</h4>
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
@@ -58,7 +58,7 @@
       <div class="col-lg-4 col-sm-10 mb-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal" id="titilo">Como me cadastrar?</h4>
+            <h4 class="my-0 font-weight-normal" id="titulo">Como me cadastrar?</h4>
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
@@ -70,7 +70,7 @@
       <div class="col-lg-4 col-sm-10 mb-4">
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal" id="titilo">Como posso doar ?</h4>
+            <h4 class="my-0 font-weight-normal" id="titulo">Como posso doar ?</h4>
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
