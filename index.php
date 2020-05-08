@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Language" content="pt-br">
   <title>Covid Solidarrio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../resources/css/estilo.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="resources/css/estilo.css" media="screen" />
 </head>
 <body>
   <div id="main">
@@ -50,7 +50,7 @@
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li><p>Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p></li>
+              <li><p id="texto">Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p></li>
             </ul>
           </div>
         </div>
@@ -62,7 +62,7 @@
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li><p>Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
+              <li><p id="texto">Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
             </ul>
           </div>
         </div>
@@ -74,7 +74,7 @@
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li><p>Para doar você precisa estar logado no sistema e descrever a sua doação. Exemplo: Arroz 1kg.</p></li>
+              <li><p id="texto">Para doar você precisa estar logado no sistema e descrever a sua doação. Exemplo: Arroz 1kg.</p></li>
             </ul>
           </div>
         </div>
