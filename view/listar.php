@@ -63,7 +63,7 @@
               <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
             </div>
           </div>
-          <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar">Pesquisar</button>
+          <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar" style="float: left;">Pesquisar</button>
         </form>
       </div>
     </div>
