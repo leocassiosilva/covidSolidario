@@ -39,7 +39,7 @@
       <div class="row">
         <div class="col-lg-12 col-sm-12 mb-4">
          <h1 class="display-4">O que é o Covid Solidário ?</h1>
-         <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores.</p>
+         <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores. </p>
        </div>
      </div>
 
@@ -70,7 +70,7 @@
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Como posso doar ?</h4>
           </div>
-          <p class="card-text">Para doar você precisa estar logado no sistema e descrever a sua doação. </p>
+          <p class="card-text">Para doar você precisa estar logado no sistema e descrever a sua doação. Ex: Arroz 1kg.</p>
         </div>
       </div>
     </div>
