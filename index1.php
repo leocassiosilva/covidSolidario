@@ -39,7 +39,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12 mb-12">
          <h1 class="display-4">O que é o Covid Solidário ?</h1>
-         <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores. </p>
+         <p class="lead">É um site que tem como objetivo facilitar a comunicação entre doadores e receptores.</p>
        </div>
      </div>
 
