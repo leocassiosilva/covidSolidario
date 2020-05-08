@@ -19,7 +19,7 @@
         <li class="nav-item">
           <a class="nav-link" href="../index.php">Home</a>
         </li>
-                <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="listar.php">Doadores</a>
         </li>
         <li class="nav-item">
@@ -41,14 +41,14 @@
   </div>
 
   <div class="row">
-    <div class="col-md-6 mx-auto">
+    <div class="col-lg-12 col-sm-12 mb-4 text-center">
       <div class="card rounded-0" id="login-form">
         <div class="card-header">
           <h3 class="mb-0" style="text-align: center;">Pesquisar doadores</h3>
         </div>
         <div class="card-body">
           <form method="POST">
-           <div class="form-row">
+            <div class="form-row">
              <div class="form-group col-md-5">
                <label for="inputCep">CEP</label>
                <input type="text" class="form-control" name="cep" id="cep" required=""
@@ -68,8 +68,9 @@
       </div>
     </div>
   </div>
-</div>
 
+
+</div>
 <div class="row" id="tabela">
   <div class="col-md-12 mx-auto" >
     <div class="table-responsive">
