@@ -56,7 +56,7 @@
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li><p>Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site.</p></li>
+              <li><p>Qualquer pessoa que deseja doar ou receber doações. Antes é necessário fazer um cadastro simples no site. Ex: Arroz 1kg</p></li>
             </ul>
           </div>
         </div>
