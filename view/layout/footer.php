@@ -1,5 +1,5 @@
-<div class="footer border-top" style="height: 70px;
-margin-top: 60px;">
+<div class="footer border-top" style="height: 40px;
+margin-top: 200px;">
 <div class="container">
 	<div class="row">
 		<div class="col-6 col-md" style="text-align: center;">

@@ -29,6 +29,7 @@ html, body { margin: 0;
     position:relative;
     padding-top: 10px; 
     min-height: 100%;
+    margin-top: 60px;
   }
   .footer {
     width: 100%;

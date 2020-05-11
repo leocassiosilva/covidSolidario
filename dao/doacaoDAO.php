@@ -2,7 +2,7 @@
 
 include("Conexao.php");
 require_once("../model/Doacao.php");
-
+require_once("../model/Usuario.php");
 
 class doacaoDAO
 {
