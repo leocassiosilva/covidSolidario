@@ -68,12 +68,14 @@ class produtoDAO
   public function cadastroDetalhePedido(Produto $produto, $id_pedido, $qtd)
   {
     $id_produto = $produto->getId_produto();
+    $id_status = 1;
 
-    $sql =  "INSERT INTO pedido_detalhe(id_pedido, id_produto, quantidade) VALUES (:id_pedido, :id_produto, :quantidade)";
+    $sql =  "INSERT INTO pedido_detalhe(id_pedido, id_produto, quantidade, id_status) VALUES (:id_pedido, :id_produto, :quantidade, :id_status)";
     $query = $this->conexao->conectar()->prepare($sql);
     $query->bindValue(":id_pedido", $id_pedido);
     $query->bindValue(":id_produto", $id_produto);
     $query->bindValue(":quantidade", $qtd);
+    $query->bindValue(":id_status", $id_status);
     $query->execute();
 
 
@@ -84,7 +86,25 @@ class produtoDAO
     }else {
       return $row;
     }
-
   }
+
+  public function listar($value)
+  {
+    $nome = $value;
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade FROM usuario
+      INNER JOIN pedido
+      ON (pedido.id_usuario = usuario.id_usuario)
+      INNER JOIN pedido_detalhe
+      ON (pedido_detalhe.id_pedido = pedido.id_pedido)
+      INNER JOIN produto
+      ON(produto.id_produto = pedido_detalhe.id_produto) 
+      WHERE produto.nome LIKE :nome');
+    $query->bindValue(":nome", "%".$nome."%", PDO::PARAM_STR);
+    $query->execute();
+    $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $resultado;
+  }
+
 }
 ?>
