@@ -25,6 +25,14 @@ foreach($data as $registro):
 		echo json_encode($retorno);
 		exit();
 	}
+
+	if (!(preg_match('/^[a-zA-Z]+/', $registro->nome))) {
+		$retorno = array('codigo' => 0, 'mensagem' => 'Digite um nome sem caracterer especiaais como numeros e [#@$%]');
+		echo json_encode($retorno);
+		exit();
+	}
+
+
 	if (empty($registro->qtd)) {
 		$retorno = array('codigo' => 0, 'mensagem' => 'Preencha a quantidade de produto!');
 		echo json_encode($retorno);
