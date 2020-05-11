@@ -65,8 +65,8 @@
  </div>
  <div class="row" id="tabela">
   <div class="col-md-12 mx-auto" >
-    <div class="table-responsive">
-      <table class="table" id="idTabela" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;table-layout:fixed;">
+    <div class="table">
+      <table class="table" id="idTabela" cellspacing="0" aria-describedby="example_info">
 
       </table>
     </div>
