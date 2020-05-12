@@ -26,42 +26,31 @@ if($_SESSION["logado"] == true){
     </div>
 
 
-  <div class="row  d-flex justify-content-center">
-    <div class="col-lg-6 col-sm-12 mb-4 text-center">
-      <div class="card rounded-0" id="login-form">
-        <div class="card-header">
-          <h3 class="mb-0" style="text-align: center;">Pesquisar doadores</h3>
-        </div>
-        <div class="card-body">
-          <form method="POST">
-            <div class="form-row">
-             <div class="form-group col-md-5 text-left">
-               <label for="inputCep">CEP</label>
-               <input type="text" class="form-control" name="cep" id="cep" required=""
-               placeholder="99999-999">
-             </div>
-             <div class="form-group col-md-5 text-left">
-              <label for="inputCidade">Cidade</label>
-              <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
-            </div>
-            <div class="form-group col-md-2 text-left">
-              <label for="inputUf">UF</label>
-              <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
-            </div>
+    <div class="row  d-flex justify-content-center">
+      <div class="col-lg-6 col-sm-12 mb-4 text-center">
+        <div class="card rounded-0" id="login-form">
+          <div class="card-header">
+            <h3 class="mb-0" style="text-align: center;">Pesquisar Produtos</h3>
           </div>
-          <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar" style="float: left;">Pesquisar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-
-  <div class="row" id="tabela">
-    <div class="col-md-8 mx-auto" >
-      <div class="table-responsive">
-        <table class="table" id="idTabela" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;table-layout:fixed;">
+          <div class="card-body">
+            <form method="POST">
+              <div class="form-row">
+               <div class="form-group col-md-12 text-left">
+                 <label for="inputNome" id="label">Nome</label>
+                 <input type="text" class="form-control" name="nomeProduto" id="nomeProduto" required=""
+                 placeholder="Arroz">
+               </div>
+             </div>
+             <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar" style="float: left;">Pesquisar</button>
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="row d-flex justify-content-center" id="tabela">
+    <div class="col-md-12 mx-auto" >
+      <div class="table">
+        <table class="table" id="idTabela" cellspacing="0" aria-describedby="example_info">
 
         </table>
       </div>
@@ -75,9 +64,7 @@ if($_SESSION["logado"] == true){
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script>
-<script type="text/javascript" src="../resources/js/mascara_cep_cel.js"> </script>
-
 <script type="text/javascript" src="../resources/js/listar.js"></script>
+
 </body>
 </html>

@@ -145,5 +145,25 @@ class produtoDAO
     }
   }
 
+  public function listarPedido($value)
+  {
+    $nome = $value;
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
+      INNER JOIN pedido
+      ON (pedido.id_usuario = usuario.id_usuario)
+      INNER JOIN pedido_detalhe
+      ON (pedido_detalhe.id_pedido = pedido.id_pedido)
+      INNER JOIN produto
+      ON(produto.id_produto = pedido_detalhe.id_produto)
+      INNER JOIN status_doacao
+      ON(status_doacao.id_status = pedido_detalhe.id_status) 
+      WHERE produto.nome LIKE :nome and status_doacao.id_status = 1');
+    $query->bindValue(":nome", "%".$nome."%", PDO::PARAM_STR);
+    $query->execute();
+    $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $resultado;
+  }
+
 }
 ?>
