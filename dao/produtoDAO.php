@@ -91,7 +91,7 @@ class produtoDAO
   public function listar($value)
   {
     $nome = $value;
-    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade FROM usuario
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.cidade as nome_cidade, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade FROM usuario
       INNER JOIN pedido
       ON (pedido.id_usuario = usuario.id_usuario)
       INNER JOIN pedido_detalhe
@@ -104,6 +104,45 @@ class produtoDAO
     $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
 
     return $resultado;
+  }
+
+
+  public function listarPedidosUsuario($value)
+  {
+    $id_usuario = $value;
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario,  produto.nome as nome_produto, pedido_detalhe.id_pedido_detalhe as id_pedido_detalhe,pedido_detalhe.quantidade as quantidade, status_doacao.nome as nome_status FROM usuario
+      INNER JOIN pedido
+      ON (pedido.id_usuario = usuario.id_usuario)
+      INNER JOIN pedido_detalhe
+      ON (pedido_detalhe.id_pedido = pedido.id_pedido)
+      INNER JOIN produto
+      ON(produto.id_produto = pedido_detalhe.id_produto)
+      INNER JOIN status_doacao
+      ON(status_doacao.id_status = pedido_detalhe.id_status) 
+      WHERE usuario.id_usuario = :id_usuario');
+    $query->bindValue(":id_usuario", $id_usuario);
+    $query->execute();
+    $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $resultado;
+  }
+
+  public function modificarStatus($id_pedido_detalhe)
+  {
+
+
+    $query = $this->conexao->conectar()->prepare('UPDATE pedido_detalhe SET id_status = 2 
+      WHERE id_pedido_detalhe = :id_pedido_detalhe');
+    $query->bindValue(":id_pedido_detalhe", $id_pedido_detalhe);
+    $query->execute();
+    
+    $row = $query->rowCount(); 
+
+    if($row != 0){
+      return true;
+    }else {
+      return false;
+    }
   }
 
 }

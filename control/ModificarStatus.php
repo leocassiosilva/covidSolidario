@@ -1,22 +1,17 @@
 <?php
 
 session_start();
-require_once("../dao/doacaoDAO.php");
-require_once("../model/Doacao.php");
+require_once("../dao/produtoDAO.php");
+require_once("../model/Produto.php");
 
-$id_doacao = $_POST["id_doacao"];;
+$id_pedido_detalhe = $_POST["id_pedido_detalhe"];;
 
-$doacaoDAO = new doacaoDAO();
-
-$doacao = new Doacao(); 
+$produtoDAO = new produtoDAO();
 
 $retorno = false;
 
 
-/*doacao*/
-$doacao->setId_doacao($id_doacao);
-
-$resultado = $doacaoDAO->modificarStatus($doacao);
+$resultado = $produtoDAO->modificarStatus($id_pedido_detalhe);
 
 if (empty($resultado)) {
 	$retorno = array('codigo' => 0, 'mensagem' => 'Não foi possivel modificar o status!');

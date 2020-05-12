@@ -2,27 +2,25 @@
 
 //Essa pagina aqui é o Controle para Minhas Doações
 session_start();
-require_once("../model/Usuario.php");
-require_once("../dao/doacaoDAO.php");
 
 $id_usuario = $_SESSION["id_usuario"];
-
-$doacaoDAO = new doacaoDAO();
-
-$usuario = new Usuario(); 
+require_once("../dao/produtoDAO.php");
+require_once("../model/Produto.php");
 
 
-$retorno = false;
+$produtoDAO = new produtoDAO();
+//echo $nome;
+if (empty($id_usuario)) {
+	$retorno = array('codigo' => 0, 'mensagem' => 'Faça Login!');
+	echo json_encode($retorno);
+	exit();
+}
 
+$resultado = $produtoDAO->listarPedidosUsuario($id_usuario);
 
-/*Usuario*/
-$usuario->setId_usuario($id_usuario);
-
-//Aqui é a função listarMinhas doações na qual passo a Id do usuario
-$resultado = $doacaoDAO->listarDoacaoUsuario($usuario);
 
 if (empty($resultado)) {
-	$retorno = array('codigo' => 0, 'mensagem' => 'Você ainda não realizou nenhuma doação!');
+	$retorno = array('codigo' => 0, 'mensagem' => 'Você ainda não realizou nenhuma pedido!');
 	echo json_encode($retorno);
 	exit();
 }else {

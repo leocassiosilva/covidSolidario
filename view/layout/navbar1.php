@@ -10,10 +10,10 @@
           <a class="nav-link" href="home.php">Pagina Inicial</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="minhasdoacoes.php">Minhas doações</a>
+          <a class="nav-link" href="minhasdoacoes.php">Meus Pedidos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="doacoes.php">Doadores</a>
+          <a class="nav-link" href="doacoes.php">Pedidos doações</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Nome do usuario:</i> <?=$nome ?> <span class="sr-only">(Página atual)</span></a>

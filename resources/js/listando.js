@@ -18,9 +18,9 @@
 
  				}else {
  					$("input").val("");
- 					$('table').append("<tr class='row'><th id='id_nome' class='col-4'>Nome</th> <th class='col-4'>Produto</th> <th class='col-3'>Quantidade</th></tr> ");
+ 					$('table').append("<tr class='row'><th id='id_nome' class='col-4'>Cidade</th> <th class='col-4'>Produto</th> <th class='col-3'>Quantidade</th></tr> ");
  					for(var i=0;response.length>i;i++){
- 						$('table').append("<tr class='row'><td id='id_nome' class='col-4'>" + response[i].nome_usuario + "</td> <td class='col-4'>" + response[i].nome_produto + "</td> <td class='col-3'>" + response[i].quantidade + "</td></tr> ");
+ 						$('table').append("<tr class='row'><td id='id_nome' class='col-4'>" + response[i].nome_cidade + "</td> <td class='col-4'>" + response[i].nome_produto + "</td> <td class='col-3'>" + response[i].quantidade + "</td></tr> ");
  					} 
  					$("table").css("display", "block");
 

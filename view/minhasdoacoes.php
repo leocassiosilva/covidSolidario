@@ -27,10 +27,9 @@ if($_SESSION["logado"] == true){
       </div>
     </div>
     <div class="row" style="padding-top: 50px;">
-      <div class="col-10 mx-auto">
+      <div class="col-8 mx-auto">
         <div class="resultadoForm">
-          <table class="table" id="idTabela" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;table-layout:fixed">
-            
+          <table class="table" id="idTabela">    
           </table>
         </div>
       </div>
