@@ -2,10 +2,10 @@
 //CRIANDO A CLASSE DE CONEXAO
 class Conexao{
 	//ATRIBUTO PRIVADOS
-	private $usuario = "nvohxwcldzkfmc";
-	private $senha= "17f1eb57fbc11dbc91463ebc4716d0d9c9702548c0d531161811049a6e5c0342";
-	private $banco= "d8v54a9tbsehej";
-	private $servidor = "ec2-52-202-146-43.compute-1.amazonaws.com";
+	private $usuario = "zvlsiayfrfzzkt";
+	private $senha= "354338005bdc6ca480269a1d35e3752a80e810ab5ba48d7aa7a2c89b6bbfa2e8";
+	private $banco= "das5ht4878dqo6";
+	private $servidor = "ec2-50-17-21-170.compute-1.amazonaws.com";
 	private static $conexao;
     private $porta = 5432;
 
