@@ -28,7 +28,7 @@ create database covidsolidario;
 
 	create table produto(
 		id_produto serial primary key not null,
-		nome varchar(30) NOT NULL
+		nome varchar(100) NOT NULL
 		);
 
 	create table pedido(
