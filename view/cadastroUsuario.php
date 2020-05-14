@@ -14,73 +14,71 @@
         <span id="mensagem"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-12 text-center mb-2">
-        </div>
-        <div class="row">
-          <div class="col-md-6 mx-auto">
-            <div class="card rounded-0">
-              <div class="card-header">
-                <h3 class="mb-0">Cadastro</h3>
-              </div>
-              <div class="card-body">
-                <form method="POST">
-                  <div class="form-row">
-                    <div class="form-group col-md-6 col-sm-12 mb-12">
-                     <label for="inputNome">Nome</label>
-                     <input type="text" class="form-control" name="nome" id="nome" required="">
-                   </div>
-                   <div class="form-group col-md-6 col-sm-12 mb-12">
-                    <label for="inputCelular">Whatsapp</label>
-                    <input type="tel" class="form-control" name="celular" id="celular" required=""
-                    placeholder="(84)9999-99999">
-                  </div>
-                </div>
-                <div class="form-row">
-                <div class="form-group col-md-12 col-sm-12 mb-4">
-                  <label for="inputEmail">E-mail</label>
-                  <input type="email" class="form-control" name="email" id="email" required="">
-                </div>
-              </div>
-                <div class="form-row">
-                 <div class="form-group col-md-5 col-sm-12 mb-4">
-                   <label for="inputCep">CEP</label>
-                   <input type="text" class="form-control" name="cep" id="cep" required=""
-                   placeholder="99999-999">
-                 </div>
-                 <div class="form-group col-md-5 col-sm-12 mb-4">
-                  <label for="inputCidade">Cidade</label>
-                  <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
-                </div>
-                <div class="form-group col-md-2 col-sm-12 mb-4">
-                  <label for="inputUf">UF</label>
-                  <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
-                </div>
-              </div>
 
+    <div class="row  d-flex justify-content-center">
+      <div class="col-lg-7 col-sm-12 mb-4 text-rigth">
+        <div class="card rounded-0" id="login-form">
+          <div class="card-header">
+            <h3 class="mb-0" style="text-align: center;">Cadastrar Usuário</h3>
+          </div>
+          <div class="card-body">
+           <form class="form" role="form"  id="login-form" novalidate="" method="POST">
+            <div class="form-group" id="formulario">
               <div class="form-row">
-                <div class="form-group col-md-6 col-sm-12 mb-4">
-                  <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" id="senha" name="senha" required="">
-                  </div>
-                </div>
-                <div class="form-group col-md-6 col-sm-12 mb-4">
-                  <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" id="senha2" name="senha2" required="">
-                  </div>
-                </div>
+                <div class="form-group col-md-6 col-sm-12 mb-12">
+                 <label for="inputNome">Nome</label>
+                 <input type="text" class="form-control" name="nome" id="nome" required="">
+               </div>
+               <div class="form-group col-md-6 col-sm-12 mb-12">
+                <label for="inputCelular">Whatsapp</label>
+                <input type="tel" class="form-control" name="celular" id="celular" required=""
+                placeholder="(84)9999-99999">
               </div>
-              
-              <button class="btn btn-success" id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
-            </form>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12 col-sm-12 mb-4">
+                <label for="inputEmail">E-mail</label>
+                <input type="email" class="form-control" name="email" id="email" required="">
+              </div>
+            </div>
+
+            <div class="form-row">
+             <div class="form-group col-md-5 col-sm-12 mb-4">
+               <label for="inputCep">CEP</label>
+               <input type="text" class="form-control" name="cep" id="cep" required=""
+               placeholder="99999-999">
+             </div>
+             <div class="form-group col-md-5 col-sm-12 mb-4">
+              <label for="inputCidade">Cidade</label>
+              <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
+            </div>
+            <div class="form-group col-md-2 col-sm-12 mb-4">
+              <label for="inputUf">UF</label>
+              <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6 col-sm-12 mb-4">
+              <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" required="">
+              </div>
+            </div>
+            <div class="form-group col-md-6 col-sm-12 mb-4">
+              <div class="form-group">
+                <label>Confirmar Senha</label>
+                <input type="password" class="form-control" id="senha2" name="senha2" required="">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
+        <button class="btn btn-success" id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
+
+      </form>
     </div>
   </div>
+</div>
 </div>
 </div>
 <?php include 'layout/footer.php';?>

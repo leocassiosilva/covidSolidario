@@ -24,6 +24,9 @@
     font-size: 25px;
   }
 
+  #email, #senha, #cidade, #cep, #uf, #senha2, #celular{
+    font-size: 25px;
+  }
 }
 
 html, body { margin: 0;
