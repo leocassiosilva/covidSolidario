@@ -11,11 +11,17 @@
   #nome, #quantidade{
     font-size: 25px;
   }
-  #add-campo, #cad{
+  #add-campo, #cad, #btnListar{
     font-size: 20px;
   }
   #tabela{
     font-size: 35px;
+  }
+  .nav-link{
+    font-size: 20px;
+  }
+  #nomeProduto{
+    font-size: 25px;
   }
 
 }
