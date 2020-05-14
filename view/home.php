@@ -49,14 +49,14 @@ if($_SESSION["logado"] == true){
               <label for="inputQuantidade">Quantidade</label>
               <input type="text" class="form-control" name="quantidade[]" placeholder="Quantidade" id="quantidade">
             </div>
-            <div class="form-group col-md-4">
-              <label for="inputQuantidade">Adicionar Itens</label><br>
-              <button type="button" id="add-campo" > Adicionar </button>
-            </div>
           </div>
         </div>
-        
-        <button name="cad" id="cad" class="btn btn-success btn-lg">Cadastrar</button>
+
+        <button type="button" class="btn btn-primary" id="add-campo"> Adicionar Item </button>
+
+        <button name="cad" id="cad" class="btn btn-success">Cadastrar Pedido</button>
+
+
       </form>
     </div>
   </div>
@@ -73,7 +73,7 @@ if($_SESSION["logado"] == true){
             $('#add-campo').click(function () {
               cont++;
                 //https://api.jquery.com/append/
-                $('#formulario').append('<div class="form-group" id="campo' + cont + '"><div class="form-row"> <div class="form-group col-md-5"><label>Nome do Produto: </label><br><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-group col-md-3"><label> Quantidade: </label><input type="text" name="quantidade[]" placeholder="Quantidade" id="quantidade' + cont + '" class="form-control"></div> <div class="form-group col-md-4"><label for="inputQuantidade">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar"> Remover </button></div></div> </div>');
+                $('#formulario').append('<div class="form-group" id="campo' + cont + '"><div class="form-row"> <div class="form-group col-md-5"><label>Nome do Produto: </label><br><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-group col-md-3"><label> Quantidade: </label><input type="text" name="quantidade[]" placeholder="Quantidade" id="quantidade' + cont + '" class="form-control"></div> <div class="form-group col-md-4"><label for="inputQuantidade">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div> </div>');
               });
 
             $('form').on('click', '.btn-apagar', function () {

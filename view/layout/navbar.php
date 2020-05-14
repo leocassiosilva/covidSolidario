@@ -10,7 +10,7 @@
           <a class="nav-link" href="../index.php">Home</a>
         </li>
                 <li class="nav-item">
-          <a class="nav-link" href="listar.php">Doadores</a>
+          <a class="nav-link" href="listar.php">Pedidos doações</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../view/cadastroUsuario.php">Cadastrar</a>
