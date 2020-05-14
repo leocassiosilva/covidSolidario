@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6 col-xs-5 mx-auto">
+      <div class="col-sm-6 col-xs-12 mx-auto">
         <div class="card card-signin flex-row my-5">
          <div class="card-body">
           <h5 class="card-title text-center">Cadastra-se</h5>
