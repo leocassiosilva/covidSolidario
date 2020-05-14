@@ -27,44 +27,46 @@
               <div class="card-body">
                 <form method="POST">
                   <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-6 col-sm-12 mb-4">
                      <label for="inputNome">Nome</label>
                      <input type="text" class="form-control" name="nome" id="nome" required="">
                    </div>
-                   <div class="form-group col-md-6">
+                   <div class="form-group col-md-6 col-sm-12 mb-4">
                     <label for="inputCelular">Whatsapp</label>
                     <input type="tel" class="form-control" name="celular" id="celular" required=""
                     placeholder="(84)9999-99999">
                   </div>
                 </div>
-                <div class="form-group">
+                <div class="form-row">
+                <div class="form-group col-md-12 col-sm-12 mb-4">
                   <label for="inputEmail">E-mail</label>
                   <input type="email" class="form-control" name="email" id="email" required="">
                 </div>
+              </div>
                 <div class="form-row">
-                 <div class="form-group col-md-5">
+                 <div class="form-group col-md-5 col-sm-12 mb-4">
                    <label for="inputCep">CEP</label>
                    <input type="text" class="form-control" name="cep" id="cep" required=""
                    placeholder="99999-999">
                  </div>
-                 <div class="form-group col-md-5">
+                 <div class="form-group col-md-5 col-sm-12 mb-4">
                   <label for="inputCidade">Cidade</label>
                   <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
                 </div>
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-2 col-sm-12 mb-4">
                   <label for="inputUf">UF</label>
                   <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
                 </div>
               </div>
 
               <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 col-sm-12 mb-4">
                   <div class="form-group">
                     <label>Senha</label>
                     <input type="password" class="form-control" id="senha" name="senha" required="">
                   </div>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 col-sm-12 mb-4">
                   <div class="form-group">
                     <label>Senha</label>
                     <input type="password" class="form-control" id="senha2" name="senha2" required="">
