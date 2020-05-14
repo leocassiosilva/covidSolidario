@@ -15,15 +15,8 @@
       </div>
     </div>
 
-  
     <div class="row  d-flex justify-content-center">
-      <div class="col-lg-7 col-m-12 mb-4 text-rigth">
-        <div class="card rounded-0" id="login-form">
-          <div class="card-header">
-            <h3 class="mb-0" style="text-align: center;">Cadastrar Usuário</h3>
-          </div>
-          <div class="card-body">
-           <form class="form" role="form" novalidate="" method="POST">
+      <form class="form" role="form" novalidate="" method="POST">
             <div class="form-group" id="formulario">
               <div class="form-row">
                 <div class="form-group col-xs-12 col-md-6 mb-4 mb-4">
@@ -77,10 +70,7 @@
         <button class="btn btn-success" id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
 
       </form>
-    </div>
-  </div>
-</div>
-</div>
+    </div>  
 </div>
 <?php include 'layout/footer.php';?>
 </body>
