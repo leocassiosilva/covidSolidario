@@ -26,11 +26,11 @@
             <div class="form-group" id="formulario">
               <div class="form-row">
                 <div class="form-group col-md-12 col-xs-12 mb-4 mb-4">
-                 <label for="inputNome">Nome</label>
+                 <label for="inputNome" id="label">Nome</label>
                  <input type="text" class="form-control" name="nome" id="nome" required="">
                </div>
                <div class="form-group col-md-12 col-xs-12 mb-4 mb-4">
-                <label for="inputCelular">Whatsapp</label>
+                <label for="inputCelular" id="label">Whatsapp</label>
                 <input type="tel" class="form-control" name="celular" id="celular" required=""
                 placeholder="(84)9999-99999">
               </div>
