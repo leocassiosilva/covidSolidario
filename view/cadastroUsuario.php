@@ -25,11 +25,11 @@
            <form class="form" role="form"  id="login-form" novalidate="" method="POST">
             <div class="form-group" id="formulario">
               <div class="form-row">
-                <div class="form-group col-md-6 col-sm-12 mb-4">
+                <div class="form-group col-xs-12 mb-4">
                  <label for="inputNome">Nome</label>
                  <input type="text" class="form-control" name="nome" id="nome" required="">
                </div>
-               <div class="form-group col-md-6 col-sm-12 mb-4">
+               <div class="form-group col-xs-12 mb-4">
                 <label for="inputCelular">Whatsapp</label>
                 <input type="tel" class="form-control" name="celular" id="celular" required=""
                 placeholder="(84)9999-99999">
