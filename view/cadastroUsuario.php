@@ -16,47 +16,47 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-7 col-xs-12 mx-auto">
+      <div class="col-md-6 col-xs-8 mx-auto">
         <div class="card card-signin flex-row my-5">
          <div class="card-body">
           <h5 class="card-title text-center">Cadastra-se</h5>
           <form class="form-signin">
-            <div class="form-label-group col-sm-12 mb-4">
+            <div class="form-label-group col-md-12 mb-4">
               <label for="inputNome" id="label">Nome</label>
               <input type="text" class="form-control" name="nome" id="nome" required="">
             </div>
 
-            <div class="form-label-group col-sm-12 mb-4">
+            <div class="form-label-group col-md-12 mb-4">
               <label for="inputCelular" id="label">Whatsapp</label>
               <input type="tel" class="form-control" name="celular" id="celular" required="" placeholder="(84)9999-99999">
             </div>
 
-            <div class="form-label-group col-sm-12 mb-4">
+            <div class="form-label-group col-md-12 mb-4">
               <label for="inputEmail" id="label">E-mail</label>
               <input type="email" class="form-control" name="email" id="email" required="">
             </div>
 
-            <div class="form-label-group col-sm-12 mb-4">
+            <div class="form-label-group col-md-12 mb-4">
              <label for="inputCep" id="label">CEP</label>
              <input type="text" class="form-control" name="cep" id="cep" required=""
              placeholder="99999-999">
            </div>
-           <div class="form-label-group col-sm-12 mb-4">
+           <div class="form-label-group col-md-12 mb-4">
             <label for="inputCidade" id="label">Cidade</label>
             <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
           </div>
-          <div class="form-label-group col-sm-12 mb-4">
+          <div class="form-label-group col-md-12 mb-4">
             <label for="inputUf" id="label">UF</label>
             <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
           </div>
 
-          <div class="form-label-group col-sm-12 mb-4">
+          <div class="form-label-group col-md-12 mb-4">
             <div class="form-group">
               <label id="label">Senha</label>
               <input type="password" class="form-control" id="senha" name="senha" required="">
             </div>
           </div>
-          <div class="form-label-group col-sm-12 mb-4">
+          <div class="form-label-group col-md-12 mb-4">
             <div class="form-group">
               <label id="label">Confirmar Senha</label>
               <input type="password" class="form-control" id="senha2" name="senha2" required="">
@@ -64,7 +64,7 @@
           </div>
 
           <hr>
-          <div class="form-label-group col-sm-12">
+          <div class="form-label-group col-md-12">
 
            <button class="btn btn-success text-uppercase" id="btnCadastrar" name="btnCadastrar">Cadastrar</button>
          </div>
