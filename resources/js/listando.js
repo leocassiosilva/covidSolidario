@@ -1,7 +1,7 @@
  $('document').ready(function(){ 
  	$('#btnListar').on('click', function(){
  		var nomeProduto = $("#nomeProduto").val();
- 		$("#btnListar").blur()
+ 		$("#btnListar").blur();
  		jQuery.ajax({
  			type: "POST",
  			url: "../control/ListarDoacao.php",

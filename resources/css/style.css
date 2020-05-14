@@ -8,10 +8,16 @@
   #label{
     font-size: 30px;
   }
-
+  #nome{
+    font-size: 30px;
+  }
+  #add-campo, #cad{
+    font-size: 25px;
+  }
   #tabela{
     font-size: 35px;
   }
+
 }
 
 html, body { margin: 0;
