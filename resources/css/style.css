@@ -29,6 +29,13 @@
   }
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center; /** ISSO AQUI ALINHA VERTICALMENTE */
+}
+
+
 html, body { margin: 0;
   padding: 0;
   height: 100%;
