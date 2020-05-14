@@ -42,11 +42,11 @@ if($_SESSION["logado"] == true){
           <div class="form-group" id="formulario">
             <div class="form-row">
               <div class="form-group col-md-5">
-               <label for="inputNome">Nome</label>
+               <label for="inputNome" id="label">Nome</label>
                <input type="text" class="form-control" name="nome[]" id="nome" placeholder="Digite o nome do produto">
              </div>
              <div class="form-group col-md-3">
-              <label for="inputQuantidade">Quantidade</label>
+              <label for="inputQuantidade" id="label">Quantidade</label>
               <input type="text" class="form-control" name="quantidade[]" placeholder="Quantidade" id="quantidade">
             </div>
           </div>
