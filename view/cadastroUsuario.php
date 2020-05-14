@@ -7,16 +7,17 @@
   <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
 </head>
 <body>
-  <?php include 'layout/navbar.php';?>
-  <div class="container py-5">
+  <?php include 'layout/navbar.php';?><br/>
+  <div class="container">
     <div class="row">
       <div id="cad-alert" style="display: none;">
         <span id="mensagem"></span>
       </div>
     </div>
 
+  
     <div class="row  d-flex justify-content-center">
-      <div class="col-lg-7 col-sm-12 mb-4 text-rigth">
+      <div class="col-lg-7 col-m-12 mb-4 text-rigth">
         <div class="card rounded-0" id="login-form">
           <div class="card-header">
             <h3 class="mb-0" style="text-align: center;">Cadastrar Usuário</h3>
@@ -25,11 +26,11 @@
            <form class="form" role="form" novalidate="" method="POST">
             <div class="form-group" id="formulario">
               <div class="form-row">
-                <div class="form-group col-md-6 col-xs-12 mb-4 mb-4">
+                <div class="form-group col-xs-12 col-md-6 mb-4 mb-4">
                  <label for="inputNome" id="label">Nome</label>
                  <input type="text" class="form-control" name="nome" id="nome" required="">
                </div>
-               <div class="form-group col-md-6 col-xs-12 mb-4 mb-4">
+               <div class="form-group col-xs-12 col-md-6 mb-4 mb-4">
                 <label for="inputCelular" id="label">Whatsapp</label>
                 <input type="tel" class="form-control" name="celular" id="celular" required=""
                 placeholder="(84)9999-99999">
