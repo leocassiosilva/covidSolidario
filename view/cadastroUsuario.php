@@ -16,7 +16,7 @@
     </div>
 
     <div class="row  d-flex justify-content-center">
-      <div class="col-lg-7 col-sm-12 mb-4 text-rigth">
+      <div class="col-lg-7 col-xs-12 mb-4 text-rigth">
         <div class="card rounded-0" id="login-form">
           <div class="card-header">
             <h3 class="mb-0" style="text-align: center;">Cadastrar Usuário</h3>
