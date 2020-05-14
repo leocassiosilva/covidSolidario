@@ -34,7 +34,6 @@
     dataType: 'json',
     success: function(response)
     {
-      alert(response);
       if (response.codigo == 0) {
         $("#cad-alert").css('display', 'block', 'background-color: green');
         $("#mensagem").html(response.mensagem).fadeIn(300).delay(1900).fadeOut(400);
