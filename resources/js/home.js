@@ -10,9 +10,9 @@ $('document').ready(function(){
 
                 if (tam <= 1000){
                   alert("ola");
-                  $( "#quarta").addClass("form-label-group col-sm-12 mb-4").removeClass("form-label-group col-md-3 mb-4");
-                  $( "#classeSecundaria").addClass("form-label-group col-sm-12 mb-4").removeClass("form-label-group col-md-6 mb-4");
-                  $( "#classeTerciaria").addClass("form-label-group col-sm-12 mb-4").removeClass( "form-label-group col-md-3 mb-4");
+                  $( "#quarta").removeClass("form-label-group col-md-3 mb-4");
+                  $( "#classeSecundaria").removeClass("form-label-group col-md-6 mb-4");
+                  $( "#classeTerciaria").removeClass( "form-label-group col-md-3 mb-4");
             }
       });
             $('form').on('click', '.btn-apagar', function () {
