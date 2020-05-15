@@ -75,6 +75,8 @@ if($_SESSION["logado"] == true){
 
    if (tam <= 1000){
     $( "#classePrincipal").addClass( "col-sm-9" ).removeClass( "col-lg-7" );
+    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-6" );
+    $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
   }
 });
 </script>
