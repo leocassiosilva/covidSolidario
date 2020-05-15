@@ -46,7 +46,7 @@ if($_SESSION["logado"] == true){
 
               <div class="form-label-group col-md-3 mb-4" id="classeTerciaria">
                 <label for="inputQuantidade" id="label">Quantidade</label>
-                <input type="text" class="form-control" name="quantidade[]" placeholder="Quantidade" id="quantidade">
+                <input type="text" class="form-control" name="quantidade[]" placeholder="20" id="quantidade">
               </div>
             </div>
           </div>

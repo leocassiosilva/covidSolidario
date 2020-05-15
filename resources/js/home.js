@@ -6,7 +6,7 @@ $('document').ready(function(){
                   $("#add-campo").blur();
                   cont++;
                 //https://api.jquery.com/append/
-                $('#formulario').append('<div class="form-row" id="campo' + cont + '"><div class="form-label-group col-md-6 mb-4"> <label>Nome </label><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div> <div class="form-label-group col-md-3 mb-4"><label for="inputQuantidade">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div>');
+                $('#formulario').append('<div class="form-row" id="campo' + cont + '"><div class="form-label-group col-md-6 mb-4" id="classeSecundaria"> <label>Nome </label><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div> <div class="form-label-group col-md-3 mb-4" id="classeTerciaria">                   <label> Quantidade </label><input type="text" name="quantidade[]" placeholder="20" id="quantidade' + cont + '" class="form-control"></div><div class="form-label-group col-md-3 mb-4"><label for="inputQuantidade">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div>');
 
           });
             $('form').on('click', '.btn-apagar', function () {
