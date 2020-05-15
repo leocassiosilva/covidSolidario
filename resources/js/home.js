@@ -8,7 +8,7 @@ $('document').ready(function(){
                 //https://api.jquery.com/append/
                 $('#formulario').append('<div class="form-row" id="campo' + cont + '"><div class="form-label-group col-md-6 mb-4" id="classeSecundaria"> <label>Nome do Produto: </label><br><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div></div>');
                 if (tamanho <= 1000){
-                    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-6" );
+                    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "form-label-group col-md-6 mb-4" );
                   }
               });
             $('form').on('click', '.btn-apagar', function () {
