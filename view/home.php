@@ -32,7 +32,7 @@ if($_SESSION["logado"] == true){
   </div>
 
   <div class="row">
-    <div class="col-sm-6 col-xs-8 mx-auto" id="classePrincipal">
+    <div class="col-lg-7 col-xs-8 mx-auto" id="classePrincipal">
       <div class="card card-signin flex-row my-5">
        <div class="card-body">
         <h5 class="card-title text-center">Cadastra seu pedido de doação</h5>
@@ -74,8 +74,8 @@ if($_SESSION["logado"] == true){
    var tam = $(window).width();
 
    if (tam <= 1000){
-    $( "#classePrincipal").addClass( "col-sm-6" ).removeClass( "col-lg-7" );
-    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
+    $( "#classePrincipal").addClass( "col-sm-9" ).removeClass( "col-lg-7" );
+    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-6" );
     $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
   }
 });
