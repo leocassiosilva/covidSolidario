@@ -18,7 +18,7 @@
       </div>
 
       <div class="row  d-flex justify-content-center">
-        <div class="col-lg-7 col-sm-12 mb-4 text-rigth">
+        <div class="col-lg-7 col-sm-12 mb-4 text-rigth" id="classePrincipal">
           <div class="card rounded-0" id="login-form">
             <div class="card-header">
               <h3 class="mb-0" style="text-align: center;">Login</h3>
@@ -59,4 +59,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/valida_login.js"></script>
+<script>
+  $(document).ready(function(){
+   var tam = $(window).width();
+
+   if (tam <= 1000){
+    $( "#classePrincipal" ).addClass( "col-lg-7" ).removeClass( "col-sm-6" );
+  }else {
+    alert("ola");
+  }
+});
+</script>
 </html>
