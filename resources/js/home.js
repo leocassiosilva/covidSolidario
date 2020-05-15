@@ -1,19 +1,18 @@
 $('document').ready(function(){
-      var tamanho = $(window).width();
+      var tam = $(window).width();
       var cont = 1;
             //https://api.jquery.com/click/
             $('#add-campo').click(function () {
                   $("#add-campo").blur();
                   cont++;
-                  if (tamanho <= 1000){
-                        $( "#classe1").addClass("col-md-6 mb-4").removeClass( "col-sm-12");
-                  }
-                //https://api.jquery.com/append/
-                $('#formulario').append('<div class="form-row" id="campo' + cont + '"><div class="col-md-6 mb-4" id="classe1"> <label>Nome do Produto: </label><br><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div></div>');
-                if (tamanho <= 1000){
-                  $( "#classe1").addClass( "col-sm-12" ).removeClass( "col-md-6 mb-4" );
-            }
-      });
+                  if (tam <= 1000){
+                      $('#formulario').append('<div class="form-row" id="campo' + cont + '"><div class="form-label-group col-sm-12 mb-4" id="classeSecundaria"> <label>Nome </label id="label"><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-label-group col-sm-12 mb-4" id="classeTerciaria"><label id="label"> Quantidade </label><input type="text" name="quantidade[]" placeholder="20" id="quantidade' + cont + '" class="form-control"></div><br><div class="form-label-group"><label for="inputQuantidade" id="label">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div>');
+
+                }else {
+                      $('#formulario').append('<div class="form-row" id="campo' + cont + '"><div class="form-label-group col-md-6 mb-4" id="classeSecundaria"> <label>Nome </label id="label"><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-label-group col-md-3 mb-4" id="classeTerciaria"><label id="label"> Quantidade </label><input type="text" name="quantidade[]" placeholder="20" id="quantidade' + cont + '" class="form-control"></div><br><div class="form-label-group"><label for="inputQuantidade" id="label">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div>');
+                }
+
+          });
             $('form').on('click', '.btn-apagar', function () {
                  var button_id = $(this).attr("id");
                  $('#campo' + button_id + '').remove();
