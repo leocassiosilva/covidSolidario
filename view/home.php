@@ -39,12 +39,12 @@ if($_SESSION["logado"] == true){
         <form class="form-signin">
           <div id="formulario">
             <div class="form-row">
-              <div class="form-label-group col-md-6 mb-4">
+              <div class="form-label-group col-md-6 mb-4" id="classeSecundaria">
                 <label for="inputNome" id="label">Nome</label>
                 <input type="text" class="form-control" name="nome[]" id="nome" placeholder="Nome">
               </div>
 
-              <div class="form-label-group col-md-6 mb-4">
+              <div class="form-label-group col-md-3 mb-4" id="classeTerciaria">
                 <label for="inputQuantidade" id="label">Quantidade</label>
                 <input type="text" class="form-control" name="quantidade[]" placeholder="Quantidade" id="quantidade">
               </div>
@@ -75,7 +75,7 @@ if($_SESSION["logado"] == true){
 
    if (tam <= 1000){
     $( "#classePrincipal").addClass( "col-sm-6" ).removeClass( "col-lg-7" );
-    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-5" );
+    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
     $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
   }
 });
