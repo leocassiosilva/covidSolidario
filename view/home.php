@@ -32,7 +32,7 @@ if($_SESSION["logado"] == true){
   </div>
 
   <div class="row  d-flex justify-content-center">
-    <div class="col-lg-7 col-sm-12 mb-4 text-rigth">
+    <div class="col-lg-7 col-sm-12 mb-4 text-rigth" id="classePrincipal">
       <div class="card rounded-0" id="login-form">
         <div class="card-header">
           <h3 class="mb-0" style="text-align: center;">Cadastrar Pedidos de Doações</h3>
@@ -41,11 +41,11 @@ if($_SESSION["logado"] == true){
          <form method="POST" action="../control/processa.php">
           <div class="form-group" id="formulario">
             <div class="form-row">
-              <div class="form-group col-md-5">
+              <div class="form-group col-md-5" id="classeSecundaria">
                <label for="inputNome" id="label">Nome</label>
                <input type="text" class="form-control" name="nome[]" id="nome" placeholder="Digite o nome do produto">
              </div>
-             <div class="form-group col-md-3">
+             <div class="form-group col-md-3" id="classeTerciaria">
               <label for="inputQuantidade" id="label">Quantidade</label>
               <input type="text" class="form-control" name="quantidade[]" placeholder="Quantidade" id="quantidade">
             </div>
@@ -67,5 +67,18 @@ if($_SESSION["logado"] == true){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../resources/js/home.js"></script>
+<script>
+  $(document).ready(function(){
+   var tam = $(window).width();
+
+   if (tam <= 1000){
+    $( "#classePrincipal").addClass( "col-sm-6" ).removeClass( "col-lg-7" );
+    $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-5" );
+    $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
+  }else {
+    alert("Ola");
+  }
+});
+</script>
 </body>
 </html>

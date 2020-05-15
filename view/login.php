@@ -65,8 +65,6 @@
 
    if (tam <= 1000){
     $( "#classePrincipal" ).addClass( "col-lg-7" ).removeClass( "col-sm-6" );
-  }else {
-    alert("ola");
   }
 });
 </script>
