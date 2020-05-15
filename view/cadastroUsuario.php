@@ -82,5 +82,17 @@
 <script type="text/javascript" src="../resources/js/jquery.maskedinput-1.3.1.min.js"></script> 
 <script type="text/javascript" src="../resources/js/valida_usuario.js"> </script>
 <script type="text/javascript" src="../resources/js/cadUsuarios.js"> </script>
-
+<script>
+$(document).ready(function(){
+   var tam = $(window).width();
+ 
+   if (tam <=768){
+    alert(tam);
+     console.log(tam);
+   }else {
+    alert("");
+    alert(tam);
+   }
+});
+</script>
 </html>
