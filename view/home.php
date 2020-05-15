@@ -24,43 +24,45 @@ if($_SESSION["logado"] == true){
  <?php include 'layout/navbar1.php';?>
 
 
- <div class="container" id="geral" style="margin-top: 100px;">
+ <div class="container" style="margin-top: 100px;">
   <div class="row">
     <div id="cad-alert" style="display: none;">
       <span id="mensagem"></span>
     </div>
   </div>
 
-  <div class="row  d-flex justify-content-center">
-    <div class="col-lg-7 col-sm-12 mb-4 text-rigth" id="classePrincipal">
-      <div class="card rounded-0" id="login-form">
-        <div class="card-header">
-          <h3 class="mb-0" style="text-align: center;">Cadastrar Pedidos de Doações</h3>
-        </div>
-        <div class="card-body">
-         <form method="POST" action="../control/processa.php">
-          <div class="form-group" id="formulario">
+  <div class="row">
+    <div class="col-sm-6 col-xs-8 mx-auto" id="classePrincipal">
+      <div class="card card-signin flex-row my-5">
+       <div class="card-body">
+        <h5 class="card-title text-center">Cadastra seu pedido de doação</h5>
+        <form class="form-signin">
+          <div id="formulario">
             <div class="form-row">
-              <div class="form-group col-md-5" id="classeSecundaria">
-               <label for="inputNome" id="label">Nome</label>
-               <input type="text" class="form-control" name="nome[]" id="nome" placeholder="Digite o nome do produto">
-             </div>
-             <div class="form-group col-md-3" id="classeTerciaria">
-              <label for="inputQuantidade" id="label">Quantidade</label>
-              <input type="text" class="form-control" name="quantidade[]" placeholder="Quantidade" id="quantidade">
+              <div class="form-label-group col-md-6 mb-4">
+                <label for="inputNome" id="label">Nome</label>
+                <input type="text" class="form-control" name="nome[]" id="nome" placeholder="Nome">
+              </div>
+
+              <div class="form-label-group col-md-6 mb-4">
+                <label for="inputQuantidade" id="label">Quantidade</label>
+                <input type="text" class="form-control" name="quantidade[]" placeholder="Quantidade" id="quantidade">
+              </div>
             </div>
           </div>
-        </div>
+          <hr>
+          <div class="form-label-group col-md-12">
 
-        <button type="button" class="btn btn-primary" id="add-campo"> Adicionar Item </button>
+           <button type="button" class="btn btn-primary" id="add-campo"> Adicionar Item </button>
 
-        <button name="cad" id="cad" class="btn btn-success">Cadastrar Pedido</button>
-
-
-      </form>
-    </div>
-  </div>
+           <button name="cad" id="cad" class="btn btn-success">Cadastrar Pedido</button>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
 </div>
+
 </div>
 <?php include 'layout/footer.php';?>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

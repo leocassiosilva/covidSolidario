@@ -6,13 +6,9 @@ $('document').ready(function(){
                   $("#add-campo").blur();
                   cont++;
                 //https://api.jquery.com/append/
-                $('#formulario').append('<div id="campo' + cont + '"><div id="classePrimaria"><div class="form-row"> <div class="form-group col-md-5" id="classeSecundaria"><label>Nome do Produto: </label><br><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-group col-md-3" id="classeTerciaria"><label> Quantidade: </label><input type="text" name="quantidade[]" placeholder="Quantidade" id="quantidade' + cont + '" class="form-control"></div> <div class="form-group col-md-4"><label for="inputQuantidade">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div></div> </div>');
-                if (tam <= 1000){
-                  $("#classePrimaria").addClass( "form-group col-sm-6");
-                  $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-5" );
-                  $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
-            }
-      });
+                $('#formulario').append('<div class="form-row" id="campo' + cont + '"><div class="form-label-group col-md-6 mb-4"> <label>Nome </label><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div> <div class="form-label-group col-md-3 mb-4"><label for="inputQuantidade">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div>');
+
+          });
             $('form').on('click', '.btn-apagar', function () {
              var button_id = $(this).attr("id");
              $('#campo' + button_id + '').remove();
