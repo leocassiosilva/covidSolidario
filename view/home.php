@@ -75,8 +75,6 @@ if($_SESSION["logado"] == true){
     $( "#classePrincipal").addClass( "col-sm-6" ).removeClass( "col-lg-7" );
     $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-5" );
     $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
-  }else {
-    alert("Ola");
   }
 });
 </script>
