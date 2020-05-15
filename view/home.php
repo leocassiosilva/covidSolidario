@@ -39,7 +39,7 @@ if($_SESSION["logado"] == true){
         <form class="form-signin">
           <div id="formulario">
             <div class="form-row">
-              <div class="form-label-group col-md-6 mb-4" id="classeSecundaria">
+              <div class="form-label-group col-md-8 mb-4" id="classeSecundaria">
                 <label for="inputNome" id="label">Nome</label>
                 <input type="text" class="form-control" name="nome[]" id="nome" placeholder="Nome">
               </div>
