@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-10 col-xs-8 mx-auto">
+      <div class="col-sm-6 col-xs-8 mx-auto" id="classePrincipal">
         <div class="card card-signin flex-row my-5">
          <div class="card-body">
           <h5 class="card-title text-center">Cadastra-se</h5>
@@ -83,16 +83,17 @@
 <script type="text/javascript" src="../resources/js/valida_usuario.js"> </script>
 <script type="text/javascript" src="../resources/js/cadUsuarios.js"> </script>
 <script>
-$(document).ready(function(){
+  $(document).ready(function(){
    var tam = $(window).width();
- 
-   if (tam <=768){
+
+   if (tam <= 1000){
     alert(tam);
-     console.log(tam);
-   }else {
+    console.log(tam);
+    $( "#classePrincipal" ).removeClass( "col-sm-6" ).addClass( "col-sm-12" );
+  }else {
     alert("");
     alert(tam);
-   }
+  }
 });
 </script>
 </html>
