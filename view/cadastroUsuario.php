@@ -87,7 +87,7 @@
    var tam = $(window).width();
 
    if (tam <= 1000){
-    $( "#classePrincipal" ).removeClass( "col-sm-6" ).addClass( "col-sm-12" );
+    $( "#classePrincipal" ).addClass( "col-sm-12" ).removeClass( "col-sm-6" );
   }
 });
 </script>
