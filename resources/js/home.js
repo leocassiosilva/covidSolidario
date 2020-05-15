@@ -8,44 +8,44 @@ $('document').ready(function(){
                 //https://api.jquery.com/append/
                 $('#formulario').append('<div class="form-group" id="campo' + cont + '"><div class="form-row"> <div class="form-group col-md-5" id="classeSecundaria"><label>Nome do Produto: </label><br><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-group col-md-3" id="classeTerciaria"><label> Quantidade: </label><input type="text" name="quantidade[]" placeholder="Quantidade" id="quantidade' + cont + '" class="form-control"></div> <div class="form-group col-md-4"><label for="inputQuantidade">Remover item</label><br><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div> </div>');
                 if (tam <= 1000){
-                      $( "#classePrincipal").addClass( "form-group col-sm-6" ).removeClass( "form-group" );
-                      $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-5" );
-                      $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
-                }
-          });
+                  $('"#campo' + cont + '"').addClass( "form-group col-sm-6" ).removeClass( "form-group" );
+                  $( "#classeSecundaria").addClass( "col-sm-12" ).removeClass( "col-md-5" );
+                  $( "#classeTerciaria").addClass( "col-sm-12" ).removeClass( "col-md-3" );
+            }
+      });
             $('form').on('click', '.btn-apagar', function () {
-                 var button_id = $(this).attr("id");
-                 $('#campo' + button_id + '').remove();
-           });
+             var button_id = $(this).attr("id");
+             $('#campo' + button_id + '').remove();
+       });
 
 
             $('#cad').on('click', function () {
-                 $("#cad").blur();
-                 var quantidade = [];
-                 var nome = [];
-                 var contador = 0;
-                 var contador1 = 0; 
-                 var arrayCompleto = [];
-                 $(this).blur();
-                 $('input[name="nome[]"]').each(function() { 
-                      nome[contador] = $(this).val(); 
-                      contador++;
-                });
+             $("#cad").blur();
+             var quantidade = [];
+             var nome = [];
+             var contador = 0;
+             var contador1 = 0; 
+             var arrayCompleto = [];
+             $(this).blur();
+             $('input[name="nome[]"]').each(function() { 
+              nome[contador] = $(this).val(); 
+              contador++;
+        });
 
 
-                 $('input[name="quantidade[]"]').each(function() { 
-                      quantidade[contador1] = $(this).val(); 
-                      contador1++;
-                });
+             $('input[name="quantidade[]"]').each(function() { 
+              quantidade[contador1] = $(this).val(); 
+              contador1++;
+        });
 
-                 nome.forEach(saveItem);
+             nome.forEach(saveItem);
 
-                 function saveItem(item) {
-                      arrayCompleto.push({
-                           'nome': item,
-                           'qtd': quantidade[nome.indexOf(item)]
-                     });
-                }
+             function saveItem(item) {
+              arrayCompleto.push({
+               'nome': item,
+               'qtd': quantidade[nome.indexOf(item)]
+         });
+        }
 
             	//console.log(JSON.stringify(arrayCompleto));
             	var jsonString = JSON.stringify(arrayCompleto);
