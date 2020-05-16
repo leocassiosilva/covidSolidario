@@ -2,20 +2,20 @@
 
 session_start();
 
-$nome = $_POST["nomeProduto"];
+$cep = $_POST["cep"];
 require_once("../dao/produtoDAO.php");
 require_once("../model/Produto.php");
 
 
 $produtoDAO = new produtoDAO();
-//echo $nome;
-if (empty($nome)) {
-	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha o nome!');
+//echo $cep;
+if (empty($cep)) {
+	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha o cep!');
 	echo json_encode($retorno);
 	exit();
 }
 
-$resultado = $produtoDAO->listar($nome);
+$resultado = $produtoDAO->listar($cep);
 
 
 if (empty($resultado)) {

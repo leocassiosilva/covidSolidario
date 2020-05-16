@@ -90,7 +90,7 @@ class produtoDAO
 
   public function listar($value)
   {
-    $nome = $value;
+    $cep = $value;
     $query = $this->conexao->conectar()->prepare('SELECT  usuario.cidade as nome_cidade, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade FROM usuario
       INNER JOIN pedido
       ON (pedido.id_usuario = usuario.id_usuario)
@@ -98,8 +98,10 @@ class produtoDAO
       ON (pedido_detalhe.id_pedido = pedido.id_pedido)
       INNER JOIN produto
       ON(produto.id_produto = pedido_detalhe.id_produto) 
-      WHERE produto.nome LIKE :nome');
-    $query->bindValue(":nome", "%".$nome."%", PDO::PARAM_STR);
+      INNER JOIN status_doacao
+      ON(status_doacao.id_status = pedido_detalhe.id_status)
+      WHERE cep = :cep and status_doacao.id_status = 1');
+    $query->bindValue(":cep", $cep);
     $query->execute();
     $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
 

@@ -1,12 +1,13 @@
  $('document').ready(function(){ 
  	$('#btnListar').on('click', function(){
- 		var nomeProduto = $("#nomeProduto").val();
+ 		var cep = $("#cep").val();
+ 		alert(cep);
  		$("#btnListar").blur();
  		jQuery.ajax({
  			type: "POST",
  			url: "../control/ListarDoacao.php",
  			data:{
- 				nomeProduto: nomeProduto
+ 				cep: cep
  			},
  			dataType: 'json',
  			success: function(response)
