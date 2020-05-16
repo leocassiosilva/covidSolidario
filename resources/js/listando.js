@@ -1,7 +1,6 @@
  $('document').ready(function(){ 
  	$('#btnListar').on('click', function(){
  		var cep = $("#cep").val();
- 		alert(cep);
  		$("#btnListar").blur();
  		jQuery.ajax({
  			type: "POST",

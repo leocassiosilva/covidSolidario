@@ -100,7 +100,7 @@ class produtoDAO
       ON(produto.id_produto = pedido_detalhe.id_produto) 
       INNER JOIN status_doacao
       ON(status_doacao.id_status = pedido_detalhe.id_status)
-      WHERE cep = :cep and status_doacao.id_status = 1');
+      WHERE  usuario.cep = :cep and status_doacao.id_status = 1');
     $query->bindValue(":cep", $cep);
     $query->execute();
     $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
