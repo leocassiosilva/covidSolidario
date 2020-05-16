@@ -11,7 +11,6 @@ $('document').ready(function(){
        dataType: 'json',
        success: function(response)
        {
-        alert(response);
         if (response.codigo == 0) {
           $("table").css("display", "none");  
           $("#listarmensagem").html('<strong>Erro! </strong>' + response.mensagem);
