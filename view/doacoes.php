@@ -46,7 +46,7 @@ if($_SESSION["logado"] == true){
                   <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
                 </div>
                 <div class="form-group col-md-12 text-left">
-                  <label for="inputUf">UF</label>
+                  <label for="inputUf" id="label">UF</label>
                   <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
                 </div>
               </div>
