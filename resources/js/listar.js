@@ -1,16 +1,17 @@
 $('document').ready(function(){ 
     $('#btnListar').on('click', function(){
-      var  nomeProduto = $("#nomeProduto").val();
+      var  cep = $("#cep").val();
       this.blur();
       jQuery.ajax({
         type: "POST",
         url: "../control/Doacoes.php",
         data:{
-           nomeProduto:  nomeProduto
+           cep:  cep
        },
        dataType: 'json',
        success: function(response)
        {
+        //alert(response);
         if (response.codigo == 0) {
           $("table").css("display", "none");  
           $("#listarmensagem").html('<strong>Erro! </strong>' + response.mensagem);

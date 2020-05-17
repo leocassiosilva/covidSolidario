@@ -19,7 +19,7 @@ $resultado = $produtoDAO->listar($cep);
 
 
 if (empty($resultado)) {
-	$retorno = array('codigo' => 0, 'mensagem' => 'Não existe pedidos de doações com o nome do produto informado!');
+	$retorno = array('codigo' => 0, 'mensagem' => 'Não existe pedidos de doações com o cep informado!');
 	echo json_encode($retorno);
 	exit();
 }else {
