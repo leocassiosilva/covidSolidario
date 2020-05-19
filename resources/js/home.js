@@ -8,11 +8,11 @@ $('document').ready(function(){
                   cont++;
                   if (tam <= 1000){
                        //$('#formulario').append('<hr >');
-                       $('#formulario').append('<div id="campo' + cont + '"><hr ><h4>Produto '+ contadorNovo +'</h4><div class="form-row"><div class="form-label-group col-sm-12 mb-4" id="classeSecundaria"> <label>Nome </label id="label"><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-label-group col-sm-12 mb-4" id="classeTerciaria"><label id="label"> Quantidade </label><input type="text" name="quantidade[]" placeholder="20" id="quantidade' + cont + '" class="form-control"></div><br><div class="form-label-group col-sm-12"><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div></div>');
+                       $('#formulario').append('<div id="campo' + cont + '"><hr ><h4>Produto '+ contadorNovo +'</h4><div class="form-row"><div class="form-label-group col-sm-12 mb-4" id="classeSecundaria"> <label>Nome </label id="label"><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-label-group col-sm-12 mb-4" id="classeTerciaria"><label id="label"> Quantidade </label><input type="number" name="quantidade[]" placeholder="20" id="quantidade' + cont + '" class="form-control"></div><br><div class="form-label-group col-sm-12"><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div></div>');
                        contadorNovo++;
                  }else {
                         //$('#formulario').append("<hr>");
-                        $('#formulario').append('<div id="campo' + cont + '"><hr > <h4>Produto '+ contadorNovo +'</h4><div class="form-row"><div class="form-label-group col-md-8 mb-4" id="classeSecundaria"> <label>Nome </label id="label"><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-label-group col-md-3 mb-4" id="classeTerciaria"><label id="label"> Quantidade </label><input type="text" name="quantidade[]" placeholder="20" id="quantidade' + cont + '" class="form-control"></div><br><div class="form-label-group col-md-3 mb-4"><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div></div>');
+                        $('#formulario').append('<div id="campo' + cont + '"><hr > <h4>Produto '+ contadorNovo +'</h4><div class="form-row"><div class="form-label-group col-md-8 mb-4" id="classeSecundaria"> <label>Nome </label id="label"><input type="text" name="nome[]" placeholder="Nome" id="campo' + cont + '" class="form-control"></div><div class="form-label-group col-md-3 mb-4" id="classeTerciaria"><label id="label"> Quantidade </label><input type="number" name="quantidade[]" placeholder="20" id="quantidade' + cont + '" class="form-control"></div><br><div class="form-label-group col-md-3 mb-4"><button type="button" id="' + cont + '" class="btn-apagar btn btn-danger"> Remover </button></div></div></div>');
                         contadorNovo++;
                   }
 
@@ -64,10 +64,18 @@ $('document').ready(function(){
             		dataType: 'json',
             		success: function(response)
             		{
+                  //auterações
+                  var aux = cont-1;
+                  while(aux > 0){
+                    $('"#campo' + cont + '"').val("");
+                    $('"#quantidade' + cont + '"').val("");
+                  }
+                  //
             			if (response.codigo  == 1) {
             				$("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem);
             				$("#cad-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);         
-            			}else {
+            			   //window.location.href = "../view/home.php";
+                  }else {
             				$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem);
             				$("#cad-alert").addClass( "col-md-6 mx-auto alert alert-danger").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);
             			}

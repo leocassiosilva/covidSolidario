@@ -27,14 +27,14 @@ foreach($data as $registro):
 	}
 
 	if (!(preg_match('/^[a-zA-Z]+/', $registro->nome))) {
-		$retorno = array('codigo' => 0, 'mensagem' => 'Digite um nome sem caracterer especiaais como numeros e [#@$%]');
+		$retorno = array('codigo' => 0, 'mensagem' => 'Digite um nome sem números e caractererses especiais.');
 		echo json_encode($retorno);
 		exit();
 	}
 
 
 	if (empty($registro->qtd)) {
-		$retorno = array('codigo' => 0, 'mensagem' => 'Preencha a quantidade de produto!');
+		$retorno = array('codigo' => 0, 'mensagem' => 'Preencha a quantidade do produto!');
 		echo json_encode($retorno);
 		exit();
 	}
@@ -66,7 +66,7 @@ endforeach;
 
 
 if (!empty($retornoDoacao)) {
-	$retorno = array('codigo' => 1, 'mensagem' => 'Doação Realizada com Sucesso!');
+	$retorno = array('codigo' => 1, 'mensagem' => 'Solicitação cadastrada!');
 	echo json_encode($retorno);
 	exit();
 }

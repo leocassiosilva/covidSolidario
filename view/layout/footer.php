@@ -18,7 +18,7 @@ margin-top: 200px;">
 	</div>
 	<div class="row">
 		<div class="col-12 col-md text-center" >
-			<small class="d-block mb-3 text-muted">&copy; 2019</small>
+			<small class="d-block mb-3 text-muted">&copy; 2020</small>
 		</div>
 	</div>
 </div>

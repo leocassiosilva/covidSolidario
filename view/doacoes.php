@@ -12,7 +12,7 @@ if($_SESSION["logado"] == true){
 <html lang="pt-br">
 <head>
   <meta http-equiv="Content-Language" content="pt-br">
-  <title>Listar Doadores</title>
+  <title>Covid Solidario - Lista de Doadores</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
 </head>
@@ -30,25 +30,16 @@ if($_SESSION["logado"] == true){
       <div class="col-lg-6 col-sm-12 mb-4 text-center">
         <div class="card rounded-0" id="login-form">
           <div class="card-header">
-            <h3 class="mb-0" style="text-align: center;">Pesquisar Produtos</h3>
+            <h3 class="mb-0" style="text-align: center;">Procurar por pedidos de doação</h3>
           </div>
           <div class="card-body">
             <form method="POST">
-              <div class="form-row">
                <div class="form-row">
                  <div class="form-group col-md-12 text-left">
                    <label for="inputNome" id="label">CEP</label>
                    <input type="text" class="form-control" name="cep" id="cep" required=""
                    placeholder="99999-999">
                  </div>
-                 <div class="form-group col-md-12 text-left">
-                  <label for="inputCidade" id="label">Cidade</label>
-                  <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
-                </div>
-                <div class="form-group col-md-12 text-left">
-                  <label for="inputUf" id="label">UF</label>
-                  <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
-                </div>
               </div>
               <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar" style="float: left;">Pesquisar</button>
             </form>

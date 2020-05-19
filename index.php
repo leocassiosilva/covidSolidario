@@ -1,8 +1,15 @@
+<?php
+    session_start();
+    if($_SESSION['logado']){
+        header("location:/view/home.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta http-equiv="Content-Language" content="pt-br">
-  <title>Covid Solidarrio</title>
+  <title>Covid Solidario</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="resources/css/estilo.css" media="screen" />
 </head>
@@ -62,7 +69,7 @@
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li><p id="texto">Para realizar seu cadastro você precisa clicar no link do menu acima e preencher os dados do formulário.</p></li>
+              <li><p id="texto">Para realizar seu cadastro você precisa clicar no link "Cadastrar" do menu acima e preencher os dados do formulário.</p></li>
             </ul>
           </div>
         </div>
@@ -74,7 +81,7 @@
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li><p id="texto">Para doar você precisa estar logado no sistema e descrever a sua doação. Exemplo: Arroz 1kg.</p></li>
+              <li><p id="texto">Realize login e clique no menu "Buscar solicitações de doação". Informe o CEP e entre em contato com o solicitante.</p></li>
             </ul>
           </div>
         </div>

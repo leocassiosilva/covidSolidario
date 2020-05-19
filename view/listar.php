@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta http-equiv="Content-Language" content="pt-br">
-  <title>Listar doadores</title>
+  <title>Covid Solidario - Lista de doadores</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" type="text/css" href="../resources/css/style.css" media="screen" />
 
@@ -54,14 +54,6 @@
                <input type="text" class="form-control" name="cep" id="cep" required=""
                placeholder="99999-999">
              </div>
-             <div class="form-group col-md-12 text-left">
-              <label for="inputCidade" id="label">Cidade</label>
-              <input type="text" class="form-control" id="cidade" name= "cidade"required="" placeholder="Pau dos Ferros">
-            </div>
-            <div class="form-group col-md-12 text-left">
-              <label for="inputUf" id="label">UF</label>
-              <input type="text" class="form-control" id="uf" name= "uf"required="" placeholder="RN">
-            </div>
           </div>
           <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar" style="float: left;">Pesquisar</button>
         </form>
