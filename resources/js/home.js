@@ -64,26 +64,16 @@ $('document').ready(function(){
             		dataType: 'json',
             		success: function(response)
             		{
-                  //auterações
-                  var aux = cont-1;
-                  while(aux > 0){
-                    $('"#campo' + cont + '"').val("");
-                    $('"#quantidade' + cont + '"').val("");
-                  }
-                  //
+                  alert(response.codigo);
                   if (response.codigo  == 1) {
                     $("#mensagem").html('<strong>Obrigado! </strong>' + response.mensagem);
                     $("#cad-alert").addClass( "col-md-6 mx-auto alert alert-success").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);         
-            			   //window.location.href = "../view/home.php";
-                    $("#nome").val("");
-                    $("#quantidade").val("");
+            			   window.location.href = "../view/home.php";
                   }else {
                     $("#mensagem").html('<strong>Erro! </strong>' + response.mensagem);
                     $("#cad-alert").addClass( "col-md-6 mx-auto alert alert-danger").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);
                   }
-                  
                 }
-
               });
             	return false;
 
