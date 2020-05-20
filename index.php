@@ -1,10 +1,3 @@
-<?php
-    session_start();
-    if($_SESSION['logado']){
-        header("location:/view/home.php");
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

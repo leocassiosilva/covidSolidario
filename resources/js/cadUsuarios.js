@@ -8,7 +8,7 @@
     var uf = $("#uf").val();
     var senha = $("#senha").val();
     var senha2 = $("#senha2").val();
-      //alert(senha2);
+      //alert(uf);
       jQuery.ajax({
         type: "POST",
         url: "../control/ControleUsuarios.php",

@@ -34,7 +34,7 @@ if (empty($celular)) {
 }
 
 if (empty($email)) {
-    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu email!');
+    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu e-mail!');
     echo json_encode($retorno);
     exit();
 }
@@ -54,13 +54,13 @@ if (empty($cep)) {
 }
 
 if (empty($cidade)) {
-    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu cidade!');
+    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha sua cidade!');
     echo json_encode($retorno);
     exit();
 }
 
 if (empty($uf)) {
-    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu UF!');
+    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha sua UF!');
     echo json_encode($retorno);
     exit();
 }
@@ -72,7 +72,7 @@ if (empty($senha)) {
 }
 
 if (empty($confirmar_senha)) {
-    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha o campo confrimar senha!');
+    $retorno = array('codigo' => 0, 'mensagem' => 'Preencha o campo confirmar senha!');
     echo json_encode($retorno);
     exit();
 }
@@ -103,7 +103,7 @@ if ($resultado) {
     echo json_encode($retorno);
     exit();
 }else {
-     $retorno = array('codigo' => 0, 'mensagem' => 'Já existe um usuario cadastrado com esse email!');
+     $retorno = array('codigo' => 0, 'mensagem' => 'Já existe um usuario cadastrado com esse e-mail!');
     echo json_encode($retorno);
     exit();
 }
