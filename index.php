@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['logado']){
+  header("location:/view/home.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,6 +28,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="view/listar.php">Pedidos de doação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="view/contato.php">Contato</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="view/cadastroUsuario.php">Cadastrar</a>

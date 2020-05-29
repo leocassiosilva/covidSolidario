@@ -11,7 +11,7 @@ $('document').ready(function(){
      dataType: 'json',
      success: function(response)
      {
-      alert(response.length);
+      //alert(response.length);
         //alert(response);
         if (response.codigo == 0) {
           $("table").css("display", "none");  

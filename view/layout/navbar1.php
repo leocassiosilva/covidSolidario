@@ -16,12 +16,23 @@
           <a class="nav-link" href="doacoes.php">Buscar solicitações de doação</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"></i> <?=$nome ?> <span class="sr-only">(Página atual)</span></a>
+          <a class="nav-link" href="contato.php">Contato</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../control/logoff.php">Sair</a>
-        </li>
-      </ul>
-    </div>
+        <?php
+
+        if($_SESSION["logado"] == true){
+          echo " <li class='nav-item'>
+          <a class='nav-link' href='#'></i> $nome <span class='sr-only'>(Página atual)</span></a>
+          </li>
+          <li class='nav-item'>
+          <a class='nav-link' href='../control/logoff.php'>Sair</a>
+          </li>";
+        }else{
+         echo "<li class='nav-item'>
+          <a class='nav-link' href='../view/login.php'>Entrar</a></li>";
+       }
+       ?>
+    </ul>
   </div>
+</div>
 </nav>

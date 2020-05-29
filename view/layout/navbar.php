@@ -12,6 +12,9 @@
                 <li class="nav-item">
           <a class="nav-link" href="listar.php">Pedidos doações</a>
         </li>
+         <li class="nav-item">
+              <a class="nav-link" href="../view/contato.php">Contato</a>
+            </li>
         <li class="nav-item">
           <a class="nav-link" href="../view/cadastroUsuario.php">Cadastrar</a>
         </li>
