@@ -3,6 +3,7 @@
 session_start();
 
 $cep = $_POST["cep"];
+$nome = $_POST["nome"];
 require_once("../dao/produtoDAO.php");
 require_once("../model/Produto.php");
 
@@ -15,11 +16,11 @@ if (empty($cep)) {
 	exit();
 }
 
-$resultado = $produtoDAO->listarPedido($cep);
+$resultado = $produtoDAO->listarPedido($nome, $cep);
 
 
 if (empty($resultado)) {
-	$retorno = array('codigo' => 0, 'mensagem' => 'Não existe pedidos de doações com cep informado!');
+	$retorno = array('codigo' => 0, 'mensagem' => 'Não existe pedidos de doação para o cep e/ou nome do produto informado!');
 	echo json_encode($retorno);
 	exit();
 }else {

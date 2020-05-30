@@ -16,7 +16,7 @@ if (empty($cep)) {
 	exit();
 }
 //$cep = "59980-000";
-$resultado = $produtoDAO->listarNovo($nome, $cep);
+$resultado = $produtoDAO->listar($nome, $cep);
 
 
 if (empty($resultado)) {
