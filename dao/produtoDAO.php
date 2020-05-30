@@ -167,5 +167,45 @@ class produtoDAO
     return $resultado;
   }
 
+  public function listarNovo($value1, $value2)
+  {
+    $nome = $value1;
+    $cep = $value2;
+
+    /*Aqui serve para verificar se o usuario colocou ou não o nome do produto, em caso dele não preencher a pesquisa busca todos os produtos.*/
+    if (empty($nome)) {
+     $query = $this->conexao->conectar()->prepare('SELECT  usuario.cidade as nome_cidade, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade FROM usuario
+      INNER JOIN pedido
+      ON (pedido.id_usuario = usuario.id_usuario)
+      INNER JOIN pedido_detalhe
+      ON (pedido_detalhe.id_pedido = pedido.id_pedido)
+      INNER JOIN produto
+      ON(produto.id_produto = pedido_detalhe.id_produto) 
+      INNER JOIN status_doacao
+      ON(status_doacao.id_status = pedido_detalhe.id_status)
+      WHERE  usuario.cep = :cep and status_doacao.id_status = 1');
+     $query->bindValue(":cep", $cep);
+     $query->execute();
+     $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+   }else {
+    //echo $cep;
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.cidade as nome_cidade, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade FROM usuario
+      INNER JOIN pedido
+      ON (pedido.id_usuario = usuario.id_usuario)
+      INNER JOIN pedido_detalhe
+      ON (pedido_detalhe.id_pedido = pedido.id_pedido)
+      INNER JOIN produto
+      ON(produto.id_produto = pedido_detalhe.id_produto) 
+      INNER JOIN status_doacao
+      ON(status_doacao.id_status = pedido_detalhe.id_status)
+      WHERE  usuario.cep = :cep and produto.nome LIKE :nome and status_doacao.id_status = 1');
+    $query->bindValue(":cep", $cep);
+    $query->bindValue(":nome", "%".$nome."%", PDO::PARAM_STR);
+    $query->execute();
+    $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+  }
+  return $resultado;
+}
+
 }
 ?>

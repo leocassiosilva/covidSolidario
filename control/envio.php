@@ -8,7 +8,7 @@
  $mail->Port = 587; 
  $mail->SMTPAuth = true; // Caso o servidor SMTP precise de autenticação
  $mail->Username = "covidsolidario@gmail.com"; // SMTP username
- $mail->Password = "dfhksdhfkdhfksdfhsdkjfhsdjkfhkjds"; // SMTP password
+ $mail->Password = "ifrn2020"; // SMTP password
  $mail->From = $mailDestino;//"leocassiosilva1234@gmail.com"; // From
  $mail->FromName = "covidsolidario"; // Nome de quem envia o email
  $mail->AddAddress($mailDestino, $nome); // Email e nome de quem receberá //Responder
