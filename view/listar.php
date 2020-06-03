@@ -58,7 +58,7 @@
            <div class="form-row">
              <div class="form-group col-md-12 text-left">
               <label for="inputNome" id="label">Nome</label>
-              <input type="text" class="form-control" name="nomeProduto" id="nomeProduto"          placeholder="Arroz">
+              <input type="text" class="form-control" name="nomeProduto" id="nomeProduto"          placeholder="Nome (Opcional)">
             </div>
           </div>
           <button type="submit" class="btn btn-success btn-lg btn-left" id="btnListar" name="btnListar" style="float: left;">Pesquisar</button>
@@ -71,7 +71,7 @@
 </div>
 <div class="row" id="tabela">
   <div class="col-md-12 mx-auto" >
-    <div class="table">
+    <div class="table" id="tabelaCompleta">
       <table class="table" id="idTabela" cellspacing="0" aria-describedby="example_info">
 
       </table>

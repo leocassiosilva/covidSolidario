@@ -2,6 +2,8 @@
 
 session_start();
 
+
+$id_usuario = $_SESSION["id_usuario"];
 $cep = $_POST["cep"];
 $nome = $_POST["nome"];
 require_once("../dao/produtoDAO.php");
@@ -16,7 +18,7 @@ if (empty($cep)) {
 	exit();
 }
 
-$resultado = $produtoDAO->listarPedido($nome, $cep);
+$resultado = $produtoDAO->listarPedido($nome, $cep, $id_usuario);
 
 
 if (empty($resultado)) {

@@ -94,7 +94,7 @@ class produtoDAO
    $cep = $value2;
 
    if (empty($nome)) {
-    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as nome_cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
       INNER JOIN pedido
       ON (pedido.id_usuario = usuario.id_usuario)
       INNER JOIN pedido_detalhe
@@ -109,7 +109,7 @@ class produtoDAO
     $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
   }else {
 
-    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as nome_cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
       INNER JOIN pedido
       ON (pedido.id_usuario = usuario.id_usuario)
       INNER JOIN pedido_detalhe
@@ -166,13 +166,14 @@ public function modificarStatus($id_pedido_detalhe)
   }
 }
 
-public function listarPedido($value1, $value2)
+public function listarPedido($value1, $value2, $value3)
 { 
   $nome = $value1;
   $cep = $value2;
+  $id_usuario = $value3;
 
   if (empty($nome)) {
-    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
+    $query = $this->conexao->conectar()->prepare('SELECT usuario.nome as nome_usuario, usuario.cidade as nome_cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
       INNER JOIN pedido
       ON (pedido.id_usuario = usuario.id_usuario)
       INNER JOIN pedido_detalhe
@@ -181,13 +182,14 @@ public function listarPedido($value1, $value2)
       ON(produto.id_produto = pedido_detalhe.id_produto)
       INNER JOIN status_doacao
       ON(status_doacao.id_status = pedido_detalhe.id_status) 
-      WHERE usuario.cep = :cep and status_doacao.id_status = 1');
+      WHERE usuario.cep = :cep and status_doacao.id_status = 1 and usuario.id_usuario <> :id_usuario');
     $query->bindValue(":cep", $cep);
+    $query->bindValue(":id_usuario", $id_usuario);
     $query->execute();
     $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
   }else {
 
-    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
+    $query = $this->conexao->conectar()->prepare('SELECT  usuario.nome as nome_usuario, usuario.cidade as nome_cidade, usuario.uf as uf, produto.nome as nome_produto, pedido_detalhe.quantidade as quantidade, usuario.celular as celular FROM usuario
       INNER JOIN pedido
       ON (pedido.id_usuario = usuario.id_usuario)
       INNER JOIN pedido_detalhe
@@ -196,9 +198,10 @@ public function listarPedido($value1, $value2)
       ON(produto.id_produto = pedido_detalhe.id_produto)
       INNER JOIN status_doacao
       ON(status_doacao.id_status = pedido_detalhe.id_status) 
-      WHERE usuario.cep = :cep and produto.nome LIKE :nome and status_doacao.id_status = 1');
+      WHERE usuario.cep = :cep and produto.nome LIKE :nome and status_doacao.id_status = 1 and usuario.id_usuario <> :id_usuario');
     $query->bindValue(":cep", $cep);
     $query->bindValue(":nome", "%".$nome."%", PDO::PARAM_STR);
+    $query->bindValue(":id_usuario", $id_usuario);
     $query->execute();
     $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
   }

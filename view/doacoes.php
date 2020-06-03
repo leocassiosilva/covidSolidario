@@ -55,7 +55,7 @@ if($_SESSION["logado"] == true){
   </div>
   <div class="row d-flex justify-content-center" id="tabela">
     <div class="col-md-12 mx-auto" >
-      <div class="table">
+      <div class="table" id="tabelaCompleta">
         <table class="table" id="idTabela" cellspacing="0" aria-describedby="example_info">
 
         </table>

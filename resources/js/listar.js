@@ -21,10 +21,12 @@ $('document').ready(function(){
           $("#listar-alert").addClass( "col-md-6 mx-auto alert alert-danger").css('display', 'block').fadeIn(300).delay(1900).fadeOut(400);
 
         }else {
-          $("input").val("");
+           $('#nomeProduto').val("");
+          $('#idTabela').remove();
+          $('#tabelaCompleta').append("<table class='table' id='idTabela' cellspacing='0' aria-describedby='example_info'></table>");
           $('table').append("<thead><tr><th class='col-2'>Nome</th>  <th class='col-2'>Whatsapp</th> <th class='col-2'>Cidade</th><th class='col-2'>UF</th><th class='col-2'>Produto</th><th class='col-2'>Quantidade</th></tr></thead>");
           for(var i=0;response.length>i;i++){
-            $('table').append("<tbody><tr><td class='col-2'>"+ response[i].nome_usuario +"</td>  <td class='col-2'>"+ response[i].celular +"</td> <td class='col-2'>"+ response[i].cidade +"</td><td class='col-2'>"+ response[i].uf +"</td><td class='col-2'>"+ response[i].nome_produto +"</td><td class='col-2'>"+ response[i].quantidade +"</td></tr></tbody>");
+            $('table').append("<tbody><tr><td class='col-2'>"+ response[i].nome_usuario +"</td>  <td class='col-2'>"+ response[i].celular +"</td> <td class='col-2'>"+ response[i].nome_cidade +"</td><td class='col-2'>"+ response[i].uf +"</td><td class='col-2'>"+ response[i].nome_produto +"</td><td class='col-2'>"+ response[i].quantidade +"</td></tr></tbody>");
           } 
           $("table").css("display", "block");
 
